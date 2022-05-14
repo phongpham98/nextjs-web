@@ -7,7 +7,7 @@ import InstagramMobile from '@components/mobile/home/instagram/InstagramMobile';
 import MediaMobile from '@components/mobile/home/media/MediaMobile';
 import PodCastMobile from '@components/mobile/home/podcast/PodCastMobile';
 import StoryFeedMobile from '@components/mobile/story-feed/StoryFeedMobile';
-import NavMobile from '@components/NavBar/nav-mobile/NavMobile';
+import NavMobile from '@components/navbar/nav-mobile/NavMobile';
 import { clickDownloadEvent } from '@helpers/customGTM';
 import DownloadFika from '@utils/components/DownloadFika';
 import HrLine from '@utils/components/HrLine';
@@ -43,6 +43,7 @@ const HomePageMobile: React.FunctionComponent<IHomePageMobileProps> = (props) =>
 				<HrLine margin="0" />
 				<InstagramMobile />
 			</Space>
+
 		</HomePageMobileContainer>
 	</>
 	);

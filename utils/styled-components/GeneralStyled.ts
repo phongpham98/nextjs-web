@@ -26,6 +26,32 @@ export const GeneralContentWrapper = styled.div`
   }
 `;
 
+export const TitleWrapper = styled.div`
+  background: linear-gradient(
+    176.83deg,
+    rgba(0, 0, 0, 0) 41.16%,
+    #000000 97.38%
+  );
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: 1.5rem 0;
+  @media ${device.tablet768} {
+    gap: 0.2rem;
+    padding: 0.5rem 0;
+  }
+  @media ${device.laptop1280} {
+    gap: 0.4rem;
+    padding: 1.5rem 0;
+  }
+`;
+
 export const GeneralHeaderWrapper = styled.div`
   position: relative;
   width: 100%;
@@ -59,13 +85,6 @@ export const GeneralImage = styled.img`
   bottom: 0;
   object-fit: cover;
   object-position: top;
-`;
-
-export const GeneralTitleH2 = styled.h2`
-  text-transform: uppercase;
-  font-family: "Playfair Display", serif;
-  font-weight: 500;
-  margin: 0;
 `;
 
 export const GeneralImageWrapper = styled.div`

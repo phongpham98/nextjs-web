@@ -13,16 +13,16 @@ export const clickTagEvent = (name: string) => {
 };
 
 export const clickDownloadEvent = (location: string) => {
-  window.dataLayer.push({
-    event: "click-download",
-    download_location: location,
-  });
+//   window.dataLayer.push({
+//     event: "click-download",
+//     download_location: location,
+//   });
 };
 
 export const doPersonalityTest = () => {
-  window.dataLayer.push({
-    event: "do-personality-test",
-  });
+//   window.dataLayer.push({
+//     event: "do-personality-test",
+//   });
 };
 
 export const clickVideoYoutube = (name: string) => {

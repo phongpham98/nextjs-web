@@ -1,0 +1,136 @@
+{
+  "question": "INTJ. ENFP. ISTP. Những cụm từ này có nghĩa là gì?",
+  "each_letter": "Mỗi ký tự sẽ mô tả một đặc điểm tính cách nhất định của mỗi người. Sau đây là ý nghĩa:",
+  "criteria": "Trắc nghiệm 16 tính cách dựa trên 4 biểu hiện/tiêu chí",
+  "criteria_detail": {
+    "one": "Xu hướng tự nhiên",
+    "two": "Tìm hiểu và nhận thức thế giới",
+    "three": "Quyết định và lựa chọn",
+    "four": "Làm nào để hành động"
+  },
+  "different_type": "các loại tính cách khác nhau",
+  "took_quiz": "người đã làm trắc nghiệm",
+  "quiz_result": {
+    "complete_text": "Hoàn thành trắc nghiệm",
+    "you_are": "bạn là",
+    "card": {
+      "strength_weakness": "Điểm mạnh và điểm yếu",
+      "career": "Nghề nghiệp",
+      "relationship": "Mối quan hệ",
+      "friendship": "Tình bạn"
+    },
+    "suitableText": "Phù hợp với"
+  },
+  "explain_title": {
+    "career": "Nghề nghiệp của ",
+    "strength_weakness": "Điểm mạnh và điểm yếu của ",
+    "friendship": "Tình bạn của ",
+    "relationship": "Mối quan hệ của "
+  },
+  "types": [
+    {
+      "name": "Nhóm phân tích",
+      "items": [
+        {
+          "name": "INTJ",
+          "characters": ["Sáng tạo", "độc lập", "sâu sắc"],
+          "image_src": "/intj.png"
+        },
+        {
+          "name": "INTP",
+          "characters": ["Trí tuệ", "Logic", "Tỉ mỉ"],
+          "image_src": "/intp.png"
+        },
+        {
+          "name": "ENTJ",
+          "characters": ["Chiến lược", "Độc lập", "Tham vọng"],
+          "image_src": "/entj.png"
+        },
+        {
+          "name": "ENTP",
+          "characters": [
+            "Thích động viên người khác",
+            "Đầy nhiệt huyết",
+            "Có chiến lược"
+          ],
+          "image_src": "/entp.png"
+        }
+      ]
+    },
+    {
+      "name": "Nhóm ngoại giao",
+      "items": [
+        {
+          "name": "INFJ",
+          "characters": ["Giàu lòng nhân ái", "Cầu toàn", "có tổ chức"],
+          "image_src": "/infj.png"
+        },
+        {
+          "name": "INFP",
+          "characters": ["Quan tâm nguòi khác", "Sáng tạo", "Nhạy cảm"],
+          "image_src": "/infp.png"
+        },
+        {
+          "name": "ENFJ",
+          "characters": ["Thích làm theo ý mình", "Sáng tạo", "vui tươi"],
+          "image_src": "/enfj.png"
+        },
+        {
+          "name": "ENFP",
+          "characters": ["Ủng hộ người khác", "Nhiệt tình", "lạc quan"],
+          "image_src": "/enfp.png"
+        }
+      ]
+    },
+    {
+      "name": "Nhóm ủng hộ",
+      "items": [
+        {
+          "name": "ISTJ",
+          "characters":  ["Chân thành", "có trách nhiệm", "thực tế"],
+          "image_src": "/istj.png"
+        },
+        {
+          "name": "ISFJ",
+          "characters": ["Ấm áp", "Thực dụng", "Nhẹ nhàng"],
+          "image_src": "/isfj.png"
+        },
+        {
+          "name": "ESTJ",
+          "characters": ["Làm việc hiệu quả", "Cởi mở", "Kỹ tính"],
+          "image_src": "/estj.png"
+        },
+        {
+          "name": "ESFJ",
+          "characters": ["Thân thiện", "thiết thực", "đáng tin cậy"],
+          "image_src": "/esfj.png"
+        }
+      ]
+    },
+    {
+      "name": "Nhóm khám phá",
+      "items": [
+        {
+          "name": "ISTP",
+          "characters": ["Lưu trữ những kiến thức mới", "Logic", "có định hướng"],
+          "image_src": "/istp.png"
+        },
+        {
+          "name": "ISFP",
+          "characters": ["Đưa ra những kiến thức mới", "Nhẹ nhàng", "nhạy cảm"],
+          "image_src": "/isfp.png"
+        },
+        {
+          "name": "ESTP",
+          "characters": ["Cởi mở", "thực tế", "tò mò"],
+          "image_src": "/estp.png"
+        },
+        {
+          "name": "ESFP",
+          "characters": ["Thích theo ý mình", "Chính xác", "vui tươi"],
+          "image_src": "/esfp.png"
+        }
+      ]
+    }
+  ]
+}

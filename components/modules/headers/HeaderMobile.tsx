@@ -6,7 +6,6 @@ import SvgYoutubeRound from '@svgs/YoutubeRound';
 import { GeneralImage } from '@utils/styled-components/GeneralStyled';
 import * as React from 'react';
 import { ConnectionIconMobile, HeaderHomeMobileContainer, HeaderMobileContent, MobileDownImage, MobileDownload, MobileIconConnection } from './HeaderMobileStyled';
-
 interface IHeaderMobileProps {
 }
 

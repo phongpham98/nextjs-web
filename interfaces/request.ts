@@ -1,3 +1,6 @@
+import { QuizPart } from "@redux/states";
+import { AssignResult, QuizItemModel, UserResult } from "./model";
+
 export type CategotyType = "Blog" | "News";
 
 export interface CategoryHomeRequest {
@@ -18,8 +21,22 @@ export interface CategoryRequest {
 }
 
 export interface SearchRequest {
-	q: string;
-	limit?: number;
-	page?: number;
-	language?: string;
-  }
+  q: string;
+  limit?: number;
+  page?: number;
+  language?: string;
+}
+
+export interface QuizResponse {
+  part: QuizPart;
+  questions: QuizItemModel[];
+  user_results: UserResult[];
+  assign_result: AssignResult[];
+}
+
+export interface AnswerModel {
+  question_id: string;
+  answer: number;
+  question_number: number;
+  type_id: string;
+}

@@ -3,6 +3,7 @@ import { device } from "@configs/screensSizes";
 import styled from "styled-components";
 
 export const MatchedContainer = styled.div`
+  overflow: hidden;
   @media ${device.tablet768} {
     margin: 0 -20px;
   }

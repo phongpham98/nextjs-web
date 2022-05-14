@@ -1,11 +1,11 @@
 @import "~antd/dist/antd.css";
 
-#__next {
-  overflow-x: hidden;
-  display: flex;
-  /* height: 100%; */
-  flex-direction: column;
-  justify-content: space-between;
+p, h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 0;
+}
+
+.mb {
+  margin-bottom: 2rem;
 }
 
 .smooth-image {
@@ -207,25 +207,25 @@
 
 /* INSTAGRAM */
 .instagram-container img {
-	width: 100%;
+  width: 100%;
 }
 
 .ins-post-container {
-	height: 140%;
-	display: flex;
+  height: 140%;
+  display: flex;
 }
 
-.instagram-container{
-	margin-bottom: 150px;
+.instagram-container {
+  margin-bottom: 150px;
 }
 
 .share-footer {
-	flex: 1;
-	display: flex;
-	justify-content: space-between;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
 }
-.share-comment{
-	display: flex;
-	align-items: center;
-	gap: 20px;
+.share-comment {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }

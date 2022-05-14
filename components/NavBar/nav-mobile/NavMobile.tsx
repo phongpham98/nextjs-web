@@ -4,7 +4,7 @@ import { colors } from '@configs/globalStyles';
 import useDebounce from '@hooks/useDebounce';
 import { Tag } from '@interfaces/posts';
 import { toglle_menu } from '@redux/slices/home';
-import { debounceSearch } from '@redux/slices/searchSlices';
+import { debounceSearch } from '@redux/slices/search';
 import { RootState } from '@redux/store';
 import SvgIconMenuMobile from '@svgs/IconMenuMobile';
 import SvgSearch from '@svgs/Search';

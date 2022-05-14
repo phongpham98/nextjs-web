@@ -1,0 +1,132 @@
+{
+  "question": "INFJ.ENFP.ISTP.WHAT DO THE LETTERS MEAN?",
+  "each_letter": "Each letter describes a preference for certain personality traits. Here they are:",
+  "criteria": "16 personality test based on 4 criteria",
+  "criteria_detail": {
+    "one": "Natural tendency",
+    "two": "Learn and perceive the world",
+    "three": "Decisions and choices",
+    "four": "How to act"
+  },
+  "different_type": "the different personality types",
+  "took_quiz": "people took this quiz",
+  "quiz_result": {
+    "complete_text": "Test Completed",
+    "you_are": "you are",
+    "card": {
+      "strength_weakness": "Strength & Weakness",
+      "career": "Career",
+      "relationship": "Relationship",
+      "friendship": "Friendship"
+    },
+    "suitableText": "Suitable with"
+  },
+  "explain_title": {
+    "career": "Career for ",
+    "strength_weakness": "Strength & Weakness for ",
+    "friendship": "Friendship for ",
+    "relationship": "Relationship for "
+  },
+  "types": [
+    {
+      "name": "ANALYSTS",
+      "items": [
+        {
+          "name": "INTJ",
+          "characters": ["Innovative", "independent", "insightful"],
+          "image_src": "/intj.png"
+        },
+        {
+          "name": "INTP",
+          "characters": ["Intellectual", "logical", "precise"],
+          "image_src": "/intp.png"
+        },
+        {
+          "name": "ENTJ",
+          "characters": ["Strategic", "independent", "ambitious"],
+          "image_src": "/entj.png"
+        },
+        {
+          "name": "ENTP",
+          "characters": ["Inventive", "enthusiastic", "strategic"],
+          "image_src": "/entp.png"
+        }
+      ]
+    },
+    {
+      "name": "DIPLOMATS",
+      "items": [
+        {
+          "name": "INFJ",
+          "characters": ["Idealistic", "organized", "compassionate"],
+          "image_src": "/infj.png"
+        },
+        {
+          "name": "INFP",
+          "characters": ["Creative", "sensitive", "caring"],
+          "image_src": "/infp.png"
+        },
+        {
+          "name": "ENFJ",
+          "characters": ["Creative", "spontaneous", "playful"],
+          "image_src": "/enfj.png"
+        },
+        {
+          "name": "ENFP",
+          "characters": ["Enthusiastic", "optimistic", "supportive"],
+          "image_src": "/enfp.png"
+        }
+      ]
+    },
+    {
+      "name": "SENTINELS",
+      "items": [
+        {
+          "name": "ISTJ",
+          "characters": ["Sincere", "responsible", "realistic"],
+          "image_src": "/istj.png"
+        },
+        {
+          "name": "ISFJ",
+          "characters": ["Warm", "pragmatic", "gentle"],
+          "image_src": "/isfj.png"
+        },
+        {
+          "name": "ESTJ",
+          "characters": ["Efficient", "outgoing", "analytical"],
+          "image_src": "/estj.png"
+        },
+        {
+          "name": "ESFJ",
+          "characters": ["Friendly", "practical", "reliable"],
+          "image_src": "/esfj.png"
+        }
+      ]
+    },
+    {
+      "name": "EXPLORERS",
+      "items": [
+        {
+          "name": "ISTP",
+          "characters": ["Logical", "oriented", "reserved"],
+          "image_src": "/istp.png"
+        },
+        {
+          "name": "ISFP",
+          "characters": ["Gentle", "sensitive", "nurturing"],
+          "image_src": "/isfp.png"
+        },
+        {
+          "name": "ESTP",
+          "characters": ["Outging", "realistic", "curious"],
+          "image_src": "/estp.png"
+        },
+        {
+          "name": "ESFP",
+          "characters": ["Tactful", "playful", "spontaneous"],
+          "image_src": "/esfp.png"
+        }
+      ]
+    }
+  ]
+}

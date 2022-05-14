@@ -6,7 +6,7 @@ import SvgChatSquare from '@svgs/ChatSquare';
 import SvgCircleSolid from '@svgs/CircleSolid';
 import SvgShare from '@svgs/Share';
 import ReadMore from '@utils/components/ReadMore';
-import ShareFeedButtons from '@utils/components/ShareFeedButtons';
+import ShareFeedButtons from '@utils/components/share/ShareFeedButtons';
 import { GeneralHeaderMobileContainer, GeneralImage } from '@utils/styled-components/GeneralStyled';
 import { Col, Dropdown, Row } from 'antd';
 import { useTranslation } from 'next-i18next';

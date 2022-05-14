@@ -1,0 +1,57 @@
+{
+  "home": "Home",
+  "personality": "Personality Test",
+  "connected_story": "Connected stories",
+  "social_spots": "Social spots",
+  "news": "news",
+  "news_children": [
+    {
+      "name": "Investor Relations",
+      "link": "investor-relations"
+    },
+    {
+      "name": "Fika in the press",
+      "link": "fika-in-the-press"
+    }
+  ],
+  "blogs": "blogs",
+  "blogs_children": [
+    {
+      "name": "Fika's Blogs",
+      "link": "blogs"
+    },
+    {
+      "name": "CEO Denise Sandquist's Blogs",
+      "link": "ceo-denise-sandquist-blogs"
+    },
+    {
+      "name": "CTO Oscar Xing Luo's Blogs",
+      "link": "cto-oscar-xing-luo-blogs"
+    }
+  ],
+  "event": "events",
+  "about": "About fika",
+  "about_children": [
+    {
+      "name": "Fika Team",
+      "link": "fika-team"
+    },
+    {
+      "name": "Faqs",
+      "link": "faqs"
+    },
+    {
+      "name": "Career",
+      "link": "career"
+    },
+    {
+      "name": "Contact",
+      "link": "contact"
+    },
+    {
+      "name": "Pause or Delete Account",
+      "link": "pause-or-delete-account"
+    }
+  ],
+  "download_app": "Download app"
+}

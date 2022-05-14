@@ -1,16 +1,16 @@
 import parse from 'html-react-parser';
+import { useTranslation } from 'next-i18next';
 import * as React from 'react';
-import { useTranslation } from 'react-i18next';
 import { Container } from './ActivityMobileContentStyled';
 interface IActivityMobileContentProps {
 }
 
 const ActivityMobileContent: React.FunctionComponent<IActivityMobileContentProps> = (props) => {
-	const { t } = useTranslation();
+	const { t } = useTranslation('home');
 	return (
 		<Container>
 			<div>
-				{parse(t('homepage.activity'))}
+				{parse(t('activity'))}
 			</div>
 		</Container>
 	);

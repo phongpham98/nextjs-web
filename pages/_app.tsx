@@ -1,34 +1,24 @@
-import { getCurrentUser } from '@redux/slices/authSlice';
+import MenuMobile from '@components/mobile/menu-mobile/MenuMobile';
+import Footer from '@components/modules/footer/Footer';
+import FooterMobile from '@components/modules/footer/FooterMobile';
+import isMobileDevice from '@helpers/isMobile';
 import { wrapper } from '@redux/store';
 import '@styles/globals.css';
 import { appWithTranslation } from 'next-i18next';
 import type { AppProps } from 'next/app';
-import { useCallback, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import moment from 'moment';
-import Router, { useRouter } from 'next/router';
-import Footer from '@components/modules/footer/Footer';
-import { isMobile } from 'react-device-detect';
-import FooterMobile from '@components/modules/footer/FooterMobile';
+import Head from 'next/head';
+const isMobile = isMobileDevice();
 
 function MyApp({ Component, pageProps }: AppProps) {
-	const dispatch = useDispatch();
-	// const resetWindowScrollPosition = useCallback(() => window.scrollTo(0, 0), []);
-
-	// useEffect(() => {
-	// 	Router.events.on("routeChangeComplete", resetWindowScrollPosition);
-
-	// 	return () => {
-	// 		Router.events.off("routeChangeComplete", resetWindowScrollPosition);
-	// 	};
-	// }, []);
-	useEffect(() => {
-		dispatch(getCurrentUser())
-	}, []);
 	return (
 		<>
-			<Component {...pageProps} />
-			{isMobile ? <FooterMobile /> : <Footer />}
+			<Head>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			</Head>
+			<div id='side-main'>
+				{isMobile ? <MenuMobile /> : null}
+				<Component {...pageProps} />
+			</div>
 		</>
 	)
 }

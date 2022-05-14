@@ -2,7 +2,7 @@ import { colors } from '@configs/globalStyles';
 import SvgLogoNeonHorizontal from '@svgs/LogoNeonHorizontalLowHigh';
 import ConnectionIcons from '@utils/components/ConnectionIcons';
 import * as React from 'react';
-import { AppContainer, AppImage, DownloadArea, DownloadContainer, LogoContainer, QRCodeContainer, QrCodeImage, Title } from './HeaderStyled';
+import { AppContainer, AppImage, DownloadArea, DownloadHomeContainer, LogoContainer, QRCodeContainer, QrCodeImage, Title } from './HeaderStyled';
 
 interface IHeaderDesktopProps {
 }
@@ -12,7 +12,7 @@ const HeaderDesktop: React.FunctionComponent<IHeaderDesktopProps> = (props) => {
 		<React.Fragment>
 			<img width='100%' src={'/banner-homepage.jpg'} alt="download fika" />
 			{/* <RenderSmoothImage width='1920' height='600' src={'/banner-homepage.jpg'} alt="fikaconnects" /> */}
-			{/* <DownloadContainer>
+			<DownloadHomeContainer>
 				<LogoContainer>
 					<SvgLogoNeonHorizontal />
 				</LogoContainer>
@@ -37,7 +37,7 @@ const HeaderDesktop: React.FunctionComponent<IHeaderDesktopProps> = (props) => {
 					</AppContainer>
 				</DownloadArea>
 				<ConnectionIcons backgroundColor={colors.primary} />
-			</DownloadContainer> */}
+			</DownloadHomeContainer>
 		</React.Fragment>
 	);
 };

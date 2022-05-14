@@ -5,9 +5,9 @@ import { RootState } from '@redux/store';
 import SvgLogoNeonHorizontal from '@svgs/LogoNeonHorizontal';
 import ConnectionIcons from '@utils/components/ConnectionIcons';
 import HrLine from '@utils/components/HrLine';
+import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import React, { useEffect } from 'react';
-import { useTranslation, withTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { CheckLocation, ConnectionText, CopyRight, DownloadImage, FooterAddress, FooterAddressDetail, FooterConnection, FooterContainer, FooterContent, ImageLogo, LatestNew, PhoneUs, PressContent, PressDetail, PressTitle, VrLine } from './FooterStyled';
 

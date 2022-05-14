@@ -1,0 +1,10 @@
+{
+  "part_text": "Will describe five personality <br /> aspects that, when combined, define the personality type:",
+  "trait": "Mind, Energy, Nature, Tactics and Identity in social life",
+  "option": {
+    "disagree": "Disagree",
+    "agree": "Agree",
+    "neutral": "Neutral",
+    "click_to_choose": "Slide to Answer"
+  }
+}

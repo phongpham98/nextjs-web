@@ -1,0 +1,61 @@
+{
+  "home": "Trang chủ",
+  "personality": "Quiz tính cách",
+  "connected_story": "Câu chuyện kết nối",
+  "social_spots": "Địa điểm gặp gỡ",
+  "news": "Tin tức",
+  "news_children": [
+    {
+      "name": "Đầu tư và hợp tác",
+      "link": "dau-tu-va-hop-tac"
+    },
+    {
+      "name": "tin tức về fika",
+      "link": "tin-tuc-ve-fika"
+    }
+  ],
+  "blogs": "Blog",
+  "blogs_children": [
+    {
+      "name": "Fika's Blogs",
+      "link": "blog"
+    },
+    {
+      "name": "CEO Denise Sandquist's Blog",
+      "link": "ceo-denise-sandquist-blogs"
+    },
+    {
+      "name": "CTO Oscar Xing Luo's Blog",
+      "link": "cto-oscar-xing-luo-blogs"
+    }
+  ],
+  "event": "Sự kiện",
+  "about": "Về fika",
+  "about_children": [
+    {
+      "name": "Fika Team",
+      "link": "fika-team"
+    },
+    {
+      "name": "Hỏi-đáp",
+      "link": "hoi-dap"
+    },
+    {
+      "name": "Tuyển dụng",
+      "link": "tuyen-dung"
+    },
+    {
+      "name": "Liên hệ",
+      "link": "lien-he"
+    },
+    {
+      "name": "Chính sách bảo mật",
+      "link": "chinh-sach-bao-mat"
+    },
+    {
+      "name": "Vô hiệu hóa tài khoản",
+      "link": "vo-hieu-hoa-tai-khoan"
+    }
+  ],
+  "download_app": "Tải ứng dụng"
+}

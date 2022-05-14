@@ -3,7 +3,7 @@ import * as HomeApi from "./_api/home";
 import * as BlogApi from "./_api/blog";
 import * as NewsApi from "./_api/news";
 import * as PressApi from "./_api/press";
-// import * as QuizApi from "./_api/quiz";
+import * as QuizApi from "./_api/quiz";
 // import * as ConnectedStoryApi from './_api/loveStory';
 // import * as DatingSpotApi from './_api/datingSpot';
 // import * as QaApi from './_api/qa';
@@ -23,7 +23,7 @@ export {
   NewsApi,
   BlogApi,
   PressApi,
-  // QuizApi,
+  QuizApi,
   // DatingSpotApi,
   // ConnectedStoryApi,
   // QaApi,

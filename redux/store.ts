@@ -12,12 +12,13 @@ import thunk from "redux-thunk";
 import { homeReducer } from "./slices/home";
 import { authReducer } from "./slices/authSlice";
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
-import thunkMiddleware from 'redux-thunk';
+import thunkMiddleware from "redux-thunk";
 import { matchedReducer } from "./slices/matched";
 import { discoverReducer } from "./slices/discoverBlogs";
 import { instagramReducer } from "./slices/instagram";
 import { pressFikaReducer } from "./slices/press";
-import { searchReducer } from "./slices/searchSlices";
+import { searchReducer } from "./slices/search";
+import { quizReducer } from "./slices/quiz";
 const createNoopStorage = () => {
   return {
     getItem(_key: any) {
@@ -44,7 +45,8 @@ const rootReducer = combineReducers({
   discover: discoverReducer,
   instagram: instagramReducer,
   press: pressFikaReducer,
-  search: searchReducer
+  search: searchReducer,
+  quiz: quizReducer,
 });
 
 const persistedReducer = persistReducer(

@@ -9,6 +9,7 @@ export const StickyDownloadContainer = styled.div`
   border-radius: 10px;
   overflow: hidden;
   position: sticky;
+  position: -webkit-sticky;
   top: 30%;
   z-index: 100;
   background-color: white;

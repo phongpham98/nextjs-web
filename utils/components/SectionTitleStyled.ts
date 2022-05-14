@@ -1,5 +1,5 @@
 import { device } from "@configs/screensSizes";
-import { GeneralTitleH2 } from "@utils/styled-components/GeneralStyled";
+import { TitleH2 } from "@utils/styled-components/GeneralTitleStyled";
 import styled from "styled-components";
 
 interface TitleProps {
@@ -26,7 +26,7 @@ export const SectionTitleContainer = styled.div<TitleProps>`
   }
 `;
 
-export const TitleText = styled(GeneralTitleH2)`
+export const TitleText = styled(TitleH2)`
   color: black;
   display: inline-flex;
   white-space: pre-wrap;
