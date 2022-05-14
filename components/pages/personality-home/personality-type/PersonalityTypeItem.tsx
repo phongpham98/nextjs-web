@@ -13,7 +13,7 @@ interface PersonalityTypeItemProps {
 const PersonalityTypeItem = ({ item, isSlider = false }: PersonalityTypeItemProps) => {
 	const { t } = useTranslation('routes')
 	return (
-		<Link href={`${t('personality')}/${item.name}`}>
+		<Link href={`/${t('personality')}/${item.name}`}>
 			<a>
 				<TypeItemContainer>
 					<AspectRatio>

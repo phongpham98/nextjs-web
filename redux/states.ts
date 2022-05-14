@@ -1,4 +1,11 @@
-import { AssignResult, InstaPost, PressMagazine, QuizItemModel, SearchModel, UserResult } from "@interfaces/model";
+import {
+  AssignResult,
+  InstaPost,
+  PressMagazine,
+  QuizItemModel,
+  SearchModel,
+  UserResult,
+} from "@interfaces/model";
 import { LanguageType, PostModel, PostRequest } from "@interfaces/posts";
 
 interface BaseState {
@@ -76,16 +83,20 @@ export interface SearchState extends BaseState {
 }
 
 export interface QuizPart {
-	current_question_number: number;
-	current_part_number: number;
-	next_part_number: number;
-  }
+  current_question_number: number;
+  current_part_number: number;
+  next_part_number: number;
+}
 
 export interface QuizState extends BaseState {
-	questions: QuizItemModel[];
-	current_part: QuizItemModel | null;
-	assign_result: AssignResult[];
-	user_results: UserResult[];
-	process: boolean;
-	part: QuizPart;
-  }
+  questions: QuizItemModel[];
+  current_part: QuizItemModel | null;
+  assign_result: AssignResult[];
+  user_results: UserResult[];
+  process: boolean;
+  part: QuizPart;
+}
+
+export interface PersonalityTypeState extends BaseState {
+  content: AssignResult | null;
+}

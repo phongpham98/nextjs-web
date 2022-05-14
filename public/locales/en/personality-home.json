@@ -10,23 +10,6 @@
   },
   "different_type": "the different personality types",
   "took_quiz": "people took this quiz",
-  "quiz_result": {
-    "complete_text": "Test Completed",
-    "you_are": "you are",
-    "card": {
-      "strength_weakness": "Strength & Weakness",
-      "career": "Career",
-      "relationship": "Relationship",
-      "friendship": "Friendship"
-    },
-    "suitableText": "Suitable with"
-  },
-  "explain_title": {
-    "career": "Career for ",
-    "strength_weakness": "Strength & Weakness for ",
-    "friendship": "Friendship for ",
-    "relationship": "Relationship for "
-  },
   "types": [
     {
       "name": "ANALYSTS",

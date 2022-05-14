@@ -6,7 +6,7 @@ import React from 'react';
 import PersonalityTypeItem from '../personality-type/PersonalityTypeItem';
 import { DifferenceTitle, PersonalityDifferenceContainer } from './PersonalityDifferenceStyled';
 
-interface PersonalityType {
+export interface PersonalityType {
 	name: string
 	items: PersonalityTypeItemModel[]
 }

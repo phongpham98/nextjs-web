@@ -1,3 +1,4 @@
+import { personalityTypeReducer } from "./slices/personalityTypeSlice";
 import {
   Action,
   combineReducers,
@@ -47,6 +48,7 @@ const rootReducer = combineReducers({
   press: pressFikaReducer,
   search: searchReducer,
   quiz: quizReducer,
+  personalityType: personalityTypeReducer,
 });
 
 const persistedReducer = persistReducer(

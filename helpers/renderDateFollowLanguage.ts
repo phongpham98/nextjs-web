@@ -1,4 +1,3 @@
-import i18next from "i18next";
 import moment from "moment";
 import Router from "next/router";
 import "moment/locale/es-us";

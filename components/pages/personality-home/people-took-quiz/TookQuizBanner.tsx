@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { TookQuizContainer, TookQuizNumber, TookQuizText, TookQuizTextContainer } from './TookQuizBannerStyled';
 import LazyLoad from 'react-lazyload';
 const TookQuizBanner = () => {
-	const { t } = useTranslation(['button', 'personality-home']);
+	const { t } = useTranslation(['button', 'personality-home', 'routes']);
 	return (
 		<TookQuizContainer>
 			<GeneralContentWrapper>
@@ -21,7 +21,7 @@ const TookQuizBanner = () => {
 								{t("took_quiz", { ns: 'personality-home' })}
 							</TookQuizText>
 							<div>
-								<Link href={'/personality/quiz/free-personality-test'}>
+								<Link href={`/${t('personality', { ns: 'routes' })}/quiz/${t('free_personality_test', {ns: 'routes'})}`}>
 									<a>
 										<FikaButton name={t("do_quiz")} />
 									</a>

@@ -18,11 +18,20 @@ module.exports = {
 				locale: false
 			},
 			{
+				source: '/en/personality/:type',
+				destination: '/en/quiz-tinh-cach/:type',
+				locale: false
+			},
+			{
+				source: '/en/personality/result/:id',
+				destination: '/en/quiz-tinh-cach/result/:id',
+				locale: false
+			},
+			{
 				source: '/en/personality/quiz/free-personality-test',
 				destination: '/en/quiz-tinh-cach/quiz/lam-trac-nghiem-mien-phi',
 				locale: false
-			}
-
+			},
 		]
 	},
 	async redirects() {

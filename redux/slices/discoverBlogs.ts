@@ -5,7 +5,6 @@ import { CategoryRequest } from "@interfaces/request";
 import { DiscoverState } from "@redux/states";
 import { RootState } from "@redux/store";
 import { AnyAction, createSlice } from "@reduxjs/toolkit";
-import i18next from "i18next";
 import { ThunkDispatch } from "redux-thunk";
 
 const initialState: DiscoverState = {

@@ -76,7 +76,7 @@ const Criteria: React.FunctionComponent<ICriteriaProps> = (props) => {
 				</Col>
 			</Row>
 			<DoTestBtnContainer>
-				<Link href={`/${t('personality', { ns: 'routes' })}/quiz/free-personality-test`} >
+				<Link href={`/${t('personality', { ns: 'routes' })}/quiz/${t('free_personality_test', {ns: 'routes'})}`} >
 					<a>
 						<FikaButton name={t("do_quiz", { ns: 'button' })} />
 					</a>

@@ -1,7 +1,7 @@
 import { HOST } from "@configs/api";
 import { ApiListResponse } from "@interfaces/model";
 import { PostModel, PostRequest } from "@interfaces/posts";
-import i18next from "i18next";
+import Router from "next/router";
 import qs from "qs";
 // import {
 //   AnotherPostRequest,
@@ -32,7 +32,7 @@ export const fetchBlogs = (query: PostRequest) => {
       limit,
       page,
       deactivated,
-      language: i18next.language,
+      language: Router.locale,
       highlight,
       ...quer,
     },
@@ -46,7 +46,7 @@ export const fetchBlogs = (query: PostRequest) => {
 
 export const getchBlogDetail = (link?: string, id?: string) => {
   const q = qs.stringify(
-    { id, link, language: i18next.language },
+    { id, link, language: Router.locale },
     {
       indices: false,
       skipNulls: true,
@@ -58,7 +58,7 @@ export const getchBlogDetail = (link?: string, id?: string) => {
 // export const fetchNextPost = (query: AnotherPostRequest) => {
 //   const { id, public_date } = query;
 //   const q = qs.stringify(
-//     { id, public_date, language: i18next.language },
+//     { id, public_date, language: Router.locale },
 //     {
 //       indices: false,
 //       skipNulls: true,
@@ -70,7 +70,7 @@ export const getchBlogDetail = (link?: string, id?: string) => {
 // export const fetchPrevPost = (query: AnotherPostRequest) => {
 //   const { id, public_date } = query;
 //   const q = qs.stringify(
-//     { id, public_date, language: i18next.language },
+//     { id, public_date, language: Router.locale },
 //     {
 //       indices: false,
 //       skipNulls: true,

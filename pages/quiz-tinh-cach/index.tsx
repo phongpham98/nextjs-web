@@ -1,5 +1,7 @@
+import LayoutDesktop from '@components/layout/LayoutDesktop';
 import Footer from '@components/modules/footer/Footer';
 import FooterMobile from '@components/modules/footer/FooterMobile';
+import NavBarDesktop from '@components/navbar/nav-desktop/NavbarDesktop';
 import isMobileDevice from '@helpers/isMobile';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -24,8 +26,9 @@ const PersonalityHome = (props: Props) => {
 				<FooterMobile />
 			</React.Fragment> :
 				<React.Fragment>
-					<Desktop />
-					<Footer />
+					<LayoutDesktop>
+						<Desktop />
+					</LayoutDesktop>
 				</React.Fragment>
 			}
 
@@ -36,7 +39,7 @@ const PersonalityHome = (props: Props) => {
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
 	return {
 		props: {
-			...(await serverSideTranslations(locale ? locale : 'vi', ["title", "personality-home", "button", 'footer', 'common', 'menu', 'routes'])),
+			...(await serverSideTranslations(locale ? locale : 'vi', ["personality-home", "common", "footer", "title", "menu", "button", "routes"])),
 			// Will be passed to the page component as props
 		},
 		revalidate: 1

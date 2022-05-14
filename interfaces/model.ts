@@ -132,3 +132,9 @@ export interface AssignResult {
   quote: string;
   image_url?: string;
 }
+
+export interface TraitCardModel {
+	suitable_list: CareerTagsModel[] | string[];
+	text: string;
+  }
+  

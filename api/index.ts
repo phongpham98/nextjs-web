@@ -14,7 +14,7 @@ import * as QuizApi from "./_api/quiz";
 // import * as JobApi from './_api/job';
 // import * as SendStoryApi from './_api/sendStory';
 // import * as CommentApi from './_api/comment';
-// import * as PersonalityApi from './_api/personality';
+import * as PersonalityApi from './_api/personality';
 import * as SearchApi from './_api/search';
 // import * as TrackViewsApi from './_api/trackViews';
 // import * as EventApi from './_api/event';
@@ -34,7 +34,7 @@ export {
   // JobApi,
   // SendStoryApi,
   // CommentApi,
-  // PersonalityApi,
+  PersonalityApi,
   SearchApi,
   // TrackViewsApi,
   // EventApi

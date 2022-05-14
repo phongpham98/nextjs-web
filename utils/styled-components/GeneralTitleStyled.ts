@@ -43,6 +43,13 @@ export const TitleH6 = styled.h2`
   margin: 0;
 `;
 
+export const CommonTitleH1 = styled.h1`
+  color: ${colors.primary};
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+`
+
 export const CommonTitleH2 = styled.h2`
   color: ${colors.primary};
   text-transform: uppercase;

@@ -13,7 +13,6 @@ interface IPQuizMoibleProps {
 
 const PQuizMoible: React.FunctionComponent<IPQuizMoibleProps> = (props) => {
 	const dispatch = useDispatch();
-	const { t } = useTranslation();
 	const { questions } = useSelector((state: RootState) => state.quiz);
 	React.useEffect(() => {
 		let oldId = sessionStorage.getItem("session_id");

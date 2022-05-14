@@ -1,0 +1,21 @@
+{
+  "title": "Take our free <br/> Personality test",
+  "sub_title": "Better understand yourself and discover who you <br/> click with by taking our 5-minute personality test",
+  "quiz_result": {
+    "complete_text": "Test Completed",
+    "you_are": "you are",
+    "card": {
+      "strength_weakness": "Strength & Weakness",
+      "career": "Career",
+      "relationship": "Relationship",
+      "friendship": "Friendship"
+    },
+    "suitableText": "Suitable with"
+  },
+  "explain_title": {
+    "career": "Career for ",
+    "strength_weakness": "Strength & Weakness for ",
+    "friendship": "Friendship for ",
+    "relationship": "Relationship for "
+  }
+}

@@ -1,8 +1,8 @@
+import isMobileDevice from '@helpers/isMobile';
 import { sendAnswer } from '@redux/slices/quiz';
 import $ from 'jquery';
 import * as React from 'react';
 import { useDispatch } from 'react-redux';
-import { useMediaQuery } from 'react-responsive';
 import { SliderBarContainer, SliderInput } from './SliderBarStyled';
 interface ISliderBarProps {
 	nextQuestion: () => void;
@@ -13,10 +13,9 @@ interface ISliderBarProps {
 const SliderBar: React.FunctionComponent<ISliderBarProps> = ({ nextQuestion, question_id, disabled }) => {
 	const [value, setValue] = React.useState<number>(0);
 	const divRef = React.useRef<HTMLInputElement>(null);
-	const mobile = useMediaQuery({ query: '(max-width: 767px)' });
+	const mobile = isMobileDevice();
 	const handleChangeValue = (e: any) => {
 		setValue(e.target.value)
-		// console.log('e', e.target.value)
 	}
 
 	const dispatch = useDispatch();
@@ -37,7 +36,7 @@ const SliderBar: React.FunctionComponent<ISliderBarProps> = ({ nextQuestion, que
 
 	return (
 		<SliderBarContainer>
-			<label style={{display: 'none'}} htmlFor="slider-bar">aaa</label>
+			<label style={{ display: 'none' }} htmlFor="slider-bar">aaa</label>
 			<SliderInput
 				disabled={disabled}
 				type="range"
@@ -51,7 +50,7 @@ const SliderBar: React.FunctionComponent<ISliderBarProps> = ({ nextQuestion, que
 				onChange={handleChangeValue}
 				onMouseUp={onChooseAnswer}
 				onTouchEnd={onChooseAnswer}
-				// onCompositionEnd={onChooseAnswer}
+			// onCompositionEnd={onChooseAnswer}
 			/>
 		</SliderBarContainer>
 	);

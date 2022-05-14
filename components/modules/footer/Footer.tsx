@@ -14,7 +14,7 @@ import { CheckLocation, ConnectionText, CopyRight, DownloadImage, FooterAddress,
 const Footer = () => {
 	const { magazines } = useSelector((state: RootState) => state.press);
 	const dispatch = useDispatch();
-	const { t } = useTranslation('footer');
+	const { t } = useTranslation(['footer', 'title']);
 	useEffect(() => {
 		dispatch(getPresses());
 		// eslint-disable-next-line react-hooks/exhaustive-deps
@@ -41,7 +41,9 @@ const Footer = () => {
 				<LatestNew>
 					<Link href={`/fika-in-the-press`}>
 						<a>
-							<PressTitle>{t('header_title.press_fika')}</PressTitle>
+							<PressTitle>{t('press_fika', {
+								ns: 'title'
+							})}</PressTitle>
 						</a>
 					</Link>
 					{magazines?.slice(0, 2)?.map((item) => {

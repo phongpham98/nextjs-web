@@ -44,7 +44,7 @@ const IndexPage = ({ }: InferGetStaticPropsType<typeof getStaticProps>) => {
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
 	return {
 		props: {
-			...(await serverSideTranslations(locale ? locale : 'vi', ["title", "home", "button", 'footer', 'common', 'menu', 'routes'])),
+			...(await serverSideTranslations(locale ? locale : 'vi', ["home", "common", "footer", "title", "menu", "button", "routes"])),
 			// Will be passed to the page component as props
 		},
 		revalidate: 1

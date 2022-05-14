@@ -10,23 +10,6 @@
   },
   "different_type": "các loại tính cách khác nhau",
   "took_quiz": "người đã làm trắc nghiệm",
-  "quiz_result": {
-    "complete_text": "Hoàn thành trắc nghiệm",
-    "you_are": "bạn là",
-    "card": {
-      "strength_weakness": "Điểm mạnh và điểm yếu",
-      "career": "Nghề nghiệp",
-      "relationship": "Mối quan hệ",
-      "friendship": "Tình bạn"
-    },
-    "suitableText": "Phù hợp với"
-  },
-  "explain_title": {
-    "career": "Nghề nghiệp của ",
-    "strength_weakness": "Điểm mạnh và điểm yếu của ",
-    "friendship": "Tình bạn của ",
-    "relationship": "Mối quan hệ của "
-  },
   "types": [
     {
       "name": "Nhóm phân tích",

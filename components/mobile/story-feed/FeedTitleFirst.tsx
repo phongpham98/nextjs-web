@@ -23,7 +23,7 @@ interface IFeedTitleFirstProps {
 
 const FeedTitleFirst: React.FunctionComponent<IFeedTitleFirstProps> = ({ onClick, story, url }) => {
 	const router = useRouter();
-	const { t } = useTranslation();
+	const { t } = useTranslation('title');
 	return (
 		<FeedTitleFirstContainer>
 			<Link style={{ color: 'black' }} href={url} >
@@ -77,7 +77,7 @@ const FeedTitleFirst: React.FunctionComponent<IFeedTitleFirstProps> = ({ onClick
 								</CommentLikeContainer>
 								<Dropdown trigger={["click"]} overlay={<ShareFeedButtons url={`${domain}${url}`} title={story.title ? story.title : story.name} />} placement="topRight">
 									<Share>
-										<SvgShare /> <span>{t("header_title.share")}</span>
+										<SvgShare /> <span>{t("share")}</span>
 
 									</Share>
 								</Dropdown>

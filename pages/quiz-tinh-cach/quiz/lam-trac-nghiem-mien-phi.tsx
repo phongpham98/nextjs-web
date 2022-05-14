@@ -1,3 +1,4 @@
+import LayoutDesktop from '@components/layout/LayoutDesktop'
 import Footer from '@components/modules/footer/Footer'
 import FooterMobile from '@components/modules/footer/FooterMobile'
 import isMobileDevice from '@helpers/isMobile'
@@ -24,8 +25,9 @@ const FreePersonalityQuiz = (props: Props) => {
 				<FooterMobile />
 			</React.Fragment> :
 				<React.Fragment>
-					<Desktop />
-					<Footer />
+					<LayoutDesktop>
+						<Desktop />
+					</LayoutDesktop>
 				</React.Fragment>
 			}
 
@@ -36,7 +38,7 @@ const FreePersonalityQuiz = (props: Props) => {
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
 	return {
 		props: {
-			...(await serverSideTranslations(locale ? locale : 'vi', ["title", "button", 'footer', 'common', 'menu', 'routes', 'personality-quiz'])),
+			...(await serverSideTranslations(locale ? locale : 'vi', ['personality-quiz', "common", "footer", "title", "menu", "button", "routes"])),
 			// Will be passed to the page component as props
 		},
 		revalidate: 1

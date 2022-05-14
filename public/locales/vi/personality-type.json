@@ -1,0 +1,21 @@
+{
+  "title": "Thử ngay Quiz Tính Cách của Fika! <br/> Hoàn toàn miễn phí💓",
+  "sub_title": "Chỉ 5 phút để HIỂU THÊM về chính bạn<br/> và tìm được người TƯƠNG HỢP nhất nhé! 🌟",
+  "quiz_result": {
+    "complete_text": "Hoàn thành trắc nghiệm",
+    "you_are": "bạn là",
+    "card": {
+      "strength_weakness": "Điểm mạnh và điểm yếu",
+      "career": "Nghề nghiệp",
+      "relationship": "Mối quan hệ",
+      "friendship": "Tình bạn"
+    },
+    "suitableText": "Phù hợp với"
+  },
+  "explain_title": {
+    "career": "Nghề nghiệp của ",
+    "strength_weakness": "Điểm mạnh và điểm yếu của ",
+    "friendship": "Tình bạn của ",
+    "relationship": "Mối quan hệ của "
+  }
+}
