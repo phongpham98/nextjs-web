@@ -137,11 +137,16 @@ export const NewTagText = styled.div`
 `;
 
 export const DivLanguage = styled.div`
+	& .ant-select{
+		display: flex;
+	}
+
   & .ant-select-selector {
     padding-left: 0 !important;
   }
 
   & .ant-select-arrow {
+    height: 100%;
     top: 20% !important;
     right: 0px;
   }

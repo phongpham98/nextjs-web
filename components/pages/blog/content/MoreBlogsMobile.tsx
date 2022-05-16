@@ -34,7 +34,6 @@ const MoreBlogsMobile: React.FunctionComponent<IMoreBlogsMobileProps> = (props) 
 						<React.Fragment key={blog.id}>
 							<FeedMobile 
 							url={`/blog/` + blog.link}
-							hasComment={true}
 							 blog={blog} />
 							<HrLine margin="0" />
 						</React.Fragment>

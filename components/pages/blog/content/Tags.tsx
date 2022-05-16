@@ -2,7 +2,7 @@ import { clickTagEvent } from '@helpers/customGTM';
 import { Tag } from '@interfaces/posts';
 import { useRouter } from 'next/router';
 import React from 'react';
-import { TagContainer, TagContent, TagItem, TagTitle } from './TagStyled';
+import { TagContainer, TagContent, TagItem, TagTitleH3 } from './TagStyled';
 export interface TagsProps {
 	tags: Tag[];
 }
@@ -27,7 +27,7 @@ const Tags = ({ tags }: TagsProps) => {
 
 	return (
 		<TagContainer>
-			<TagTitle>Tags</TagTitle>
+			<TagTitleH3>Tags</TagTitleH3>
 			<TagContent>
 				{
 					tags.map(tag => {

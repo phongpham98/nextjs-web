@@ -5,16 +5,14 @@ import { GeneralImageWrapper } from '@utils/styled-components/GeneralStyled';
 import { Col, Row } from 'antd';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import React from 'react';
-import { LastPostContainer, PostContent, PostDate, PostImageContainer, PostItemDiv, PostItemTitle, LatestPostTitleH3 } from './LatestPostsStyled';
+import { LastPostContainer, LatestPostTitleH3, PostContent, PostDate, PostImageContainer, PostItemDiv, PostItemTitle } from './LatestPostsStyled';
 export interface LatestPostsProps {
 	posts: any[];
 	type?: PostType;
 }
 
 const LatestPosts = ({ posts, type }: LatestPostsProps) => {
-	const router = useRouter();
 	const { t } = useTranslation(['routes', 'title']);
 
 	const postType = (type: any) => {

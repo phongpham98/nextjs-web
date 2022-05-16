@@ -40,10 +40,13 @@ export const InputContainer = styled.div`
   & .ant-select {
     width: 100%;
     border-bottom: 1px solid #babac0;
-	margin-bottom: 0.3rem;
+    margin-bottom: 0.3rem;
     &:focus {
       border-bottom: 1px solid #6666ff;
     }
+  }
+  & .ant-select-selection-search-input {
+    color: white;
   }
 `;
 

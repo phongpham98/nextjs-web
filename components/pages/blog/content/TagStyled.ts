@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const TagContainer = styled.div``;
 
-export const TagTitle = styled.div`
+export const TagTitleH3 = styled.h3`
   font-family: "Playfair Display", serif;
   font-weight: 500;
   font-size: 20px;

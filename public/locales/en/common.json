@@ -1,3 +1,15 @@
 {
-	"download_fika": "EXPERIENCE THE BEST DATING APP, CLICK TO DOWNLOAD FIKA"
+  "download_fika": "EXPERIENCE THE BEST DATING APP, CLICK TO DOWNLOAD FIKA",
+  "comment": {
+    "save_name_email": "Save my name and email in this browser for the next time I comment.",
+    "place_holder": {
+      "name": "NAME",
+      "email": "EMAIL",
+      "comment": "COMMENT"
+    },
+    "title": "Comments",
+    "post_comment": "Post a comment",
+    "next": "Next Post",
+    "prev": "Prev Post"
+  }
 }

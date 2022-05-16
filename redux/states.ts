@@ -1,5 +1,6 @@
 import {
   AssignResult,
+  CommentModel,
   InstaPost,
   PressMagazine,
   QuizItemModel,
@@ -123,3 +124,11 @@ export interface NewsState extends BaseState {
   nextBlog?: PostModel;
   prevBlog?: PostModel;
 }
+
+export interface CommentState extends BaseState {
+	comments: CommentModel[];
+	total: number;
+	isReply: boolean;
+	commentId: string;
+	commentReplied: CommentModel | null;
+  }

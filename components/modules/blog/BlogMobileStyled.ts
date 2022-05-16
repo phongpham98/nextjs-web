@@ -2,7 +2,7 @@ import { device } from "@configs/screensSizes";
 import { GeneralPaddingMobile } from "@utils/styled-components/GeneralStyled";
 import styled from "styled-components";
 
-export const Title = styled.div`
+export const BlogTitleH1 = styled.h1`
   width: 60%;
   text-transform: uppercase;
   font-family: 'Playfair Display', serif;
@@ -39,14 +39,14 @@ export const RelationShipTitle = styled.div`
 export const HeaderContent = styled(GeneralPaddingMobile)`
   position: absolute;
   width: 100%;
-  height: 50%;
+  height: 60%;
   bottom: 0;
   left: 0;
   padding: 0 1.5rem;
 `;
 
-export const SubHeader = styled.div`
-  font-size: 0.55rem;
+export const SubHeaderP = styled.div`
+  font-size: 0.7rem;
   color: #61666d;
   width: 90%;
   @media ${device.mobileM} {

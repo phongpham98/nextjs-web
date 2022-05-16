@@ -8,28 +8,28 @@ import { FeedMobileContainer, FeedMobileContent, ImageFeedMobile } from './FeedM
 interface IFeedMobileProps {
 	blog: any;
 	showDate?: boolean;
-	hasComment?: boolean;
-	onClick?: () => void;
 	url: string;
 }
 
-const FeedMobile: React.FunctionComponent<IFeedMobileProps> = ({ blog, showDate, hasComment, onClick, url }) => {
+const FeedMobile: React.FunctionComponent<IFeedMobileProps> = ({ blog, showDate, url }) => {
 	return (
 		<FeedMobileContainer>
 			<Link href={url} >
 				<a>
-					<ImageFeedMobile onClick={onClick}>
-							<GeneralImageWrapper>
-								<RenderSmoothImage width='500' height='500' src={blog.thumbnail !== '' ? blog.thumbnail: '/16banner.jpg'} alt={blog.title} />
-							</GeneralImageWrapper>
+					<ImageFeedMobile >
+						<GeneralImageWrapper>
+							<RenderSmoothImage width='500' height='500' src={blog.thumbnail !== '' ? blog.thumbnail : '/16banner.jpg'} alt={blog.title} />
+						</GeneralImageWrapper>
 					</ImageFeedMobile>
 				</a>
 			</Link>
 			<FeedMobileContent>
 				<FeedContent
-					onClick={onClick}
 					url={url}
-					hasComment={hasComment} bigTitle={true} story={blog} showDate={showDate} />
+					bigTitle={true}
+					story={blog}
+					showDate={showDate}
+				/>
 			</FeedMobileContent>
 		</FeedMobileContainer>
 	);

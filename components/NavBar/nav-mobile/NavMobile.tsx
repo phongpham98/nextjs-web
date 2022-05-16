@@ -11,6 +11,7 @@ import SvgSearch from '@svgs/Search';
 import { LoadingContainer } from '@utils/components/SearchResultsStyled';
 import { LoadingTag, TagItem } from '@utils/components/TagStyled';
 import { Select } from 'antd';
+import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import * as React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -31,6 +32,7 @@ const NavMobile: React.FunctionComponent<INavMobileProps> = (props) => {
 	const [searchTerm, setSearchTerm] = React.useState<string>("");
 	const debouncedSearchTerm: string = useDebounce<string>(searchTerm, 500);
 	const { results, loading, searchValue } = useSelector((state: RootState) => state.search);
+	const {t} = useTranslation('routes');
 
 	React.useEffect(() => {
 		setCurrentType(pathname.split("/")[2])
@@ -93,7 +95,7 @@ const NavMobile: React.FunctionComponent<INavMobileProps> = (props) => {
 							onKeyDown={(e: any) => {
 								if (e.key === "Enter") {
 									router.push({
-										pathname: `/search`,
+										pathname: `/${t('search')}`,
 										search: `?value=${searchValue}`
 									})
 								}
@@ -111,7 +113,7 @@ const NavMobile: React.FunctionComponent<INavMobileProps> = (props) => {
 							</Select.Option> : results.map(item => (
 								<Select.Option value={item.id} key={item.id}>
 									<div onClick={() => {
-										router.push(`/${item.search_type === "news" ? 'news/detail' : item.search_type === "story" ? "love-stories" : "blog"}/${item.link}`)
+										router.push(`/${item.search_type === "news" ? `${t('news')}/${t('detail')}` : item.search_type === "story" ? `${t('connected_story')}` : "blog"}/${item.link}`)
 
 									}}>{item.title}</div>
 								</Select.Option>
@@ -120,7 +122,7 @@ const NavMobile: React.FunctionComponent<INavMobileProps> = (props) => {
 					</InputContainer>
 					<SearchIcon onClick={() => {
 						router.push({
-							pathname: `/search`,
+							pathname: `/${t('search')}`,
 							search: `?value=${searchValue}`
 						})
 					}}>
@@ -158,7 +160,7 @@ const NavMobile: React.FunctionComponent<INavMobileProps> = (props) => {
 								</Select.Option> : results.map(item => (
 									<Select.Option value={item.id} key={item.id}>
 										<div onClick={() => {
-											router.push(`/{item.search_type === "news" ? 'news/detail' : item.search_type === "story" ? "love-stories" : "blog"}/${item.link}`)
+											router.push(`/${item.search_type === "news" ? `${t('news')}/${t('detail')}` : item.search_type === "story" ? `${t('connected_story')}` : "blog"}/${item.link}`)
 										}}>{item.title}</div>
 									</Select.Option>
 								))}
@@ -167,7 +169,7 @@ const NavMobile: React.FunctionComponent<INavMobileProps> = (props) => {
 						</InputContainer>
 						<SearchIcon onClick={() => {
 							router.push({
-								pathname: `/search`,
+								pathname: `/${t('search')}`,
 								search: `?value=${searchValue}`
 							})
 						}}>

@@ -1,7 +1,7 @@
 import { LoadingOutlined } from '@ant-design/icons';
+import { RootState } from '@redux/store';
 import * as React from 'react';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../ultils/store';
 import { LoadingContainer, ResultItemContainer, SearchResultsContainer } from './SearchResultsStyled';
 
 interface ISearchResultsProps {

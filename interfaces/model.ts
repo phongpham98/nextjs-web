@@ -64,57 +64,57 @@ export interface QuizItemModel {
 export type Trait = "Mind" | "Energy" | "Nature" | "Tactics";
 
 export interface QuizQuestion {
-	question_id: string;
-	question: string;
-	question_number: number;
-	answered?: number;
-	image_url: string;
-  }
-  
-  export interface QuizItemModel {
-	type: string;
-	type_id: string;
-	part_number: number;
-	items: QuizQuestion[];
-  }
-  
-  export interface QuizResultItem {
-	key: string;
-	key_name: string;
-	type: string;
-	value: number;
-  }
+  question_id: string;
+  question: string;
+  question_number: number;
+  answered?: number;
+  image_url: string;
+}
+
+export interface QuizItemModel {
+  type: string;
+  type_id: string;
+  part_number: number;
+  items: QuizQuestion[];
+}
+
+export interface QuizResultItem {
+  key: string;
+  key_name: string;
+  type: string;
+  value: number;
+}
 
 export interface UserResult {
-	type: Trait;
-	type_name: string;
-	type_key: string;
-	results: QuizResultItem[];
-  }
-  
-  interface InsightItem {
-	title: {
-	  en: string;
-	  vi: string;
-	};
-	description: {
-	  en: string;
-	  vi: string;
-	};
-  }
+  type: Trait;
+  type_name: string;
+  type_key: string;
+  results: QuizResultItem[];
+}
+
+interface InsightItem {
+  title: {
+    en: string;
+    vi: string;
+  };
+  description: {
+    en: string;
+    vi: string;
+  };
+}
 
 export interface InsightsModel {
-	strength: InsightItem;
-	weakness: InsightItem;
-	career: InsightItem;
-	relationship: InsightItem;
-	friendship: InsightItem;
-  }
-  
-  export interface CareerTagsModel {
-	id: number;
-	name: string;
-  }
+  strength: InsightItem;
+  weakness: InsightItem;
+  career: InsightItem;
+  relationship: InsightItem;
+  friendship: InsightItem;
+}
+
+export interface CareerTagsModel {
+  id: number;
+  name: string;
+}
 export interface AssignResult {
   code: string;
   title: string;
@@ -134,7 +134,17 @@ export interface AssignResult {
 }
 
 export interface TraitCardModel {
-	suitable_list: CareerTagsModel[] | string[];
-	text: string;
-  }
-  
+  suitable_list: CareerTagsModel[] | string[];
+  text: string;
+}
+
+export interface CommentModel {
+  comments: string;
+  created_at: number;
+  deactivated: boolean;
+  email: string;
+  id: string;
+  liked: number;
+  name: string;
+  replies?: CommentModel[];
+}

@@ -4,11 +4,8 @@ import { PostModel, PostRequest, Tag } from "@interfaces/posts";
 import { AnotherPostRequest } from "@interfaces/request";
 import { BlogState } from "@redux/states";
 import { RootState } from "@redux/store";
-import {
-  AnyAction,
-  createSlice,
-  PayloadAction,
-} from "@reduxjs/toolkit";
+import { AnyAction, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import Router from "next/router";
 import { ThunkDispatch } from "redux-thunk";
 
 const initState: BlogState = {
@@ -96,6 +93,7 @@ export function getLatestBlogs(tags?: string[]) {
         limit: 3,
         deactivated: false,
         tags: tags ? tags : [],
+        language: Router.locale,
       };
       const response = await BlogApi.fetchBlogs(q);
       if (response) {
@@ -119,6 +117,7 @@ export function getBlogs(tags?: Tag[], ids?: string[]) {
         deactivated: false,
         limit: tags ? 6 : 9,
         post_ids: ids ? ids : [],
+        language: Router.locale,
       };
       if (tags && tags.length > 0) {
         let list = tags.map((tag) => tag.id);
@@ -145,6 +144,7 @@ export function loadMoreBlogs(tags?: Tag[]) {
         page: query?.page,
         limit: query?.limit,
         deactivated: false,
+        language: Router.locale,
       };
       if (tags && tags.length > 0) {
         let list = tags.map((tag) => tag.id);
@@ -162,14 +162,14 @@ export function loadMoreBlogs(tags?: Tag[]) {
   };
 }
 
-export function getBlogDetail(link?: string, id?: string, setLoading?: any) {
+export function getBlogDetail(link?: string, id?: string, language?: string, setLoading?: any) {
   return async (
     dispatch: ThunkDispatch<{}, {}, AnyAction>,
     getStore: () => RootState
   ) => {
     dispatch(blogSlice.actions.loading());
     try {
-      const response = await BlogApi.getchBlogDetail(link, id);
+      const response = await BlogApi.fetchByLinkorId(link, id, language);
       if (response) {
         dispatch(blogSlice.actions.update_blog_detail(response));
       }

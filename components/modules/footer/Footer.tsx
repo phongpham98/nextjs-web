@@ -7,7 +7,7 @@ import ConnectionIcons from '@utils/components/ConnectionIcons';
 import HrLine from '@utils/components/HrLine';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { CheckLocation, ConnectionText, CopyRight, DownloadImage, FooterAddress, FooterAddressDetail, FooterConnection, FooterContainer, FooterContent, ImageLogo, LatestNew, PhoneUs, PressContent, PressDetail, PressTitle, VrLine } from './FooterStyled';
 
@@ -15,10 +15,16 @@ const Footer = () => {
 	const { magazines } = useSelector((state: RootState) => state.press);
 	const dispatch = useDispatch();
 	const { t } = useTranslation(['footer', 'title', 'routes']);
+	const [display, setDisplay] = useState<boolean>(false)
 	useEffect(() => {
 		dispatch(getPresses());
+		setTimeout(() => {
+			setDisplay(true)
+		}, 2000)
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
+	if (!display)
+		return null
 
 	return (
 		<FooterContainer id="footer">
@@ -53,7 +59,7 @@ const Footer = () => {
 					{magazines?.slice(0, 2)?.map((item) => {
 						return (
 							<PressContent key={item.id}>
-								<div style={{ paddingTop: "2px" }}>
+								<div style={{ paddingTop: "4px" }}>
 									<SvgPenAlt />
 								</div>
 								<PressDetail href={item.link} target="_blank" rel="noreferrer nofollow">

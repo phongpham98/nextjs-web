@@ -111,6 +111,7 @@ export function getLatestNews(highlight = false) {
         limit: 10,
         highlight: highlight,
         deactivated: false,
+		language: Router.locale
       };
 
       const response = await HomeApi.fetchLatestNews(query);

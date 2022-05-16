@@ -15,6 +15,9 @@ import { useTranslation } from 'next-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { AddressDetail, CheckLocation, ConnectionFooter, ConnectionIconsFooter, ContactMobile, CopyRightFooter, DownLoadFooter, FooterMobileContainer, FooterMobileIconConnection, LogoFooterMobile, PressContent, PressFikaFooter, TitleFooter } from './FooterMobileStyled';
 import { PressDetail } from './FooterStyled';
+import SvgMap from '@svgs/Map';
+import SvgPenAlt from '@svgs/PenAlt';
+import Link from 'next/link';
 
 interface IFooterMobileProps {
 }
@@ -23,40 +26,44 @@ const FooterMobile: React.FunctionComponent<IFooterMobileProps> = (props) => {
 
 	const { magazines } = useSelector((state: RootState) => state.press);
 	const dispatch = useDispatch();
-	const { t } = useTranslation('footer');
+	const { t } = useTranslation(['footer', 'title']);
 	React.useEffect(() => {
 		dispatch(getPresses());
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (
-		<footer style={{marginTop: '1rem'}}>
+		<footer style={{ marginTop: '1rem' }}>
 			<FooterMobileContainer>
 				<Space style={{ width: "100%" }} size={15} direction="vertical">
 					<ContactMobile>
-						<LogoFooterMobile>
-							<SvgLogoNeonHorizontal />
-						</LogoFooterMobile>
+						<Link href={'/'}>
+							<a>
+								<LogoFooterMobile>
+									<SvgLogoNeonHorizontal />
+								</LogoFooterMobile>
+							</a>
+						</Link>
 						<AddressDetail>
 							<div>{t("holding")}</div>
 							<div>{t("address")}</div>
 							<div>{t("contact_text")} <b>{t("phone_number")}</b></div>
 							<CheckLocation onClick={() => window.open(t("map_link"))}>
-								<FontAwesomeIcon style={{ fontSize: "1rem" }} icon={faMapMarkerAlt} />
+								<SvgMap style={{ fontSize: "1rem" }} />
 								<span>{t("location_text")}</span>
 							</CheckLocation>
 						</AddressDetail>
 					</ContactMobile>
 					<HrLine margin="0" />
 					<PressFikaFooter>
-						<TitleFooter>Fika in the press</TitleFooter>
+						<TitleFooter>{t('press_fika', { ns: 'title' })}</TitleFooter>
 						{magazines?.slice(0, 2).map((item) => {
 							return (
 								<PressContent key={item.id}>
-									<div style={{ paddingTop: "2px" }}>
-										<FontAwesomeIcon icon={faPenAlt} />
+									<div style={{ paddingTop: "4px" }}>
+										<SvgPenAlt />
 									</div>
-									<PressDetail onClick={() => window.open(item.link)}>
+									<PressDetail href={item.link} target="_blank" rel="noreferrer nofollow">
 										<span>{item.author}</span> - {item.title}
 									</PressDetail>
 								</PressContent>

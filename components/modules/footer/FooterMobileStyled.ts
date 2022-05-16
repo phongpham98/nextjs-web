@@ -29,11 +29,15 @@ export const AddressDetail = styled.div`
   }
 `;
 
-export const CheckLocation = styled.div`
+export const CheckLocation = styled.a`
   display: flex;
   gap: 0.5rem;
   align-items: center;
   margin-top: 0.5rem;
+  color: white;
+  &:hover {
+    color: white;
+  }
 `;
 
 export const PressFikaFooter = styled.div``;

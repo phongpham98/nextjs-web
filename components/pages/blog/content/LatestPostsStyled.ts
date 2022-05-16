@@ -35,7 +35,7 @@ export const PostImage = styled.img`
   object-position: top;
 `;
 
-export const PostItemTitle = styled.h2`
+export const PostItemTitle = styled.p`
   font-weight: 500;
   text-transform: uppercase;
   color: black;

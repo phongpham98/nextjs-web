@@ -8,21 +8,20 @@ import { CommentContainer, ShareComment, ShareContentContainer } from './ShareCo
 import ShareFeedButtons from './ShareFeedButtons';
 
 export interface ShareContentProps {
-	hasComment?: boolean;
 	story?: any;
 	url: string;
 	banner?: string;
 	thumbnail?: string;
 }
 
-const ShareContent = ({ hasComment = false, story, url }: ShareContentProps) => {
+const ShareContent = ({  story, url }: ShareContentProps) => {
 	const { t } = useTranslation('title');
 	return (
 		<ShareContentContainer>
 			<span>{t("share")}:</span>
 			<div className="share-footer">
 				<ShareFeedButtons url={`${domain}${url}#${story.id}`} title={story.title ? story.title : story.name} />
-				{hasComment && (
+				{/* {hasComment && (
 					!isMobile ? (<ShareComment>
 						<CommentContainer>
 							<CommentBlack>
@@ -36,7 +35,8 @@ const ShareContent = ({ hasComment = false, story, url }: ShareContentProps) => 
 								<SvgChatSquare /> <span>{story.comments}</span>
 							</Comment>
 						</CommentLikeContainer>
-					</div>)}
+					</div>) */}
+					{/* } */}
 			</div>
 		</ShareContentContainer>
 	);

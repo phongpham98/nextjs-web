@@ -47,7 +47,6 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
-	// const res: ApiListResponse<Project> | void = await projectApi.getAllProjects()
 	let paths: any[] = [];
 	if (locales)
 		['INTJ', 'INTP', 'ENTJ', 'ENTP', 'INFJ', 'INFP', 'ENFJ', 'ENFP', 'ISTJ', 'ISFJ', 'ESTJ', 'ESFJ', 'ISTP', 'ISFP', 'ESTP', 'ESFP'].forEach(block => {
@@ -63,7 +62,7 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
 	paths = paths.flat();
 	return {
 		paths,
-		fallback: false
+		fallback: true
 	}
 }
 

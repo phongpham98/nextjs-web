@@ -4,11 +4,6 @@ import { PostModel, PostRequest } from "@interfaces/posts";
 import { AnotherPostRequest } from "@interfaces/request";
 import Router from "next/router";
 import qs from "qs";
-// import {
-//   AnotherPostRequest,
-//   ApiListResponse,
-//   PostRequest,
-// } from "../../schema/api";
 import request from "../request";
 
 const Endpoint = HOST;
@@ -33,7 +28,6 @@ export const fetchBlogs = (query: PostRequest) => {
       limit,
       page,
       deactivated,
-      language: Router.locale,
       highlight,
       ...quer,
     },
@@ -45,9 +39,9 @@ export const fetchBlogs = (query: PostRequest) => {
   return request<ApiListResponse<PostModel>>("GET", Endpoint + "/blogs?" + q);
 };
 
-export const getchBlogDetail = (link?: string, id?: string) => {
+export const fetchByLinkorId = (link?: string, id?: string, language?: string) => {
   const q = qs.stringify(
-    { id, link, language: Router.locale },
+    { id, link, language },
     {
       indices: false,
       skipNulls: true,

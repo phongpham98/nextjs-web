@@ -112,3 +112,12 @@ export const GeneralHeaderMobileContainer = styled.div`
   background-color: #f2f3f5;
 `;
 
+export const MarginBottonDiv = styled.div`
+  margin-bottom: 1.5rem;
+`;
+
+export const TermDiv = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`;

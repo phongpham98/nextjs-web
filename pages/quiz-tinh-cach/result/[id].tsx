@@ -45,7 +45,7 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
 	// const res: ApiListResponse<Project> | void = await projectApi.getAllProjects()
 	let paths: any[] = [];
 	if (locales)
-		[''].forEach(block => {
+		['intp'].forEach(block => {
 			for (const locale of locales) {
 				paths.push({
 					params: {
@@ -58,7 +58,7 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
 	paths = paths.flat();
 	return {
 		paths,
-		fallback: false
+		fallback: true
 	}
 }
 export default PersonalityResult

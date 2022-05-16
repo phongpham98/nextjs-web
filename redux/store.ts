@@ -22,6 +22,7 @@ import { searchReducer } from "./slices/search";
 import { quizReducer } from "./slices/quiz";
 import { blogReducer } from "./slices/blog";
 import { newsReducer } from "./slices/news";
+import { blogCommentReducer } from "./slices/comment";
 const createNoopStorage = () => {
   return {
     getItem(_key: any) {
@@ -52,7 +53,8 @@ const rootReducer = combineReducers({
   quiz: quizReducer,
   personalityType: personalityTypeReducer,
   blog: blogReducer,
-  news: newsReducer
+  news: newsReducer,
+  comment: blogCommentReducer
 });
 
 const persistedReducer = persistReducer(

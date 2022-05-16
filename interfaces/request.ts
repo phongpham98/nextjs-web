@@ -42,6 +42,25 @@ export interface AnswerModel {
 }
 
 export interface AnotherPostRequest {
-	id: string;
-	public_date: number;
+  id: string;
+  public_date: number;
+}
+
+export interface CommentRequest {
+  created_at?: number;
+  updated_at?: number;
+  deactivated?: boolean;
+  name: string;
+  email: string;
+  post_id: string;
+  comments: string;
+  language?: string;
+}
+
+
+export interface GetCommentRequest {
+	post_id: string;
+	page?: number;
+	limit?: number;
+	language?: string;
   }

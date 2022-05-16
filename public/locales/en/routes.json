@@ -5,7 +5,11 @@
 	"fika_in_the_press": "fika-in-the-press",
 	"news": "news",
 	"category": "category",
+	"social_spots": "social-spots",
+	"events": "events",
+	"about_fika": "about-fika",
 
 	"free_personality_test": "free-personality-test",
-	"detail": "detail"
+	"detail": "detail",
+	"search": "search"
 }

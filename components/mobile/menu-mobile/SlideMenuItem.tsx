@@ -1,7 +1,7 @@
 import { toglle_menu } from '@redux/slices/home';
 import SvgArrowDownMobile from '@svgs/ArrowDownMobile';
-import TranslatedLink from '@utils/components/next-link/TranslateLink';
 import $ from 'jquery';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import * as React from 'react';
 import { useDispatch } from 'react-redux';
@@ -29,13 +29,13 @@ const SlideMenuItem: React.FunctionComponent<ISlideMenuItemProps> = ({ id, menuT
 	return (
 		<SlideMenuItemContainer>
 			<MobileMenuItem>
-				<TranslatedLink href={href}>
+				<Link href={href}>
 					<a onClick={handleClickMenu}>
 						<MobileMenuItem>
 							{menuTitle}
 						</MobileMenuItem>
 					</a>
-				</TranslatedLink>
+				</Link>
 				<SurfixIcon onClick={(e) => {
 					setOpen(!open)
 					e.stopPropagation();
@@ -52,13 +52,13 @@ const SlideMenuItem: React.FunctionComponent<ISlideMenuItemProps> = ({ id, menuT
 			<SubMenuContent id={id} style={{ display: "none" }}>
 				{subMenu.map((item, idx) => {
 					return (
-						<TranslatedLink key={idx} href={item.link}>
+						<Link key={idx} href={item.link}>
 							<a onClick={handleClickMenu}>
 								<MobileSubMenuItem>
 									{item.name}
 								</MobileSubMenuItem>
 							</a>
-						</TranslatedLink>
+						</Link>
 					)
 				})}
 			</SubMenuContent>

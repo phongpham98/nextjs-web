@@ -4,16 +4,16 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { useTranslation } from 'next-i18next';
-import { DateDiv, FeedContentP, FeedContentWrapper, FeedTitleDiv, PathDateWrapper, PathDiv, ReadMoreDiv } from './FeedContentStyled';
+import { DateDiv, FeedContentP, FeedContentWrapper, FeedTitleH2, FeedTitleH3, FeedTitleH4, PathDateWrapper, PathDiv, ReadMoreDiv } from './FeedContentStyled';
 import ReadMore from '@utils/components/ReadMore';
 import ShareContent from '@utils/components/share/ShareContent';
-
+export type HeadingTag = "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
 interface FeedContentProps {
 	showDate?: boolean;
 	story: any;
 	small?: boolean;
 	bigTitle?: boolean;
-	onClick?: () => void;
+	headingTag?: HeadingTag
 }
 
 interface ShareContentProps {
@@ -23,7 +23,7 @@ interface ShareContentProps {
 	thumbnail?: string;
 }
 
-const FeedContent = ({ small, story, bigTitle = false, showDate = true, url }: FeedContentProps & ShareContentProps) => {
+const FeedContent = ({ small, story, bigTitle = false, showDate = true, url, headingTag = "h2" }: FeedContentProps & ShareContentProps) => {
 	const { t } = useTranslation('routes');
 	return (
 		<FeedContentWrapper className={showDate ? "" : "gap"}>
@@ -41,11 +41,19 @@ const FeedContent = ({ small, story, bigTitle = false, showDate = true, url }: F
 			</PathDateWrapper>
 			<Link href={url}>
 				<a>
-					<FeedTitleDiv
+					{headingTag === "h3" ? <FeedTitleH3
 						bigTitle={bigTitle}
 					>
 						{story.title ? story.title : story.name}
-					</FeedTitleDiv>
+					</FeedTitleH3> : headingTag === "h4" ? <FeedTitleH4
+						bigTitle={bigTitle}
+					>
+						{story.title ? story.title : story.name}
+					</FeedTitleH4> : <FeedTitleH2
+						bigTitle={bigTitle}
+					>
+						{story.title ? story.title : story.name}
+					</FeedTitleH2>}
 				</a>
 			</Link>
 			<div style={{ flex: 1 }}>

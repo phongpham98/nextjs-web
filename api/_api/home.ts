@@ -14,15 +14,15 @@ export const getCategories = (query: CategoryHomeRequest) => {
 };
 
 export const fetchLatestNews = (query: PostRequest) => {
-  const { post_ids, limit, page, deactivated, highlight } = query;
+  const { post_ids, limit, page, deactivated, highlight, ...props } = query;
   const q = qs.stringify(
     {
       post_ids,
       limit,
       page,
       deactivated,
-      language: Router.locale,
       highlight,
+	  ...props
     },
     {
       indices: false,

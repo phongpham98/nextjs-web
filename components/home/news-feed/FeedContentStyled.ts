@@ -59,7 +59,111 @@ export const DateDiv = styled.div`
   font-size: 0.7rem;
   margin-bottom: 0.2rem;
 `;
-export const FeedTitleDiv = styled.h2<FeedTitleProps>`
+export const FeedTitleH2 = styled.h2<FeedTitleProps>`
+  font-size: ${(props) => (props.bigTitle ? "26px" : "16px")};
+  /* font-family: "PoppinsVN", sans-serif; */
+  color: black;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 90%;
+
+  @media ${device.mobileS} {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0px;
+    letter-spacing: 0.5px;
+    -webkit-text-stroke-width: 0.2px;
+  }
+
+  @media ${device.tablet768} {
+    font-size: ${(props) => (props.bigTitle ? "0.8rem" : "14px")};
+    line-height: ${(props) => (props.bigTitle ? "1rem" : "unset")};
+    font-weight: 500;
+  }
+
+  @media ${device.laptop1024} {
+    font-size: ${(props) => (props.bigTitle ? "1rem" : "16px")};
+    line-height: ${(props) => (props.bigTitle ? "1.3rem" : "unset")};
+  }
+
+  @media ${device.laptop1280} {
+    font-size: ${(props) => (props.bigTitle ? "1.2rem" : "16px")};
+    line-height: ${(props) => (props.bigTitle ? "1.5rem" : "unset")};
+    margin-bottom: ${(props) => (props.bigTitle ? "0rem" : "unset")};
+  }
+
+  @media ${device.laptop1440} {
+    font-size: ${(props) => (props.bigTitle ? "1.5rem" : "16px")};
+    /* margin-bottom: 15px; */
+    line-height: ${(props) => (props.bigTitle ? "40px" : "28px")};
+  }
+
+  @media ${device.laptop1600} {
+    font-size: ${(props) => (props.bigTitle ? "1.5rem" : "20px")};
+    /* margin-bottom: 20px; */
+    line-height: ${(props) => (props.bigTitle ? "40px" : "28px")};
+  } ;
+`;
+
+export const FeedTitleH3 = styled.h3<FeedTitleProps>`
+  font-size: ${(props) => (props.bigTitle ? "26px" : "16px")};
+  /* font-family: "PoppinsVN", sans-serif; */
+  color: black;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 90%;
+
+  @media ${device.mobileS} {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0px;
+    letter-spacing: 0.5px;
+    -webkit-text-stroke-width: 0.2px;
+  }
+
+  @media ${device.tablet768} {
+    font-size: ${(props) => (props.bigTitle ? "0.8rem" : "14px")};
+    line-height: ${(props) => (props.bigTitle ? "1rem" : "unset")};
+    font-weight: 500;
+  }
+
+  @media ${device.laptop1024} {
+    font-size: ${(props) => (props.bigTitle ? "1rem" : "16px")};
+    line-height: ${(props) => (props.bigTitle ? "1.3rem" : "unset")};
+  }
+
+  @media ${device.laptop1280} {
+    font-size: ${(props) => (props.bigTitle ? "1.2rem" : "16px")};
+    line-height: ${(props) => (props.bigTitle ? "1.5rem" : "unset")};
+    margin-bottom: ${(props) => (props.bigTitle ? "0rem" : "unset")};
+  }
+
+  @media ${device.laptop1440} {
+    font-size: ${(props) => (props.bigTitle ? "1.5rem" : "16px")};
+    /* margin-bottom: 15px; */
+    line-height: ${(props) => (props.bigTitle ? "40px" : "28px")};
+  }
+
+  @media ${device.laptop1600} {
+    font-size: ${(props) => (props.bigTitle ? "1.5rem" : "20px")};
+    /* margin-bottom: 20px; */
+    line-height: ${(props) => (props.bigTitle ? "40px" : "28px")};
+  } ;
+`;
+
+export const FeedTitleH4 = styled.h4<FeedTitleProps>`
   font-size: ${(props) => (props.bigTitle ? "26px" : "16px")};
   /* font-family: "PoppinsVN", sans-serif; */
   color: black;

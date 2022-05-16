@@ -1,19 +1,22 @@
 import { MobileDownImage } from '@components/modules/headers/HeaderMobileStyled';
+import currentLocale from '@helpers/getCurrentLocale';
 import { toglle_menu } from '@redux/slices/home';
 import { RootState } from '@redux/store';
+import SvgArrowDownMobile from '@svgs/ArrowDownMobile';
 import SvgFacebookRound from '@svgs/FacebookRound';
 import SvgInstagramRound from '@svgs/InstagramRound';
 import SvgLinkedinRound from '@svgs/LinkedinRound';
 import SvgTiktokRound from '@svgs/TiktokRound';
 import SvgYoutubeRound from '@svgs/YoutubeRound';
+import HrLine from '@utils/components/HrLine';
 import TranslatedLink from '@utils/components/next-link/TranslateLink';
-import { Drawer } from 'antd';
+import { Drawer, Select } from 'antd';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { CategoriesMenu, ConnectionNavMobile, DownloadAppContainer, ListMenuContainer, MenuMobileConnectionIcon, MenuMobileContainer, MobileMenuItem, NavMobileDownload } from './MenuMobileStyled';
+import { CategoriesMenu, ConnectionNavMobile, DivLanguage, DownloadAppContainer, ListMenuContainer, MenuMobileConnectionIcon, MenuMobileContainer, MobileMenuItem, NavMobileDownload } from './MenuMobileStyled';
 import SlideMenuItem from './SlideMenuItem';
 interface IMenuMobileProps {
 }
@@ -30,12 +33,8 @@ const MenuMobile: React.FunctionComponent<IMenuMobileProps> = (props) => {
 	const isHomePage = pathname === "/"
 
 	useEffect(() => {
-		if (!pathname.startsWith('/en')) {
-			setLang('vi')
-		} else {
-			setLang('en')
-		}
-	}, [pathname]);
+		setLang(currentLocale())
+	}, [router.locale]);
 
 	const handleClickMenu = () => {
 		dispatch(toglle_menu());
@@ -79,13 +78,13 @@ const MenuMobile: React.FunctionComponent<IMenuMobileProps> = (props) => {
 				</ConnectionNavMobile>
 
 				<ListMenuContainer>
-					<TranslatedLink href='/'>
+					<Link href='/'>
 						<a onClick={handleClickMenu}>
 							<MobileMenuItem>
 								{t('home')}
 							</MobileMenuItem>
 						</a>
-					</TranslatedLink>
+					</Link>
 					<Link href={t('personality', { ns: 'routes' })}>
 						<a onClick={handleClickMenu}>
 							<MobileMenuItem>
@@ -101,33 +100,33 @@ const MenuMobile: React.FunctionComponent<IMenuMobileProps> = (props) => {
 						</a>
 					</Link>
 					<SlideMenuItem
-						href='/blog'
+						href={t('blog', { ns: 'routes' })}
 						id={"blog"}
 						menuTitle={t('blogs')}
 						subMenu={t('blogs_children', { returnObjects: true })}
 					/>
-					<TranslatedLink href='/dia-diem-gap-go'>
+					<Link href={t('social_spots', { ns: 'routes' })}>
 						<a onClick={handleClickMenu}>
 							<MobileMenuItem>
 								{t('connected_story')}
 							</MobileMenuItem>
 						</a>
-					</TranslatedLink>
+					</Link>
 					<SlideMenuItem
-						href='/tin-tuc'
+						href={t('news', { ns: 'routes' })}
 						id={"news"}
 						menuTitle={t('news')}
 						subMenu={t('news_children', { returnObjects: true })}
 					/>
-					<TranslatedLink href='/su-kien'>
+					<Link href={t('events', { ns: 'routes' })}>
 						<a onClick={handleClickMenu}>
 							<MobileMenuItem>
 								{t('event')}
 							</MobileMenuItem>
 						</a>
-					</TranslatedLink>
+					</Link>
 					<SlideMenuItem
-						href='/ve-fika'
+						href={t('about_fika', { ns: 'routes' })}
 						id={"aboutFika"}
 						menuTitle={t('about')}
 						subMenu={t('about_children', { returnObjects: true })}
@@ -147,11 +146,6 @@ const MenuMobile: React.FunctionComponent<IMenuMobileProps> = (props) => {
 							})}
 						</CategoriesMenu>
 					) : null}
-					{/* 
-					
-					<MobileMenuItem onClick={() => handleClickMenu("events")}>
-					
-					
 					<HrLine margin="0" />
 					<DivLanguage>
 						<Select
@@ -164,21 +158,14 @@ const MenuMobile: React.FunctionComponent<IMenuMobileProps> = (props) => {
 								textTransform: "uppercase",
 							}}
 							onChange={(value) => {
-								setLang(value);
-								localStorage.setItem("lang", value);
-								i18next.changeLanguage(value);
 								dispatch(toglle_menu());
-								if (value === "vi")
-									history.push('/');
-								else
-									history.push('/' + value);
-								window.location.reload();
+								router.push('/', '/', { locale: value })
 							}}
 						>
 							<Select.Option value="en">English</Select.Option>
 							<Select.Option value="vi">Tiếng Việt</Select.Option>
 						</Select>
-					</DivLanguage> */}
+					</DivLanguage>
 				</ListMenuContainer>
 
 				<DownloadAppContainer>

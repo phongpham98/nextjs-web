@@ -1,3 +1,15 @@
 {
-	"download_fika": "TRẢI NGHIỆM NGAY APP HẸN HÒ PHIÊN BẢN TỐT NHẤT! ẤN ĐỂ TẢI FIKA"
+  "download_fika": "TRẢI NGHIỆM NGAY APP HẸN HÒ PHIÊN BẢN TỐT NHẤT! ẤN ĐỂ TẢI FIKA",
+  "comment": {
+    "save_name_email": "Lưu tên và email của tôi cho lần bình luận tiếp theo.",
+    "place_holder": {
+      "name": "TÊN",
+      "email": "EMAIL",
+      "comment": "NỘI DUNG"
+    },
+    "title": "Bình luận",
+    "post_comment": "Viết bình luận",
+    "next": "Bài tiếp theo",
+    "prev": "Bài trước"
+  }
 }
