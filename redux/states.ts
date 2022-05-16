@@ -100,3 +100,26 @@ export interface QuizState extends BaseState {
 export interface PersonalityTypeState extends BaseState {
   content: AssignResult | null;
 }
+
+export interface BlogState extends BaseState {
+  latestBlogs?: PostModel[];
+  blogs: PostModel[];
+  query?: PostRequest;
+  loadBlogs?: PostModel[];
+  total: number;
+  blogDetail?: PostModel;
+  likes?: number;
+  nextBlog?: PostModel;
+  prevBlog?: PostModel;
+}
+
+export interface NewsState extends BaseState {
+  newsList: PostModel[];
+  query?: PostRequest;
+  loadMoreNews: PostModel[];
+  total: number;
+  newsDetail?: PostModel;
+  latestNews?: PostModel[];
+  nextBlog?: PostModel;
+  prevBlog?: PostModel;
+}

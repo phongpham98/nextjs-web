@@ -10,7 +10,7 @@ const Instagram = () => {
 	const { instagrams } = useSelector((state: RootState) => state.instagram);
 	return (
 		<div id="instagram" className="instagram-container">
-			<SectionTitle title="Instagram" icon={<SvgInstagram />} />
+			<SectionTitle title="Instagram" icon={<SvgInstagram color='#030303' />} />
 			<Row gutter={12} justify="center">
 				{instagrams.map((item, idx) => {
 					if (idx === 1) {

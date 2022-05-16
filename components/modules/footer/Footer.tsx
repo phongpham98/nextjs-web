@@ -1,8 +1,8 @@
-import { faMapMarkerAlt, faPenAlt } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { getPresses } from '@redux/slices/press';
 import { RootState } from '@redux/store';
 import SvgLogoNeonHorizontal from '@svgs/LogoNeonHorizontal';
+import SvgMap from '@svgs/Map';
+import SvgPenAlt from '@svgs/PenAlt';
 import ConnectionIcons from '@utils/components/ConnectionIcons';
 import HrLine from '@utils/components/HrLine';
 import { useTranslation } from 'next-i18next';
@@ -14,7 +14,7 @@ import { CheckLocation, ConnectionText, CopyRight, DownloadImage, FooterAddress,
 const Footer = () => {
 	const { magazines } = useSelector((state: RootState) => state.press);
 	const dispatch = useDispatch();
-	const { t } = useTranslation(['footer', 'title']);
+	const { t } = useTranslation(['footer', 'title', 'routes']);
 	useEffect(() => {
 		dispatch(getPresses());
 		// eslint-disable-next-line react-hooks/exhaustive-deps
@@ -24,22 +24,26 @@ const Footer = () => {
 		<FooterContainer id="footer">
 			<FooterContent >
 				<FooterAddress >
-					<ImageLogo>
-						<SvgLogoNeonHorizontal />
-					</ImageLogo>
+					<Link href={'/'}>
+						<a>
+							<ImageLogo>
+								<SvgLogoNeonHorizontal />
+							</ImageLogo>
+						</a>
+					</Link>
 					<FooterAddressDetail >
 						<div>{t("holding")}</div>
 						<div> {t("address")}</div>
 						<PhoneUs >{t("contact_text")}: <span>{t("phone_number")}</span></PhoneUs>
-						<CheckLocation onClick={() => window.open(t("map_link"))}>
-							<FontAwesomeIcon icon={faMapMarkerAlt} />
+						<CheckLocation href={t("map_link")} target="_blank" rel="noreferrer nofollow">
+							<SvgMap />
 							<span>{t("location_text")}</span>
 						</CheckLocation>
 					</FooterAddressDetail>
 				</FooterAddress>
 				<VrLine />
 				<LatestNew>
-					<Link href={`/fika-in-the-press`}>
+					<Link href={`/${t('fika_in_the_press', { ns: 'routes' })}`}>
 						<a>
 							<PressTitle>{t('press_fika', {
 								ns: 'title'
@@ -50,9 +54,9 @@ const Footer = () => {
 						return (
 							<PressContent key={item.id}>
 								<div style={{ paddingTop: "2px" }}>
-									<FontAwesomeIcon icon={faPenAlt} />
+									<SvgPenAlt />
 								</div>
-								<PressDetail onClick={() => window.open(item.link)}>
+								<PressDetail href={item.link} target="_blank" rel="noreferrer nofollow">
 									<span>{item.author}</span> - {item.title}
 								</PressDetail>
 							</PressContent>

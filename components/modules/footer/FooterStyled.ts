@@ -36,6 +36,7 @@ export const ImageLogo = styled.div`
   margin-bottom: 20px;
   display: inline-flex;
   font-size: 11rem;
+  cursor: pointer;
 `;
 
 export const FooterAddressDetail = styled.div`
@@ -49,11 +50,15 @@ export const PhoneUs = styled.div`
   }
 `;
 
-export const CheckLocation = styled.div`
+export const CheckLocation = styled.a`
   display: flex;
   align-items: center;
   cursor: pointer;
   gap: 10px;
+  color: white;
+  &:hover {
+    color: white;
+  }
 `;
 
 export const VrLine = styled.div`
@@ -83,8 +88,12 @@ export const PressContent = styled.div`
   gap: 20px;
 `;
 
-export const PressDetail = styled.div`
+export const PressDetail = styled.a`
   font-size: 13px;
+  color: white;
+  &:hover {
+    color: white;
+  }
   cursor: pointer;
   & span {
     font-weight: 500;

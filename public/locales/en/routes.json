@@ -2,6 +2,10 @@
 	"personality": "personality",
 	"blogs": "blogs",
 	"connected_story": "connected-story",
+	"fika_in_the_press": "fika-in-the-press",
+	"news": "news",
+	"category": "category",
 
-	"free_personality_test": "free-personality-test"
+	"free_personality_test": "free-personality-test",
+	"detail": "detail"
 }

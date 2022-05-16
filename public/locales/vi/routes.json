@@ -2,6 +2,11 @@
 	"personality": "quiz-tinh-cach",
 	"blogs": "blog",
 	"connected_story": "cau-chuyen-ket-noi",
+	"fika_in_the_press": "tin-tuc-ve-fika",
+	"news": "tin-tuc",
+	"category": "danh-muc",
+	
 
-	"free_personality_test": "lam-bai-trac-nghiem-mien-phi"
+	"free_personality_test": "lam-bai-trac-nghiem-mien-phi",
+	"detail": "chi-tiet"
 }

@@ -40,3 +40,8 @@ export interface AnswerModel {
   question_number: number;
   type_id: string;
 }
+
+export interface AnotherPostRequest {
+	id: string;
+	public_date: number;
+  }

@@ -2,6 +2,7 @@ import request from "@api/request";
 import { HOST } from "@configs/api";
 import { ApiListResponse } from "@interfaces/model";
 import { PostModel, PostRequest } from "@interfaces/posts";
+import { AnotherPostRequest } from "@interfaces/request";
 import Router from "next/router";
 import qs from "qs";
 
@@ -40,26 +41,26 @@ export const fetchNewsDetail = (link?: string, id?: string) => {
   return request<PostModel>("GET", Endpoint + "/news/detail?" + q);
 };
 
-// export const fetchNextPost = (query: AnotherPostRequest) => {
-//   const { id, public_date } = query;
-//   const q = qs.stringify(
-//     { id, public_date, language: Router.locale },
-//     {
-//       indices: false,
-//       skipNulls: true,
-//     }
-//   );
-//   return request<PostModel>("GET", Endpoint + `/next-news?` + q);
-// };
+export const fetchNextPost = (query: AnotherPostRequest) => {
+  const { id, public_date } = query;
+  const q = qs.stringify(
+    { id, public_date, language: Router.locale },
+    {
+      indices: false,
+      skipNulls: true,
+    }
+  );
+  return request<PostModel>("GET", Endpoint + `/next-news?` + q);
+};
 
-// export const fetchPrevPost = (query: AnotherPostRequest) => {
-//   const { id, public_date } = query;
-//   const q = qs.stringify(
-//     { id, public_date, language: Router.locale },
-//     {
-//       indices: false,
-//       skipNulls: true,
-//     }
-//   );
-//   return request<PostModel>("GET", Endpoint + `/pre-news?` + q);
-// };
+export const fetchPrevPost = (query: AnotherPostRequest) => {
+  const { id, public_date } = query;
+  const q = qs.stringify(
+    { id, public_date, language: Router.locale },
+    {
+      indices: false,
+      skipNulls: true,
+    }
+  );
+  return request<PostModel>("GET", Endpoint + `/pre-news?` + q);
+};

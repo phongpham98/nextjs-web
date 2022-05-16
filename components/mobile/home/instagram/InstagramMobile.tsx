@@ -32,7 +32,7 @@ const InstagramMobile: React.FunctionComponent<IInstagramMobileProps> = (props) 
 
 	return (
 		<GeneralPaddingMobile>
-			<SectionTitle marginBottom="20" title='Instagram' icon={<SvgInstagram />} />
+			<SectionTitle marginBottom="20" title='Instagram' icon={<SvgInstagram color='#030303' />} />
 
 			<SliderMobileContainer>
 				<Slider {...settings}>

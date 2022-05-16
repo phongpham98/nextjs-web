@@ -1,3 +1,4 @@
+import { colors } from "@configs/globalStyles";
 import { device } from "@configs/screensSizes";
 import styled from "styled-components";
 
@@ -31,8 +32,10 @@ export const PathDateWrapper = styled.div`
 export const PathDiv = styled.div`
   font-style: italic;
   cursor: pointer;
+  color: ${colors.grey};
   &:hover {
     text-decoration: underline;
+    color: ${colors.grey};
   }
   @media ${device.mobileS} {
     font-size: 0.7rem;
@@ -108,7 +111,7 @@ export const FeedTitleDiv = styled.h2<FeedTitleProps>`
   } ;
 `;
 
-export const FeedContentDiv = styled.div`
+export const FeedContentP = styled.p`
   color: #61666d;
   font-size: 13px;
   width: 70%;

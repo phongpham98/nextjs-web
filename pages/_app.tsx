@@ -1,6 +1,4 @@
 import MenuMobile from '@components/mobile/menu-mobile/MenuMobile';
-import Footer from '@components/modules/footer/Footer';
-import FooterMobile from '@components/modules/footer/FooterMobile';
 import isMobileDevice from '@helpers/isMobile';
 import { wrapper } from '@redux/store';
 import '@styles/globals.css';

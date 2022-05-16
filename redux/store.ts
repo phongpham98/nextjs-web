@@ -20,6 +20,8 @@ import { instagramReducer } from "./slices/instagram";
 import { pressFikaReducer } from "./slices/press";
 import { searchReducer } from "./slices/search";
 import { quizReducer } from "./slices/quiz";
+import { blogReducer } from "./slices/blog";
+import { newsReducer } from "./slices/news";
 const createNoopStorage = () => {
   return {
     getItem(_key: any) {
@@ -49,6 +51,8 @@ const rootReducer = combineReducers({
   search: searchReducer,
   quiz: quizReducer,
   personalityType: personalityTypeReducer,
+  blog: blogReducer,
+  news: newsReducer
 });
 
 const persistedReducer = persistReducer(
