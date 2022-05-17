@@ -8,6 +8,19 @@
   font-display: swap;
 }
 
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+#side-main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 p,
 h1,
 h2,

@@ -52,6 +52,11 @@ module.exports = {
 				destination: '/en/cau-chuyen-ket-noi/:link',
 				locale: false
 			},
+			{
+				source: '/en/social-spots',
+				destination: '/en/dia-diem-gap-go',
+				locale: false
+			},
 		]
 	},
 	async redirects() {

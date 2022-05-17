@@ -20,9 +20,9 @@ const Footer = () => {
 		dispatch(getPresses());
 		setTimeout(() => {
 			setDisplay(true)
-		}, 2000)
+		}, 500)
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+	}, [display]);
 	if (!display)
 		return null
 

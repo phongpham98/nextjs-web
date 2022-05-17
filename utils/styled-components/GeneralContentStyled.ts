@@ -83,7 +83,7 @@ export const GeneralTitlePostDetailH1 = styled.h1`
 
   @media ${device.laptop1440} {
     font-size: 2.2rem;
-    line-height: 3em;
+    line-height: 3rem;
   }
 
   @media ${device.laptop1600} {
