@@ -1,6 +1,7 @@
 import {
   AssignResult,
   CommentModel,
+  EventModel,
   InstaPost,
   PressMagazine,
   QuizItemModel,
@@ -145,3 +146,11 @@ export interface ConnectedStoryState extends BaseState {
 }
 
 export interface SendStoryState extends BaseState {}
+
+export interface EventState extends BaseState{
+	events: EventModel[];
+	total: number;
+	query: PostRequest;
+	event_detail?: EventModel;
+	eventLoading?: boolean
+}

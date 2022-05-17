@@ -164,3 +164,30 @@ export interface StoryResponse {
   deactivated?: boolean;
   id: string;
 }
+
+export interface Gallery {
+  key: string;
+  url: string;
+}
+
+export interface EventModel {
+  author?: Author;
+  banner?: string;
+  banner_key?: string;
+  created_at?: number;
+  deactivated?: boolean;
+  description?: string;
+  galleries?: Gallery[];
+  homepage?: boolean;
+  id: string;
+  language?: string;
+  link?: string;
+  likes?: number;
+  name?: string;
+  public_date?: string;
+  short_description?: string;
+  tags?: Tag[];
+  thumbnail?: string;
+  thumbnail_key?: string;
+  updated_at?: number;
+}

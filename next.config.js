@@ -53,8 +53,18 @@ module.exports = {
 				locale: false
 			},
 			{
-				source: '/en/social-spots',
+				source: '/en/social-spot',
 				destination: '/en/dia-diem-gap-go',
+				locale: false
+			},
+			{
+				source: '/en/event',
+				destination: '/en/su-kien',
+				locale: false
+			},
+			{
+				source: '/en/event/:link',
+				destination: '/en/su-kien/:link',
 				locale: false
 			},
 		]

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const ArticleContainer = styled.article`
   height: 100%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 
   @media ${device.tablet768} {
     padding: 0 20px;

@@ -17,7 +17,7 @@ import * as CommentApi from './_api/comment';
 import * as PersonalityApi from './_api/personality';
 import * as SearchApi from './_api/search';
 import * as TrackViewsApi from './_api/trackViews';
-// import * as EventApi from './_api/event';
+import * as EventApi from './_api/event';
 export {
   HomeApi,
   NewsApi,
@@ -37,5 +37,5 @@ export {
   PersonalityApi,
   SearchApi,
   TrackViewsApi,
-  // EventApi
+  EventApi
 };
