@@ -147,10 +147,18 @@ export interface ConnectedStoryState extends BaseState {
 
 export interface SendStoryState extends BaseState {}
 
-export interface EventState extends BaseState{
-	events: EventModel[];
-	total: number;
-	query: PostRequest;
-	event_detail?: EventModel;
-	eventLoading?: boolean
+export interface EventState extends BaseState {
+  events: EventModel[];
+  total: number;
+  query: PostRequest;
+  event_detail?: EventModel;
+  eventLoading?: boolean;
+}
+
+export interface PressFikaState extends BaseState {
+  highlightMags: PressMagazine[];
+  magazines: PressMagazine[];
+  news: LatestNew[];
+  total: number;
+  query: PostRequest;
 }

@@ -60,7 +60,8 @@ const rootReducer = combineReducers({
   comment: blogCommentReducer,
   loveStory: loveStoryReducer,
   sendStory: sendStoryReducer,
-  event: eventReducer
+  event: eventReducer,
+  pressFika: pressFikaReducer,
 });
 
 const persistedReducer = persistReducer(

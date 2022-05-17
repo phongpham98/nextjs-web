@@ -191,3 +191,35 @@ export interface EventModel {
   thumbnail_key?: string;
   updated_at?: number;
 }
+
+export interface PopularQuestion {
+  question: string;
+  answer: string;
+}
+
+export interface SupportCentre {
+  title: string;
+}
+
+export interface PressFikaMagazine {
+  image: string;
+  title: string;
+  magBrand: string;
+  date: string;
+}
+
+export interface PressMagazine {
+  author: string;
+  banner: string;
+  banner_key: string;
+  deactivated: boolean;
+  homepage: boolean;
+  id: string;
+  link: string;
+  language: LanguageType;
+  short_description: string;
+  thumbnail: string;
+  thumbnail_key: string;
+  title: string;
+  date: number;
+}
