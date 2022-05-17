@@ -97,6 +97,16 @@ module.exports = {
 				destination: '/en/cong-viec',
 				locale: false
 			},
+			{
+				source: '/en/contact',
+				destination: '/en/lien-he',
+				locale: false
+			},
+			{
+				source: '/en/privacy-policy',
+				destination: '/en/chinh-sach-bao-mat',
+				locale: false
+			},
 		]
 	},
 	async redirects() {

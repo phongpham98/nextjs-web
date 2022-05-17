@@ -1,0 +1,76 @@
+{
+  "header_mobile": "Hỗ trợ người dùng <br /> Điều khoản dịch vụ - Chính sách bảo mật",
+  "header": "Hỗ trợ người dùng - Điều khoản dịch vụ - Chính sách bảo mật",
+  "detail": [
+    {
+      "id": 1,
+      "title": "Trung tâm trợ giúp",
+      "content": "Với chúng tôi, người dùng luôn là ưu tiên cao nhất. Người dùng cần cảm thấy rằng họ đang tham gia một môi trường an toàn, được bảo mật và cảm thấy thoải mái 100% khi sử dụng Fika. Nếu có bất cứ điều gì khiến bạn cảm thấy không an toàn hoặc gặp lỗi khi sử dụng, hãy gửi email hoặc trò chuyện với nhóm hỗ trợ của chúng tôi tại đây: <br />Gửi tin nhắn tại: <a aria-label={'contact us'}  aria-label={'contact us'}  target='_blank' href='https://www.facebook.com/messages/t/101187824833257'>m.me/fikaconnects</a> <br/> Gửi mail tại: <a aria-label={'contact us'}  aria-label={'contact us'}  target='_blank' href='mailto:info@fikaconnects.com?subject=&body='>info@fikaconnects.com</a> <br/>"
+    },
+    {
+      "id": 2,
+      "title": "Chính sách bảo mật",
+      "content": "Fika Holdings Pte. Ltd. tạo nên Fika - Ứng dụng Xã hội & Hẹn hò tích hợp trên nền tảng công nghệ AI, ưu tiên trao quyền phụ nữ và hoàn toàn miễn phí. <br /><br />Trang này được sử dụng để thông báo cho người dùng về các chính sách thu thập, sử dụng và tiết lộ Thông tin cá nhân trong quá trình người dùng sử dụng Dịch vụ của chúng tôi.<br /><br />Nếu bạn chọn sử dụng Dịch vụ của chúng tôi, nghĩa là bạn đồng ý với việc thu thập và sử dụng thông tin liên quan đến chính sách này. Thông tin cá nhân mà chúng tôi thu thập sẽ được sử dụng để cung cấp và cải thiện Dịch vụ. Chúng tôi sẽ không sử dụng hoặc chia sẻ thông tin của bạn với bất kỳ ai, ngoại trừ như đã mô tả trong Chính sách bảo mật này."
+    },
+    {
+      "id": 3,
+      "title": "Thu thập và sử dụng thông tin",
+      "content": "Để có trải nghiệm tốt hơn, khi sử dụng Dịch vụ của chúng tôi, chúng tôi có thể yêu cầu bạn cung cấp một số thông tin nhận dạng cá nhân nhất định. Thông tin chúng tôi yêu cầu sẽ được giữ lại và sử dụng như đã mô tả trong chính sách bảo mật này.<br /><br />Chúng tôi sẽ thu thập hồ sơ hoàn chỉnh của bạn làm dữ liệu bao gồm: tên, giới tính, vị trí địa lý, nghề nghiệp, chiều cao, các mô tả về bạn (đặc điểm, phong cách hẹn hò, sở thích), giới tính mà bạn quan tâm. Dữ liệu này (không bao gồm tên của bạn) sau đó sẽ được tính năng Al của chúng tôi sử dụng để cải thiện thuật toán đề xuất, nhằm giúp cho cho bạn và những người dùng khác nhìn thấy các gợi ý phù hợp nhất với sở thích.<br /><br />Chúng tôi cũng sẽ thu thập thao tác cuộn của bạn dưới dạng dữ liệu nhằm theo dõi những hồ sơ nào bạn không thích và thích, sau đó sử dụng dữ liệu này theo thuật toán Al để cải thiện đề xuất tương tác, giúp bạn thấy những người dùng phù hợp hơn với sở thích.<br /><br />Chúng tôi cũng sẽ thu thập dữ liệu tổng hợp về cuộc trò chuyện, bao gồm các tin nhắn đã gửi và tần suất, thời gian phản hồi trung bình, các tin nhắn đã nhận và tần suất. Chúng tôi không thu thập bất kỳ dữ liệu riêng tư nào, như tin nhắn trò chuyện cụ thể - các tin nhắn này đã được mã hóa và lưu trữ trong cơ sở dữ liệu FireBase của chúng tôi để bạn có thể truy xuất lịch sử trò chuyện khi cần. Dữ liệu cũng được sử dụng cho mục đích cải thiện tính năng AI của chúng tôi và nâng cao trải nghiệm về người dùng trong thuật toán đề xuất được đề cập trước đó, cũng như các tính năng sắp tới.<br/><br/>Ứng dụng cũng sử dụng dịch vụ của các bên thứ ba và có thể thu thập thông tin để định danh bạn.<br /><br />Liên kết tới Chính sách quyền riêng tư từ  nhà cung cấp dịch vụ của các bên thứ ba được sử dụng trong ứng dụng: <br /><br /><ul><li><a aria-label={'contact us'}  target='_blank' href='https://policies.google.com/privacy'>Google Play Services</a></li><li><a aria-label={'contact us'}  target='_blank' href='https://support.google.com/admob/answer/6128543?hl=en'>AdMob</a></li><li><a aria-label={'contact us'}  target='_blank' href='https://firebase.google.com/policies/analytics'>Google Analytics for Firebase</a></li><li><a aria-label={'contact us'}  target='_blank' href='https://firebase.google.com/support/privacy/'>Firebase Crashlytics</a></li><li><a aria-label={'contact us'}  target='_blank' href='https://www.facebook.com/about/privacy/update/printable'>Facebook</a></li></ul>"
+    },
+    {
+      "id": 4,
+      "title": "Theo dõi vị trí",
+      "content": "Chúng tôi sẽ chỉ sử dụng dữ liệu về theo dõi vị trí cho mục Khám phá - là mục mà bạn nằm trong dữ liệu tổng hợp về tất cả người dùng của Fika. Điều này giúp bạn nhìn thấy những người dùng trong vùng lân cận của bạn, tránh trường hợp bạn nhìn thấy đề xuất về người ở địa điểm cách xa (trong cùng đất nước hoặc thậm chí khác quốc gia). Tất cả các thời điểm khác khi bạn sử dụng, chúng tôi không theo dõi vị trí của bạn."
+    },
+    {
+      "id": 5,
+      "title": "Nhật ký dữ liệu",
+      "content": "Chúng tôi thông báo với bạn rằng bất cứ khi nào bạn sử dụng Dịch vụ, chúng tôi sẽ thu thập dữ liệu và thông tin (thông qua các sản phẩm của bên thứ ba) trên điện thoại của bạn được gọi là Nhật ký dữ liệu. Nhật ký dữ liệu này có thể bao gồm thông tin như địa chỉ Giao thức Internet ('IP') của thiết bị bạn dùng, tên thiết bị, phiên bản hệ điều hành, cấu hình của thiết bị sử dụng, ngày giờ bạn sử dụng Dịch vụ và các số liệu thống kê khác."
+    },
+    {
+      "id": 6,
+      "title": "Cookies",
+      "content": "Cookies là các tệp có một lượng nhỏ dữ liệu thường được sử dụng làm mã định danh duy nhất ẩn danh. Chúng được gửi đến trình duyệt của bạn từ các trang web mà bạn truy cập và được lưu trữ trên bộ nhớ trong của thiết bị của bạn. Dịch vụ của chúng tôi không sử dụng các cookie này. Tuy nhiên, ứng dụng có thể sử dụng mã của bên thứ ba để thu thập thông tin và cải thiện dịch vụ. Bạn có chấp nhận hoặc từ chối các cookie này, đồng thời sẽ được thông báo khi nào một cookie được gửi đến thiết bị của bạn. Nếu bạn chọn từ chối cookie của chúng tôi, bạn có thể không sử dụng được một số phần của ứng dụng."
+    },
+    {
+      "id": 7,
+      "title": "Nhà cung cấp dịch vụ",
+      "content": "Chúng tôi có thể hợp tác với các công ty và cá nhân bên thứ ba vì những lý do sau:<br /><br /><ul><li>Để hỗ trợ cho Dịch vụ của chúng tôi;</li><li>Để cung cấp Dịch vụ đại diện cho chúng tôi</li><li>Để thực hiện các dịch vụ liên quan đến Dịch vụ của chúng tôi</li><li>Hoặc để hỗ trợ chúng tôi phân tích cách người dùng sử dụng Dịch vụ của chúng tôi</li></ul>Chúng tôi thông báo cho người dùng Dịch vụ rằng các bên thứ ba này có quyền truy cập vào Thông tin cá nhân của bạn. Lý do là để thay mặt chúng tôi thực hiện các nhiệm vụ mà chúng tôi giao cho họ. Tuy nhiên, họ có nghĩa vụ không tiết lộ hoặc sử dụng thông tin cho bất kỳ mục đích nào khác."
+    },
+    {
+      "id": 8,
+      "title": "Bảo mật",
+      "content": "Chúng tôi đánh giá cao sự tin tưởng của bạn trong việc cung cấp Thông tin cá nhân của bạn, do đó chúng tôi sẽ sử dụng các công cụ hợp phát để bảo vệ thông tin đó. Tuy nhiên không có phương thức truyền qua internet hoặc phương thức lưu trữ điện tử nào là an toàn và đáng tin cậy 100%, nên chúng tôi không thể đảm bảo tính bảo mật tuyệt đối của nó."
+    },
+    {
+      "id": 9,
+      "title": "Xóa dữ liệu",
+      "content": "Chúng tôi cho phép tất cả người dùng của mình có khả năng yêu cầu xóa tất cả dữ liệu của họ ngay lập tức. Nếu bạn liên hệ với chúng tôi qua bất kỳ kênh hỗ trợ nào của chúng tôi và yêu cầu xóa dữ liệu, yêu cầu của bạn sẽ được thực hiện trong vòng 24 giờ sau khi xác nhận."
+    },
+    {
+      "id": 10,
+      "title": "Liên kết đến các trang khác",
+      "content": "Dịch vụ này có thể chứa các liên kết đến các trang khác. Nếu bạn nhấn vào liên kết của bên thứ ba, bạn sẽ được dẫn đến website đó. Lưu ý rằng chúng tôi không vận hành các website liên kết này. Do đó, chúng tôi đặc biệt khuyến cáo bạn nên xem lại Chính sách Bảo mật của các website này. Chúng tôi không kiểm soát và không chịu trách nhiệm đối với nội dung, chính sách bảo mật của bất kỳ trang web hoặc dịch vụ của bên thứ ba nào."
+    },
+    {
+      "id": 11,
+      "title": "Quyền riêng tư của trẻ em",
+      "content": "Dịch vụ này không liên quan đến bất kỳ ai dưới 18 tuổi. Chúng tôi không thu thập thông tin nhận dạng cá nhân của trẻ em dưới 18. Nếu phát hiện ra rằng một người dùng dưới 18 tuổi cung cấp cho chúng tôi thông tin cá nhân, chúng tôi sẽ ngay lập tức xóa thông tin này khỏi máy chủ. Nếu bạn là cha mẹ hoặc người giám hộ và bạn thấy con bạn đã cung cấp thông tin cá nhân cho chúng tôi, vui lòng liên hệ với chúng tôi để chúng tôi có thể thực hiện các hành động cần thiết ngây lập tức."
+    },
+    {
+      "id": 12,
+      "title": "Những thay đổi đối với Chính sách Bảo mật này",
+      "content": "Chúng tôi có thể cập nhật Chính sách Bảo mật của mình thường xuyên. Do đó, bạn nên xem lại trang này định kỳ để cập nhật bất kỳ thay đổi nào. Chúng tôi sẽ thông báo cho bạn về các thay đổi này bằng cách đăng Chính sách Bảo mật mới tại trang này.<br /><br />Chính sách này có hiệu lực kể từ ngày 17/9/2020."
+    },
+    {
+      "id": 13,
+      "title": "Liên hệ chúng tôi",
+      "content": "Nếu bạn có bất kỳ câu hỏi hoặc đề xuất nào về Chính sách Bảo mật của  Fika, vui lòng liên hệ với chúng tôi tại: <a aria-label={'contact us'}  target='_blank' href='mailto:info@fikaconnects.com?subject=&body='>info@fikaconnects.com</a>."
+    },
+    {
+      "id": 14,
+      "title": "Điều khoản dịch vụ",
+      "content": "Bằng cách tải xuống hoặc sử dụng ứng dụng, các điều khoản này sẽ tự động áp dụng cho bạn - do đó, bạn nên chắc chắn rằng bạn đã đọc chúng cẩn thận trước khi sử dụng ứng dụng. Bạn không được phép sao chép hoặc sửa đổi ứng dụng, hay thay đổi bất kỳ phần nào của ứng dụng hoặc thương hiệu được bảo hộ của chúng tôi theo bất kỳ cách nào. Bạn không được phép trích xuất mã nguồn của ứng dụng và bạn cũng không được dịch ứng dụng sang các ngôn ngữ khác hoặc tạo các phiên bản phái sinh. Bản thân ứng dụng và tất cả các nhãn hiệu, bản quyền, quyền cơ sở dữ liệu và các quyền sở hữu trí tuệ khác liên quan đều thuộc về Fika Holdings Pte Ltd.<br /><br />Fika Holdings Pte Ltd cam kết rằng ứng dụng mang đến giá trị hữu ích và hiệu quả nhất có thể. Do đó, chúng tôi có quyền thực hiện các thay đổi đối với ứng dụng hoặc tính phí các dịch vụ của ứng dụng, bất kỳ lúc nào và vì bất kỳ lý do gì. Chúng tôi sẽ không tính phí bạn khi sử dụng ứng dụng hoặc các dịch vụ của ứng dụng mà không nói rõ cho bạn biết chính xác các khoản bạn sẽ thanh toán.<br /><br />Ứng dụng Fika lưu trữ và xử lý dữ liệu cá nhân mà bạn đã cung cấp cho chúng tôi để phục vụ cho Dịch vụ của chúng tôi. Bạn có trách nhiệm bảo mật điện thoại cá nhân và quyền truy cập vào ứng dụng. Chúng tôi khuyên bạn không nên bẻ khóa hoặc root điện thoại, khiến điện thoại của bạn có thể bị nhiễm phần mềm độc hại, vi rút, xâm phạm các tính năng bảo mật của điện thoại, khiến ứng dụng Fika không hoạt động đầy đủ hoặc không hoạt động được.<br /><br />Bạn cần biết rằng có một số điểm mà Fika Holdings Pte Ltd sẽ không chịu trách nhiệm. Một số chức năng sẽ yêu cầu ứng dụng có kết nối internet đang hoạt động. Kết nối có thể là Wifi hoặc do mạng di động của bạn cung cấp, nhưng Fika Holdings Pte Ltd không chịu trách nhiệm về việc ứng dụng không hoạt động với đầy đủ chức năng nếu bạn không có Wifi  hoặc không có dữ liệu di động.<br /><br />Nếu đang sử dụng ứng dụng bên ngoài khu vực có Wifi, bạn cần biết rằng các điều khoản thỏa thuận với nhà cung cấp mạng di động của bạn sẽ vẫn được áp dụng. Do đó, bạn có thể bị nhà cung cấp dịch vụ di động tính phí dữ liệu trong suốt thời gian kết nối khi truy cập ứng dụng hoặc các khoản phí khác của bên thứ ba. Khi sử dụng ứng dụng, bạn chấp nhận chịu trách nhiệm về mọi khoản phí như vậy, bao gồm cả phí chuyển vùng dữ liệu nếu bạn sử dụng ứng dụng bên ngoài lãnh thổ quốc gia của mình (tức là vùng hoặc quốc gia) mà không tắt chuyển vùng dữ liệu. Nếu bạn không phải là người thanh toán hóa đơn cho thiết bị mà bạn đang sử dụng ứng dụng, xin lưu ý rằng chúng tôi sẽ coi bạn đã nhận được sự cho phép từ người thanh toán hóa đơn để sử dụng ứng dụng.<br /><br />Fika Holdings Pte Ltd cũng không chịu trách nhiệm với cách bạn sử dụng ứng dụng, ví dụ bạn phải đảm bảo điện thoại cá nhân luôn được sạc đầy pin. Nếu điện thoại hết pin và bạn không thể sử dụng ứng dụng, Fika Holdings Pte Ltd không chịu trách nhiệm về điều này. <br /><br />Tại một số thời điểm, chúng tôi có thể muốn cập nhật ứng dụng. Ứng dụng hiện có sẵn trên hệ điều hành Android và iOS. Các yêu cầu đối với cả hai hệ điều hành này (và bất kỳ hệ điều hành bổ sung nào mà chúng tôi quyết định mở rộng) có thể thay đổi và bạn sẽ cần tải xuống các bản cập nhật nếu muốn tiếp tục sử dụng ứng dụng.<br /><br />Fika Holdings Pte Ltd không đảm bảo rằng sẽ luôn cập nhật ứng dụng sao cho phù hợp với bạn và với các phiên bản Android & iOS mà bạn đã cài đặt trên thiết bị của mình. Tuy nhiên, bạn đồng ý sẽ luôn đồng ý cập nhật cho ứng dụng khi có thể. Chúng tôi cũng có thể ngừng cung cấp ứng dụng và có thể chấm dứt việc sử dụng ứng dụng bất kỳ lúc nào mà không cần thông báo trước cho bạn. Khi chấm dứt ứng dụng, (a) các quyền được cấp cho bạn trong các điều khoản này sẽ chấm dứt; (b) bạn phải ngừng sử dụng ứng dụng và (nếu cần) xóa nó khỏi thiết bị của bạn."
+    }
+  ]
+}
