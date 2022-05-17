@@ -12,6 +12,20 @@
     "next": "Bài tiếp theo",
     "prev": "Bài trước"
   },
+  "contact": {
+    "help": {
+      "title": "trung tâm hỗ trợ",
+      "desc": "Người dùng là ưu tiên hàng đầu của Fika. Chúng tôi mong muốn tạo ra được một nền tảng an toàn và bảo mật tối đa cho người sử dụng. Nếu bạn có bất kỳ vấn đề nào khi sử dụng hoặc gặp lỗi trên app, hãy gửi email cho chúng tôi để đội ngũ của Fika có thể hỗ trợ bạn tốt hơn."
+    },
+    "press": {
+      "title": "Đầu tư - Hợp tác truyền thông",
+      "desc": "Fika luôn hoan nghênh các nhà đầu tư, đơn vị bảo trợ hoặc đối tác có những hình thức hợp tác phù hợp. Hãy liên hệ ngay tại địa chỉ email hoặc SĐT của Fika, chúng tôi rất mong được kết nối thêm với bạn!"
+    },
+    "ask": {
+      "title": "Những câu hỏi thường gặp",
+      "desc": "Muốn biết thêm thông tin về việc sử dụng app? Xem thêm tại đây"
+    }
+  },
   "more_blogs": "Blog khác",
   "more_news": "Tin tức khác",
   "more_stories": "Câu chuyện khác"

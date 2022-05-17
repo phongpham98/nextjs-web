@@ -61,7 +61,7 @@ const FooterMobile: React.FunctionComponent<IFooterMobileProps> = (props) => {
 					</ContactMobile>
 					<HrLine margin="0" />
 					<PressFikaFooter>
-						<TitleFooter>{t('press_fika', { ns: 'title' })}</TitleFooter>
+						<TitleFooter>{t('fika_in_the_press', { ns: 'title' })}</TitleFooter>
 						{magazines?.slice(0, 2).map((item) => {
 							return (
 								<PressContent key={item.id}>

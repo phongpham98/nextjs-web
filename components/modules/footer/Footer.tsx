@@ -51,7 +51,7 @@ const Footer = () => {
 				<LatestNew>
 					<Link href={`/${t('fika_in_the_press', { ns: 'routes' })}`}>
 						<a>
-							<PressTitle>{t('press_fika', {
+							<PressTitle>{t('fika_in_the_press', {
 								ns: 'title'
 							})}</PressTitle>
 						</a>

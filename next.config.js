@@ -67,6 +67,16 @@ module.exports = {
 				destination: '/en/su-kien/:link',
 				locale: false
 			},
+			{
+				source: '/en/fika-in-the-press',
+				destination: '/en/tin-tuc-ve-fika',
+				locale: false
+			},
+			{
+				source: '/en/investor-relations',
+				destination: '/en/-hop-tac-va-dau-tu',
+				locale: false
+			},
 		]
 	},
 	async redirects() {
