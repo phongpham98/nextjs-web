@@ -52,6 +52,24 @@ export const TitleWrapper = styled.div`
   }
 `;
 
+export const GeneralSubTitleHeaderText = styled.div`
+  @media ${device.tablet768} {
+    font-size: 0.7rem;
+  }
+
+  @media ${device.laptop1024} {
+    font-size: 1rem;
+  }
+
+  @media ${device.laptop1440} {
+    font-size: 1rem;
+  }
+
+  @media ${device.laptop1600} {
+    font-size: 1rem;
+  }
+`;
+
 export const GeneralHeaderWrapper = styled.div`
   position: relative;
   width: 100%;

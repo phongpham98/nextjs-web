@@ -255,3 +255,15 @@ export interface QAModel {
   thumbnail_key: string;
   updated_at: string;
 }
+export interface JobModel {
+  created_at: number;
+  deactivated: boolean;
+  department: string;
+  expired_date: number;
+  id: string;
+  jd_file: string;
+  job_title: string;
+  language: LanguageType;
+  position: string;
+  updated_at: number;
+}

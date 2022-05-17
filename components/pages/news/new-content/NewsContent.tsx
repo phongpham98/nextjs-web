@@ -20,7 +20,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import { ContentContainer } from './NewsContentStyled';
+import { NewsContentContainer } from './NewsContentStyled';
 const NewsContent = () => {
 	const { newsList, loadMoreNews, query, total } = useSelector((state: RootState) => state.news);
 	const { latestBlogs } = useSelector((state: RootState) => state.blog);
@@ -62,7 +62,7 @@ const NewsContent = () => {
 	};
 
 	return (
-		<ContentContainer>
+		<NewsContentContainer>
 			{/* {loading === true && <Loader />} */}
 			{newsList.length > 0 ? (<Row gutter={60}>
 				<Col span={16}>
@@ -173,7 +173,7 @@ const NewsContent = () => {
 			)
 			}
 
-		</ContentContainer >
+		</NewsContentContainer >
 	);
 };
 

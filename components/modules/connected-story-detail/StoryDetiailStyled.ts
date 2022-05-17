@@ -22,7 +22,7 @@ export const HeaderContentWrapper = styled.div`
   padding: 2rem 0;
 `;
 
-export const ContentContainer = styled(GeneralPaddingMobile)``;
+// export const ContentContainer = styled(GeneralPaddingMobile)``;
 
 export const ContentMobileContainer = styled.div`
   & img {

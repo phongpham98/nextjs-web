@@ -3,6 +3,7 @@ import {
   CommentModel,
   EventModel,
   InstaPost,
+  JobModel,
   MemberModel,
   PressMagazine,
   QAModel,
@@ -179,4 +180,9 @@ export interface QAState extends BaseState {
   isOpenModal: boolean;
   total: number;
   qaDetail: QAModel | null;
+}
+export interface CareerDetailState extends BaseState {
+  jobs: JobModel[];
+  jobs_by_department: any | null;
+  total: number;
 }

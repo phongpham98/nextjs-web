@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const ContentContainer = styled.div`
+export const NewsContentContainer = styled.div`
 	margin-top: 40px;
 `;

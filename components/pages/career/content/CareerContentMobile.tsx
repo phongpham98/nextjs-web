@@ -14,7 +14,7 @@ interface ICareerContentMobileProps {
 }
 
 const CareerContentMobile: React.FunctionComponent<ICareerContentMobileProps> = (props) => {
-	const { t } = useTranslation(['career', 'button']);
+	const { t } = useTranslation(['career', 'button', 'routes']);
 	const router = useRouter();
 	return (
 		<React.Fragment>
@@ -31,14 +31,14 @@ const CareerContentMobile: React.FunctionComponent<ICareerContentMobileProps> = 
 						<ReasonAnswer>{t('reason_desc')}</ReasonAnswer>
 					</ReasonContainer>
 					<SeeJobButton>
-						<SeeJoBtn onClick={() => router.push(`/jobs`)}>
+						<SeeJoBtn onClick={() => router.push(`/${t('job', { ns: 'routes' })}`)}>
 							{t('see_job', { ns: 'button' })}
 						</SeeJoBtn>
 					</SeeJobButton>
 				</GeneralPaddingMobile>
 				<ProfesstionalDevContainer>
 					<LazyLoad throttle={100} height={100} once>
-							<img width={'100%'} src={'/1.jpg'} alt="professional develop fika" />
+						<img width={'100%'} src={'/1.jpg'} alt="professional develop fika" />
 					</LazyLoad>
 					<ProfesstionnalTextDiv>
 						{t('professional_development')}

@@ -1,7 +1,13 @@
 import { device } from "@configs/screensSizes";
 import styled from "styled-components";
 
-export const StoryContentContainer = styled.div`
+export const PositionContainer = styled.div`
+  @media ${device.tablet768} {
+    border-top: 1px solid #dedede;
+  }
+`;
+
+export const CareerDetailContentContainer = styled.div`
   padding: 50px 120px;
   position: relative;
 

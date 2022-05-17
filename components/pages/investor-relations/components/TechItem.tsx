@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { CenterIcon, ContentContainer, Description, EqualDiv, Header, IconContainer, TechItemContainer } from './Styled';
+import { CenterIcon, TextItemContentContainer, Description, EqualDiv, Header, IconContainer, TechItemContainer } from './Styled';
 import parse from 'html-react-parser';
 import LazyLoad from 'react-lazyload';
 import { GeneralImage } from '@utils/styled-components/GeneralStyled';
@@ -24,14 +24,14 @@ const TextItem: React.FunctionComponent<ITextItemProps> = ({ icon, title, descri
 				</CenterIcon>
 			</EqualDiv>
 
-			<ContentContainer>
+			<TextItemContentContainer>
 				<Header>
 					{title}
 				</Header>
 				<Description>
 					{parse(description)}
 				</Description>
-			</ContentContainer>
+			</TextItemContentContainer>
 		</TechItemContainer>
 	);
 };

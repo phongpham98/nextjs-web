@@ -84,14 +84,21 @@ export interface StoryRequest {
 }
 
 export interface QuestionRequest {
-	email: string;
-	contents: string;
-	name: string;
-	language: string;
-	tags: string[];
-	title?: string;
-	created_at?: Date;
-	updated_at?: Date;
-	deactivated?: boolean;
-  }
-  
+  email: string;
+  contents: string;
+  name: string;
+  language: string;
+  tags: string[];
+  title?: string;
+  created_at?: Date;
+  updated_at?: Date;
+  deactivated?: boolean;
+}
+export interface CVRequest {
+  name: string;
+  job_id: string;
+  email: string;
+  content: string;
+  language: string;
+  file?: RcFile | string;
+}

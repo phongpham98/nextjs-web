@@ -10,7 +10,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import LoveItem from '../item/LoveItem';
 import StickySendStory from '../sticky-send-story/StickySendStory';
-import { ContentContainer } from './ConnectedStoryContentStyled';
+import { StoryContentContainer } from './ConnectedStoryContentStyled';
 
 
 const ConnectedStoryContent = () => {
@@ -56,7 +56,7 @@ const ConnectedStoryContent = () => {
 
 	};
 	return (
-		<ContentContainer>
+		<StoryContentContainer>
 			<div style={{ position: "absolute", height: "100%", top: "20px", left: "75px" }}>
 				<StickyDownload />
 			</div>
@@ -88,7 +88,7 @@ const ConnectedStoryContent = () => {
 			/> : <React.Fragment>
 				<LoadingLoveStories />
 			</React.Fragment>}
-		</ContentContainer>
+		</StoryContentContainer>
 	);
 };
 

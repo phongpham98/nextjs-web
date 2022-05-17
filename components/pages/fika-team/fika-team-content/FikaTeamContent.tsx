@@ -9,7 +9,7 @@ import React, { useEffect } from 'react';
 import LazyLoad from 'react-lazyload';
 import { useDispatch, useSelector } from 'react-redux';
 import FikaMember from '../fika-member/FikaMember';
-import { AboutFikaSubTitle, ContentContainer } from './FikaTeamContentStyled';
+import { AboutFikaSubTitle } from './FikaTeamContentStyled';
 
 const FikaTeamContent = () => {
 	const dispatch = useDispatch();
@@ -20,7 +20,7 @@ const FikaTeamContent = () => {
 	}, []);
 
 	return (
-		<ContentContainer>
+		<div>
 			<Row justify="center" gutter={[40, 80]}>
 				<Col span={16}>
 					<SectionTitle marginBottom="20" title={t("our_excecutive_team")} icon={<SvgPeople />} />
@@ -49,7 +49,7 @@ const FikaTeamContent = () => {
 					</Row>
 				}
 			</Row>
-		</ContentContainer>
+		</div>
 	);
 };
 

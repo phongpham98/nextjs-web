@@ -14,7 +14,7 @@ export const EqualDiv = styled.div`
   position: relative;
 `;
 
-export const ContentContainer = styled.div`
+export const TextItemContentContainer = styled.div`
   width: 100%;
   padding: 1.5rem 1rem;
   gap: 1rem;

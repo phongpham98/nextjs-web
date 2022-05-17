@@ -92,6 +92,11 @@ module.exports = {
 				destination: '/en/tuyen-dung',
 				locale: false
 			},
+			{
+				source: '/en/jobs',
+				destination: '/en/cong-viec',
+				locale: false
+			},
 		]
 	},
 	async redirects() {
