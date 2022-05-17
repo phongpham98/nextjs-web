@@ -32,6 +32,26 @@ module.exports = {
 				destination: '/en/quiz-tinh-cach/quiz/lam-trac-nghiem-mien-phi',
 				locale: false
 			},
+			{
+				source: '/en/news',
+				destination: '/en/tin-tuc',
+				locale: false
+			},
+			{
+				source: '/en/news/detail/:link',
+				destination: '/en/tin-tuc/chi-tiet/:link',
+				locale: false
+			},
+			{
+				source: '/en/connected-story',
+				destination: '/en/cau-chuyen-ket-noi',
+				locale: false
+			},
+			{
+				source: '/en/connected-story/:link',
+				destination: '/en/cau-chuyen-ket-noi/:link',
+				locale: false
+			},
 		]
 	},
 	async redirects() {
@@ -44,6 +64,16 @@ module.exports = {
 			{
 				source: '/en/ve-fika',
 				destination: '/en/about',
+				permanent: true,
+			},
+			{
+				source: '/en/news',
+				destination: '/en/tin-tuc',
+				permanent: true,
+			},
+			{
+				source: '/en/connected-story',
+				destination: '/en/cau-chuyen-ket-noi',
 				permanent: true,
 			},
 		]

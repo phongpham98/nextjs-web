@@ -98,7 +98,7 @@ const Comment = ({ postId }: Props) => {
 					</Form.Item>
 				</TermDiv>
 				<div style={{ marginTop: "2rem", textAlign: "center" }}>
-					<FikaButton onClick={form.submit} name={t("comment.post_comment", { ns: 'button' })} />
+					<FikaButton onClick={form.submit} name={t("post_comment", { ns: 'button' })} />
 				</div>
 			</Form>
 		</CommentContainer>

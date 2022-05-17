@@ -1,5 +1,4 @@
 import React from 'react';
-import { Comment } from '../../../../schema/model';
 import { DivContainer } from './SingleCommentStyled';
 
 interface SingleComentProps {

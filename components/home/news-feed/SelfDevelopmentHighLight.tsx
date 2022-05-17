@@ -23,16 +23,12 @@ const SelfDevelopmentHighLight: React.FunctionComponent<ISelfDevelopmentHighLigh
 				<>
 					<MobileView>
 						<FeedMobile
-							onClick={() => router.push(`/blog/` + highlightBlog.link)}
 							url={`/blog/` + highlightBlog.link}
 							showDate={false} blog={highlightBlog} />
 					</MobileView>
 					<BrowserView>
 						<Feed
-							onClick={() => router.push({
-								pathname: `/blog/${highlightBlog.link}`,
-							})}
-							url={`news/detail/` + highlightBlog.link}
+							url={`/blog/` + highlightBlog.link}
 							showDate={false}
 							story={highlightBlog}
 						/>

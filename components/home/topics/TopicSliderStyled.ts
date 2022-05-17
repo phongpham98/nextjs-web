@@ -38,7 +38,7 @@ export const SliderContent = styled.div`
   }
 `;
 
-export const Title = styled.h1`
+export const SliderTitleH3 = styled.h3`
   font-weight: 500;
   margin: 0;
   color: #fff;
@@ -75,7 +75,7 @@ export const Title = styled.h1`
   }
 `;
 
-export const SubTitle = styled.div`
+export const SliderSubTitleP = styled.p`
   font-weight: 300;
   font-size: 11px;
   width: 70%;

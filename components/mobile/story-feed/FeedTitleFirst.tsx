@@ -1,4 +1,4 @@
-import { DateDiv, FeedTitleDiv, PathDiv, ReadMoreDiv } from '@components/home/news-feed/FeedContentStyled';
+import { DateDiv, FeedTitleH2, PathDiv, ReadMoreDiv } from '@components/home/news-feed/FeedContentStyled';
 import { domain } from '@configs/api';
 import { clickCategoryEvent } from '@helpers/customGTM';
 import { renderDateFollowLanguage } from '@helpers/renderDateFollowLanguage';
@@ -16,33 +16,33 @@ import React from 'react'
 import { Comment, CommentLikeContainer, FeedContent, FeedDate, FeedTitleFirstContainer, FeedTitleFirstContent, FeedTitleFistSub, Share, ShareContainer } from './FeedTitleFirstStyled';
 
 interface IFeedTitleFirstProps {
-	onClick?: () => void;
 	story: any;
 	url: string;
 }
 
-const FeedTitleFirst: React.FunctionComponent<IFeedTitleFirstProps> = ({ onClick, story, url }) => {
+const FeedTitleFirst: React.FunctionComponent<IFeedTitleFirstProps> = ({ story, url }) => {
 	const router = useRouter();
 	const { t } = useTranslation('title');
 	return (
 		<FeedTitleFirstContainer>
 			<Link style={{ color: 'black' }} href={url} >
 				<a>
-					<FeedTitleDiv
-						onClick={onClick}
+					<FeedTitleH2
 						bigTitle={true}
 					>
 						{story.title ? story.title : story.name}
-					</FeedTitleDiv>
+					</FeedTitleH2>
 				</a>
 			</Link>
 			<FeedTitleFirstContent>
 				<Row gutter={10}>
 					<Col span={10}>
 						<Link aria-label={story.title ? story.title : story.name} style={{ color: 'black' }} href={url} >
-							<GeneralHeaderMobileContainer>
+							<a>
+								<GeneralHeaderMobileContainer>
 									<GeneralImage src={story.thumbnail} alt={story.title} />
-							</GeneralHeaderMobileContainer>
+								</GeneralHeaderMobileContainer>
+							</a>
 						</Link>
 					</Col>
 					<Col span={14}>
@@ -65,9 +65,13 @@ const FeedTitleFirst: React.FunctionComponent<IFeedTitleFirstProps> = ({ onClick
 								<FeedTitleFistSub>
 									{story.short_description}
 								</FeedTitleFistSub>
-								<ReadMoreDiv onClick={onClick}>
-									<ReadMore />
-								</ReadMoreDiv>
+								<Link style={{ color: 'black' }} href={url} >
+									<a>
+										<ReadMoreDiv>
+											<ReadMore />
+										</ReadMoreDiv>
+									</a>
+								</Link>
 							</div>
 							<ShareContainer>
 								<CommentLikeContainer>

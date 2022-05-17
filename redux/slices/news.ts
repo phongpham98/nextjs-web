@@ -4,11 +4,8 @@ import { PostModel, Tag } from "@interfaces/posts";
 import { AnotherPostRequest } from "@interfaces/request";
 import { NewsState } from "@redux/states";
 import { RootState } from "@redux/store";
-import {
-  AnyAction,
-  createSlice,
-  PayloadAction,
-} from "@reduxjs/toolkit";
+import { AnyAction, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import Router from "next/router";
 import { ThunkDispatch } from "redux-thunk";
 
 const initState: NewsState = {
@@ -42,11 +39,11 @@ const newsSlice = createSlice({
     },
     update_latest_news: (state, { payload }) => {
       state.latestNews = payload;
-	  state.loading = false;
+      state.loading = false;
     },
     update_more_news: (state, { payload }) => {
       state.loadMoreNews = [...state.loadMoreNews?.concat(payload)];
-	  state.loading = false;
+      state.loading = false;
     },
     update_news_detail: (state, { payload }) => {
       state.newsDetail = payload;
@@ -59,7 +56,7 @@ const newsSlice = createSlice({
     },
     update_query: (state, { payload }) => {
       state.query = payload;
-	  state.loading = false;
+      state.loading = false;
     },
     update_next_blog: (state, { payload }) => {
       state.loading = false;
@@ -69,11 +66,11 @@ const newsSlice = createSlice({
       state.loading = false;
       state.prevBlog = payload;
     },
-	update_news_likes: (state) => {
-		state.newsDetail = state.newsDetail
-		  ? { ...state.newsDetail, likes: state.newsDetail.likes + 1 }
-		  : state.newsDetail;
-	  },
+    update_news_likes: (state) => {
+      state.newsDetail = state.newsDetail
+        ? { ...state.newsDetail, likes: state.newsDetail.likes + 1 }
+        : state.newsDetail;
+    },
     error: (state, { payload }) => {
       state.loading = false;
       state.error = payload;
@@ -83,7 +80,8 @@ const newsSlice = createSlice({
 });
 
 export const newsReducer = newsSlice.reducer;
-export const { update_query, clear, update_news_likes, update_news_detail } = newsSlice.actions;
+export const { update_query, clear, update_news_likes, update_news_detail } =
+  newsSlice.actions;
 
 export function getLatestNews(tags?: string[]) {
   return async (
@@ -98,9 +96,10 @@ export function getLatestNews(tags?: string[]) {
     newQuery.page = 1;
     newQuery.deactivated = false;
     newQuery.tags = tags ? tags : [];
+    newQuery.language = Router.locale;
     let response = await NewsApi.fetchListNews(newQuery);
     if (response) {
-      dispatch(newsSlice.actions.update_latest_news(response.items));
+      dispatch(newsSlice.actions.update_news_list(response));
     }
     try {
     } catch (error: any) {
@@ -123,11 +122,12 @@ export function getListNews(id?: string, tags?: Tag[]) {
       newQuery.limit = 6;
       newQuery.page = 1;
     }
-	if(tags && tags.length > 0){
-		let list = tags.map(tag => tag.id);
-		newQuery.tags = list;
-	}
+    if (tags && tags.length > 0) {
+      let list = tags.map((tag) => tag.id);
+      newQuery.tags = list;
+    }
     newQuery.deactivated = false;
+    newQuery.language = Router.locale;
     let response = await NewsApi.fetchListNews(newQuery);
     if (response) {
       dispatch(newsSlice.actions.update_news_list(response));
@@ -148,10 +148,11 @@ export function getMoreNews(tags?: Tag[]) {
     const { query } = getStore().news;
     let newQuery = { ...query };
     newQuery.deactivated = false;
-	if(tags && tags.length > 0){
-		let list = tags.map(tag => tag.id);
-		newQuery.tags = list;
-	}
+    newQuery.language = Router.locale;
+    if (tags && tags.length > 0) {
+      let list = tags.map((tag) => tag.id);
+      newQuery.tags = list;
+    }
     let response = await NewsApi.fetchListNews(newQuery);
     if (response) {
       dispatch(newsSlice.actions.update_more_news(response.items));
@@ -170,7 +171,7 @@ export function getNewsDetail(link?: string, id?: string) {
   ) => {
     dispatch(newsSlice.actions.loading());
 
-    let response = await NewsApi.fetchNewsDetail(link, id);
+    let response = await NewsApi.fetchNewsByLinkOrId(link, id, Router.locale);
     if (response) {
       dispatch(newsSlice.actions.update_news_detail(response));
     }

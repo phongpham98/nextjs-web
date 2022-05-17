@@ -44,7 +44,7 @@ const DiscoverBlogs = () => {
 							</div>
 						</Col>
 					</Row>
-					<ExploreAll >
+					<ExploreAll>
 						<FikaButton onClick={() => router.push(`/blog`)} name={t('explore_all')} />
 					</ExploreAll>
 				</React.Fragment>

@@ -4,7 +4,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-	"export": "next export",
+    "export": "next export",
     "type-check": "tsc"
   },
   "dependencies": {
@@ -54,6 +54,7 @@
   },
   "devDependencies": {
     "@types/jquery": "^3.5.14",
+    "@types/lodash": "^4.14.182",
     "@types/node": "^17.0.31",
     "@types/qs": "^6.9.7",
     "@types/react": "^17.0.0",

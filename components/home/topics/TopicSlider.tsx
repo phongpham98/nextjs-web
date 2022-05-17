@@ -4,6 +4,7 @@ import { RootState } from '@redux/store';
 import SvgChevronLeft from '@svgs/ChevronLeft';
 import SvgChevronRight from '@svgs/ChevronRight';
 import { ChevronIconContainer, GeneralImage } from '@utils/styled-components/GeneralStyled';
+import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
@@ -11,7 +12,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import { DateTime, SliderContainer, SliderContent, SliderItemContainer, SliderLoadingContainer, SubTitle, Title } from './TopicSliderStyled';
+import { DateTime, SliderContainer, SliderContent, SliderItemContainer, SliderLoadingContainer, SliderSubTitleP, SliderTitleH3 } from './TopicSliderStyled';
 export const NextArrow = (props: any) => {
 	const { onClick } = props;
 	return (
@@ -43,6 +44,7 @@ const TopicSlider = () => {
 	const { latestNews } = useSelector((state: RootState) => state.home);
 	const dispatch = useDispatch();
 	const router = useRouter()
+	const {t} = useTranslation(['routes']);
 
 	useEffect(() => {
 		dispatch(getLatestNews(true));
@@ -56,12 +58,12 @@ const TopicSlider = () => {
 						<div style={{ height: "100%" }} key={item.id}>
 							<SliderItemContainer style={{ position: "relative", height: "100%" }}>
 								<SliderContent>
-									<Link href={'/news'}>
+									<Link href={`/${t('news')}/${t('detail')}/${item.link}`}>
 										<a>
-											<Title >{item.title}</Title>
+											<SliderTitleH3 >{item.title}</SliderTitleH3>
 										</a>
 									</Link>
-									<SubTitle>{item.short_description}</SubTitle>
+									<SliderSubTitleP>{item.short_description}</SliderSubTitleP>
 									<DateTime>{renderDateFollowLanguage(item.public_date ? item.public_date : item.created_at)}</DateTime>
 								</SliderContent>
 								<GeneralImage alt={item.title} src={item.thumbnail} />

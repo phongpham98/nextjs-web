@@ -1,6 +1,7 @@
 import { SingleTopicContainer, TopicImage, TopicTitle } from "@components/home/topics/TopicStyled";
 import { CategoryHome } from "@redux/states";
 import RenderSmoothImage from "@utils/components/RenderSmoothImage";
+import { useTranslation } from "next-i18next";
 import Link from "next/link";
 
 interface TopicProps {
@@ -10,11 +11,12 @@ interface TopicProps {
 const CategoryItem = (props: TopicProps) => {
 	const { item } = props;
 	const { thumbnail, name, link } = item;
+	const { t } = useTranslation(['routes']);
 
 	return (
 		<div style={{ display: "flex", justifyContent: "center" }}>
 			<SingleTopicContainer>
-				<Link href={`/category/` + link}>
+				<Link href={`/${t('category')}/` + link}>
 					<a>
 						<TopicImage>
 							<RenderSmoothImage width="600" height="600" src={thumbnail} alt={item.name} />
@@ -22,7 +24,7 @@ const CategoryItem = (props: TopicProps) => {
 					</a>
 				</Link>
 				<TopicTitle>
-					<Link href={`/category/` + link}>
+					<Link href={`/${t('category')}/` + link}>
 						<a style={{ color: 'black' }}>
 							{name}
 						</a>

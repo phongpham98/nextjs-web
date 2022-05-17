@@ -44,7 +44,6 @@ export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
 			...(await serverSideTranslations(locale ? locale : 'vi', ["blog", "common", "footer", "title", "menu", "button", "routes"])),
 			// Will be passed to the page component as props
 		},
-		revalidate: 1
 	};
 }
 

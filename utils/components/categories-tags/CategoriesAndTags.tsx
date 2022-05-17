@@ -13,6 +13,7 @@ import { RootState } from '@redux/store';
 import SvgHandPointRight from '@svgs/HandPointRight';
 import SvgSearch from '@svgs/Search';
 import { Select } from 'antd';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -46,7 +47,7 @@ const CategoriesAndTags = ({
 	const [searchTerm, setSearchTerm] = React.useState<string>("");
 	const debouncedSearchTerm: string = useDebounce<string>(searchTerm, 500);
 	const { results, loading, searchValue } = useSelector((state: RootState) => state.search);
-	const { t } = useTranslation();
+	const { t } = useTranslation(['button', 'routes', 'title']);
 	const router = useRouter();
 
 	useEffect(() => {
@@ -75,7 +76,7 @@ const CategoriesAndTags = ({
 						onKeyDown={(e: any) => {
 							if (e.key === "Enter") {
 								router.push({
-									pathname: `/search`,
+									pathname: `/${t('search')}`,
 									search: `?q=${searchValue}`
 								})
 							}
@@ -97,7 +98,7 @@ const CategoriesAndTags = ({
 						</Select.Option> : results.map(item => (
 							<Select.Option value={item.id} key={item.id}>
 								<div onClick={() => {
-									router.push(`/${item.search_type === "news" ? 'news/detail' : item.search_type === "story" ? "love-stories" : "blog"}/${item.link}`)
+									router.push(`/${item.search_type === "news" ? `/${t('news')}/${t('detail')}/` : item.search_type === "story" ? `${t('connected_story')}` : "blog"}/${item.link}`)
 								}}>{item.title}</div>
 							</Select.Option>
 						))}
@@ -105,7 +106,7 @@ const CategoriesAndTags = ({
 					<IconSearch onClick={() => {
 						if (searchValue) {
 							router.push({
-								pathname: `/search`,
+								pathname: `/${t('search')}`,
 								search: `?q=${searchValue}`
 							})
 						}
@@ -115,14 +116,18 @@ const CategoriesAndTags = ({
 				</SearchWithIcon>
 			</SearchContainer>
 			{hasCategory && <div>
-				<LatestPostTitleH3>category</LatestPostTitleH3>
+				<LatestPostTitleH3>{t('category', { ns: 'title' })}</LatestPostTitleH3>
 				<TopicContainer>
 					{categories?.map(topic => {
 						return (
-							<div onClick={() => {
-								clickCategoryEvent(topic.name);
-								router.push(`/category/` + topic.link)
-							}} className="topic categories" key={topic.id}>{topic.name}</div>
+							<Link href={`/${t('category')}/` + topic.link}>
+								<a>
+									<div onClick={() => {
+										clickCategoryEvent(topic.name);
+									}} className="topic categories" key={topic.id}>{topic.name}</div>
+								</a>
+							</Link>
+
 						);
 					})}
 				</TopicContainer>
@@ -137,16 +142,24 @@ const CategoriesAndTags = ({
 
 				{hasInvestorBtn && <FikaButtonContainer>
 					<InvestorWrapper>
-						<FikaInvestorBtn onClick={() => router.push(`/news/fika-investor`)} >
-							{t("category.button.investor")}
-						</FikaInvestorBtn>
+						<Link href={`/${t('investor')}`}>
+							<a>
+								<FikaInvestorBtn>
+									{t("investor", { ns: 'button' })}
+								</FikaInvestorBtn>
+							</a>
+						</Link>
 						<HandLeftIcon>
 							<SvgHandPointRight />
 						</HandLeftIcon>
 					</InvestorWrapper>
-					<FikaPressBtn onClick={() => router.push(`/news/fika-in-the-press`)}>
-						{t("category.button.press")}
-					</FikaPressBtn>
+					<Link href={`/${t('fika_in_the_press')}`}>
+						<a>
+							<FikaPressBtn>
+								{t("fika_in_the_press", { ns: 'button' })}
+							</FikaPressBtn>
+						</a>
+					</Link>
 				</FikaButtonContainer>}
 			</StickyContainer>
 		</DivContainer>

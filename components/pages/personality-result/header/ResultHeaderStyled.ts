@@ -1,7 +1,7 @@
 import { device } from "@configs/screensSizes";
 import styled from "styled-components";
 
-export const HeaderContent = styled.div`
+export const PResultHeaderContent = styled.div`
   position: absolute;
   top: 0;
   left: 0;

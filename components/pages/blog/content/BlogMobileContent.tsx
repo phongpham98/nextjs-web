@@ -16,7 +16,7 @@ import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import * as React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { BlogContentContainer } from './BlogMoibleContentStyled';
+import { BlogMobileContentContainer } from './BlogMoibleContentStyled';
 import LatestPosts from './LatestPosts';
 interface IBlogMobileContentProps {
 }
@@ -59,7 +59,7 @@ const BlogMobileContent: React.FunctionComponent<IBlogMobileContentProps> = (pro
 	return (
 		<React.Fragment>
 			<NavMobile tags={firstBlog ? firstBlog.tags : []} isLoading={!firstBlog} />
-			<BlogContentContainer>
+			<BlogMobileContentContainer>
 				<Space style={{ width: "100%" }} size={20} direction="vertical">
 					{firstBlog ? (
 						<FeedMobile
@@ -84,7 +84,6 @@ const BlogMobileContent: React.FunctionComponent<IBlogMobileContentProps> = (pro
 						return (
 							<React.Fragment key={blog.id}>
 								<FeedMobile
-									onClick={() => router.push(`/blog/` + blog.link)}
 									url={`/blog/` + blog.link}
 									 blog={blog} />
 								<HrLine margin="0" />
@@ -97,7 +96,6 @@ const BlogMobileContent: React.FunctionComponent<IBlogMobileContentProps> = (pro
 						return (
 							<React.Fragment key={blog.id}>
 								<FeedMobile
-									onClick={() => router.push(`/blog/` + blog.link)}
 									url={`/blog/` + blog.link}
 									blog={blog} />
 								<HrLine margin="0" />
@@ -108,7 +106,7 @@ const BlogMobileContent: React.FunctionComponent<IBlogMobileContentProps> = (pro
 				{blogs.length + (loadBlogs ? loadBlogs.length : 0) < total ? <ButtonDisContainer>
 					<FikaButtonMobile onClick={() => fetchMoreData()}>{t("view_more")}</FikaButtonMobile>
 				</ButtonDisContainer> : null}
-			</BlogContentContainer>
+			</BlogMobileContentContainer>
 		</React.Fragment>
 	);
 };

@@ -27,10 +27,15 @@ const FooterMobile: React.FunctionComponent<IFooterMobileProps> = (props) => {
 	const { magazines } = useSelector((state: RootState) => state.press);
 	const dispatch = useDispatch();
 	const { t } = useTranslation(['footer', 'title']);
+	const [display, setDisplay] = React.useState<boolean>(false)
 	React.useEffect(() => {
-		dispatch(getPresses());
+		dispatch(getPresses()); setTimeout(() => {
+			setDisplay(true)
+		}, 2000)
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
+	if (!display)
+		return null
 
 	return (
 		<footer style={{ marginTop: '1rem' }}>

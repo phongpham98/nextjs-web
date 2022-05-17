@@ -20,15 +20,16 @@ const BlogDetailMobile: React.FunctionComponent<IBlogDetailMobileProps> = (props
 	const { link } = router.query;
 	const { blogDetail } = useSelector((state: RootState) => state.blog);
 	const [loading, setLoading] = React.useState<boolean>(false);
+
 	const fetchBlogDetail = async () => {
 		setLoading(true)
 		try {
 			let response: PostModel | undefined
 			if (typeof link === 'string') {
 				if (link.includes('&&')) {
-					response = await BlogApi.fetchByLinkorId(undefined, link.split('&&')[1]);
+					response = await BlogApi.fetchByLinkorId(undefined, link.split('&&')[1], router.locale);
 				} else
-					response = await BlogApi.fetchByLinkorId(link);
+					response = await BlogApi.fetchByLinkorId(link, undefined, router.locale);
 			}
 
 			if (response) {

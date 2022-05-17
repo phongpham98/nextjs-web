@@ -85,9 +85,3 @@ export const CommentWrapper = styled.div`
   }
 `;
 
-export const ImageMoreBlogContainer = styled.div`
-  width: 100%;
-  padding-top: 80.81%;
-  position: relative;
-  cursor: pointer;
-`;

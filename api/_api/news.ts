@@ -8,7 +8,7 @@ import qs from "qs";
 
 const Endpoint = HOST;
 export const fetchListNews = (query: PostRequest) => {
-  const { post_ids, homepage, limit, page, deactivated, tags, highlight } =
+  const { post_ids, homepage, limit, page, deactivated, tags, highlight, language } =
     query;
   const q = qs.stringify(
     {
@@ -18,8 +18,8 @@ export const fetchListNews = (query: PostRequest) => {
       limit,
       page,
       deactivated,
-      language: Router.locale,
       highlight,
+	  language
     },
     {
       indices: false,
@@ -30,9 +30,9 @@ export const fetchListNews = (query: PostRequest) => {
   return request<ApiListResponse<PostModel>>("GET", Endpoint + "/news?" + q);
 };
 
-export const fetchNewsDetail = (link?: string, id?: string) => {
+export const fetchNewsByLinkOrId = (link?: string, id?: string, language?: string) => {
   const q = qs.stringify(
-    { link, id, language: Router.locale },
+    { link, id, language },
     {
       indices: false,
       skipNulls: true,
@@ -44,7 +44,7 @@ export const fetchNewsDetail = (link?: string, id?: string) => {
 export const fetchNextPost = (query: AnotherPostRequest) => {
   const { id, public_date } = query;
   const q = qs.stringify(
-    { id, public_date, language: Router.locale },
+    { id, public_date },
     {
       indices: false,
       skipNulls: true,

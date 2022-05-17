@@ -62,16 +62,16 @@ export const Title = styled.div`
   }
 `;
 
-export const TimeAndAuthor = styled.div`
-  color: #25282b;
-  text-transform: uppercase;
-  font-size: 10px;
-  margin-top: 0px;
-  @media ${device.tablet768} {
-    font-size: 10px;
-    /* margin-top: 10px; */
-  }
-`;
+// export const TimeAndAuthor = styled.div`
+//   color: #25282b;
+//   text-transform: uppercase;
+//   font-size: 10px;
+//   margin-top: 0px;
+//   @media ${device.tablet768} {
+//     font-size: 10px;
+//     /* margin-top: 10px; */
+//   }
+// `;
 
 export const IconContainer = styled.div`
   display: flex;

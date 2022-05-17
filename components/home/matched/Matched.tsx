@@ -8,7 +8,7 @@ import MatchedAvatar from './MatchedAvatar';
 import { DiscoverContainer, DiscoverTitle, MatchedContainer } from './MatchedStyled';
 
 const Matched = () => {
-	const { t } = useTranslation(['home', 'button']);
+	const { t } = useTranslation(['home', 'button', 'routes']);
 	return (
 		<MatchedContainer>
 			<Row>
@@ -18,10 +18,10 @@ const Matched = () => {
 							{t("matched.title")}
 						</DiscoverTitle>
 						<div>
-							<Link href={`/personality/quiz/free-personality-test`} >
+							<Link href={`/${t('personality', { ns: 'routes' })}/quiz/${t('free_personality_test', { ns: 'routes' })}`} >
 								<a>
 									<FikaButton
-										name={t('discover', {ns: "button"})} />
+										name={t('discover', { ns: "button" })} />
 								</a>
 							</Link>
 						</div>

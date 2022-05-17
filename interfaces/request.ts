@@ -1,4 +1,5 @@
 import { QuizPart } from "@redux/states";
+import { RcFile } from "antd/lib/upload";
 import { AssignResult, QuizItemModel, UserResult } from "./model";
 
 export type CategotyType = "Blog" | "News";
@@ -57,10 +58,27 @@ export interface CommentRequest {
   language?: string;
 }
 
-
 export interface GetCommentRequest {
-	post_id: string;
-	page?: number;
-	limit?: number;
-	language?: string;
-  }
+  post_id: string;
+  page?: number;
+  limit?: number;
+  language?: string;
+}
+
+export interface QueryModel {
+  page: number;
+  limit: number;
+}
+
+export interface StoryRequest {
+  user_a: string;
+  user_b: string;
+  email: string;
+  content: string;
+  other?: string;
+  title: string;
+  created_at?: Date;
+  updated_at?: Date;
+  deactivated?: boolean;
+  files?: RcFile[] | string[];
+}

@@ -49,6 +49,7 @@ export const SubHeaderP = styled.div`
   font-size: 0.7rem;
   color: #61666d;
   width: 90%;
+  margin-top: 0.7rem;
   @media ${device.mobileM} {
     font-size: 0.7rem;
   }

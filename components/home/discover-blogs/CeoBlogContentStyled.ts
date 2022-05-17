@@ -49,7 +49,7 @@ export const PathDateWrapper = styled.div`
   }
 `;
 
-export const CeoBlogTitle = styled.div`
+export const CeoBlogTitleH3 = styled.h3`
   font-weight: 500;
   color: black;
   text-transform: uppercase;
@@ -89,7 +89,7 @@ export const CeoBlogTitle = styled.div`
   } ;
 `;
 
-export const CeoContentDiv = styled.div`
+export const CeoContentP = styled.p`
   color: #61666d;
   font-size: 13px;
   overflow: hidden;

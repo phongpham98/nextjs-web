@@ -2,7 +2,7 @@ import * as React from 'react';
 import LazyLoad from 'react-lazyload';
 import { useSelector } from 'react-redux';
 import banner from '@public/result-banner.png';
-import { CaptionText, CharacterType, HeaderContent, PResultDescription, ResultImage, YouAre } from './ResultHeaderStyled';
+import { CaptionText, CharacterType, PResultHeaderContent, PResultDescription, ResultImage, YouAre } from './ResultHeaderStyled';
 import { GeneralHeaderWrapper, GeneralImage } from '@utils/styled-components/GeneralStyled';
 import { HeaderContainer } from '@components/modules/headers/HeaderStyled';
 import { RootState } from '@redux/store';
@@ -24,7 +24,7 @@ const ResultHeader: React.FunctionComponent<IResultHeaderProps> = (props) => {
 				<LazyLoad throttle={100} height={100} once>
 					<GeneralImage src={banner.src} alt="fika quiz" />
 				</LazyLoad>
-				{assign_result.length > 0 ? <HeaderContent>
+				{assign_result.length > 0 ? <PResultHeaderContent>
 					<CaptionText>
 						{t('quiz_result.complete_text')}
 					</CaptionText>
@@ -38,7 +38,7 @@ const ResultHeader: React.FunctionComponent<IResultHeaderProps> = (props) => {
 					<PResultDescription>
 						{assign_result[0].description}
 					</PResultDescription>
-				</HeaderContent> : null}
+				</PResultHeaderContent> : null}
 			</GeneralHeaderWrapper>
 		</>
 	);

@@ -141,6 +141,7 @@ export function getHighlightNews() {
         limit: 1,
         highlight: false,
         deactivated: false,
+		language: Router.locale
       };
 
       const response = await NewsApi.fetchListNews(query);

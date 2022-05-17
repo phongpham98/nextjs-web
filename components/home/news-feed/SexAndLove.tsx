@@ -25,15 +25,11 @@ const SexAndLoveHighlight: React.FunctionComponent<IDatingAdviceHighLightProps> 
 				<>
 					<MobileView>
 						<FeedMobile
-							onClick={() => router.push(`/blog/` + highlightBlog.link)}
 							url={`/blog/` + highlightBlog.link}
 							showDate={false} blog={highlightBlog} />
 					</MobileView>
 					<BrowserView>
 						<Feed
-							onClick={() => router.push({
-								pathname: `/blog/${highlightBlog.link}`,
-							})}
 							url={`/blog/` + highlightBlog.link}
 							showDate={false}
 							story={highlightBlog}

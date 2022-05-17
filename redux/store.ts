@@ -23,6 +23,8 @@ import { quizReducer } from "./slices/quiz";
 import { blogReducer } from "./slices/blog";
 import { newsReducer } from "./slices/news";
 import { blogCommentReducer } from "./slices/comment";
+import { loveStoryReducer } from "./slices/connectedStoriesSlice";
+import { sendStoryReducer } from "./slices/sendStory";
 const createNoopStorage = () => {
   return {
     getItem(_key: any) {
@@ -54,7 +56,9 @@ const rootReducer = combineReducers({
   personalityType: personalityTypeReducer,
   blog: blogReducer,
   news: newsReducer,
-  comment: blogCommentReducer
+  comment: blogCommentReducer,
+  loveStory: loveStoryReducer,
+  sendStory: sendStoryReducer
 });
 
 const persistedReducer = persistReducer(

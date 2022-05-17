@@ -1,9 +1,8 @@
-import { faPenAlt } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import isMobileDevice from '@helpers/isMobile';
 import { Author, PostModel } from '@interfaces/posts';
 import { getCommentsById } from '@redux/slices/comment';
 import { RootState } from '@redux/store';
+import SvgPenAlt from '@svgs/PenAlt';
 import { Avatar, Col, Row } from 'antd';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -77,7 +76,7 @@ const BlogComment = ({ postId, author, type, nextPost, prevPost }: Props) => {
 					<CommentWrapper>
 						<PostACommentTitleWrapper>
 							<CommentText>{t("comment.post_comment")}</CommentText>
-							<FontAwesomeIcon icon={faPenAlt} />
+							<SvgPenAlt />
 						</PostACommentTitleWrapper>
 						<Comment postId={postId} />
 					</CommentWrapper>

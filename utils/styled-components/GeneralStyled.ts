@@ -121,3 +121,10 @@ export const TermDiv = styled.div`
   justify-content: flex-start;
   align-items: center;
 `;
+
+export const CloseIcon = styled.div`
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  display: inline-flex;
+`;

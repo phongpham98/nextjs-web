@@ -1,4 +1,4 @@
-import { Author, CategoryItem, LanguageType, Tag } from "./posts";
+import { Author, CategoryItem, LanguageType, PostModel, Tag } from "./posts";
 
 export interface ApiListResponse<T> {
   total: number;
@@ -147,4 +147,20 @@ export interface CommentModel {
   liked: number;
   name: string;
   replies?: CommentModel[];
+}
+
+export interface StoryModel extends PostModel {
+  slogan?: string;
+}
+
+export interface StoryResponse {
+  user_a: string;
+  user_b: string;
+  email: string;
+  story: string;
+  other?: string;
+  title: string;
+  created_at?: Date;
+  deactivated?: boolean;
+  id: string;
 }

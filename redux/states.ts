@@ -5,9 +5,11 @@ import {
   PressMagazine,
   QuizItemModel,
   SearchModel,
+  StoryModel,
   UserResult,
 } from "@interfaces/model";
 import { LanguageType, PostModel, PostRequest } from "@interfaces/posts";
+import { QueryModel } from "@interfaces/request";
 
 interface BaseState {
   loading?: boolean;
@@ -126,9 +128,20 @@ export interface NewsState extends BaseState {
 }
 
 export interface CommentState extends BaseState {
-	comments: CommentModel[];
-	total: number;
-	isReply: boolean;
-	commentId: string;
-	commentReplied: CommentModel | null;
-  }
+  comments: CommentModel[];
+  total: number;
+  isReply: boolean;
+  commentId: string;
+  commentReplied: CommentModel | null;
+}
+
+export interface ConnectedStoryState extends BaseState {
+  stories: StoryModel[];
+  query: QueryModel;
+  total: number;
+  storyDetail?: StoryModel;
+  isOpenModal: boolean;
+  detailLoading?: boolean;
+}
+
+export interface SendStoryState extends BaseState {}

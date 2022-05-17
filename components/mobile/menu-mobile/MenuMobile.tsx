@@ -85,14 +85,14 @@ const MenuMobile: React.FunctionComponent<IMenuMobileProps> = (props) => {
 							</MobileMenuItem>
 						</a>
 					</Link>
-					<Link href={t('personality', { ns: 'routes' })}>
+					<Link href={`/${t('personality', { ns: 'routes' })}`}>
 						<a onClick={handleClickMenu}>
 							<MobileMenuItem>
 								{t('personality')}
 							</MobileMenuItem>
 						</a>
 					</Link>
-					<Link href={t('connected_story', { ns: 'routes' })}>
+					<Link href={`/${t('connected_story', { ns: 'routes' })}`}>
 						<a onClick={handleClickMenu}>
 							<MobileMenuItem>
 								{t('connected_story')}
@@ -100,12 +100,12 @@ const MenuMobile: React.FunctionComponent<IMenuMobileProps> = (props) => {
 						</a>
 					</Link>
 					<SlideMenuItem
-						href={t('blog', { ns: 'routes' })}
+						href={`/${t('blog', { ns: 'routes' })}`}
 						id={"blog"}
 						menuTitle={t('blogs')}
 						subMenu={t('blogs_children', { returnObjects: true })}
 					/>
-					<Link href={t('social_spots', { ns: 'routes' })}>
+					<Link href={`/${t('social_spots', { ns: 'routes' })}`}>
 						<a onClick={handleClickMenu}>
 							<MobileMenuItem>
 								{t('connected_story')}
@@ -113,12 +113,12 @@ const MenuMobile: React.FunctionComponent<IMenuMobileProps> = (props) => {
 						</a>
 					</Link>
 					<SlideMenuItem
-						href={t('news', { ns: 'routes' })}
+						href={`/${t('news', { ns: 'routes' })}`}
 						id={"news"}
 						menuTitle={t('news')}
 						subMenu={t('news_children', { returnObjects: true })}
 					/>
-					<Link href={t('events', { ns: 'routes' })}>
+					<Link href={`/${t('events', { ns: 'routes' })}`}>
 						<a onClick={handleClickMenu}>
 							<MobileMenuItem>
 								{t('event')}
@@ -126,7 +126,7 @@ const MenuMobile: React.FunctionComponent<IMenuMobileProps> = (props) => {
 						</a>
 					</Link>
 					<SlideMenuItem
-						href={t('about_fika', { ns: 'routes' })}
+						href={`/${t('about_fika', { ns: 'routes' })}`}
 						id={"aboutFika"}
 						menuTitle={t('about')}
 						subMenu={t('about_children', { returnObjects: true })}

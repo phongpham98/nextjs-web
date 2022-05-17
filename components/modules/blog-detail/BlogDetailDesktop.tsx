@@ -85,13 +85,12 @@ const BlogDetailDesktop: React.FunctionComponent<IBlogDetailDesktopProps> = (pro
 					<Col span={16}>
 						{blogDetail && !loading ?
 							<React.Fragment>
-								{/* <SchemaBlog blogDetail={blogDetail} /> */}
 								<MarginBottonDiv>
 									<GeneralTitlePostDetailH1>{blogDetail.title}</GeneralTitlePostDetailH1>
 									<MotoP>{blogDetail.short_description}</MotoP>
 									<TimeAndAuthor>{renderDateFollowLanguage(blogDetail.created_at)} / BY {blogDetail.author.name}</TimeAndAuthor>
 									<ShareAndLikeContainer>
-										<ShareButton title={blogDetail.title} url={`${domain}${location.pathname}&&${blogDetail.id}#${blogDetail.id}`} />
+										<ShareButton title={blogDetail.title} url={`${domain}${router.pathname}&&${blogDetail.id}#${blogDetail.id}`} />
 
 									</ShareAndLikeContainer>
 								</MarginBottonDiv>

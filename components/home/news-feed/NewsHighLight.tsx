@@ -1,5 +1,6 @@
 import { getHighlightNews } from '@redux/slices/home';
 import { RootState } from '@redux/store';
+import { useTranslation } from 'next-i18next';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import * as React from 'react';
@@ -12,31 +13,27 @@ const FeedMobile = dynamic(() => import('@components/mobile/story-feed/FeedMobil
 const Feed = dynamic(() => import('./Feed'))
 
 const NewsHighLight: React.FunctionComponent<INewsHighLightProps> = (props) => {
-	const { highlightNews } = useSelector((state: RootState) => state.home);
-	const router = useRouter();
+	const { highlightNews: highlightBlog } = useSelector((state: RootState) => state.home);
+	const { t } = useTranslation('routes')
 	const dispatch = useDispatch();
 	React.useEffect(() => {
 		dispatch(getHighlightNews())
 	}, [dispatch]);
 	return (
 		<React.Fragment>
-			{highlightNews ? (
+			{highlightBlog ? (
 				<>
 					<MobileView>
-					<FeedMobile
-							onClick={() => router.push(`news/detail/` + highlightNews.link)}
-							url={`news/detail/` + highlightNews.link}
+						<FeedMobile
+							url={`/${t('news')}/${t('detail')}/` + highlightBlog.link}
 							showDate={false}
-							 blog={highlightNews} />
+							blog={highlightBlog} />
 					</MobileView>
 					<BrowserView>
 						<Feed
-							onClick={() => router.push({
-								pathname: 'news/detail/` + highlightNews.link',
-							})}
-							url={`news/detail/` + highlightNews.link}
+							url={`/${t('news')}/${t('detail')}/` + highlightBlog.link}
 							showDate={false}
-							story={highlightNews}
+							story={highlightBlog}
 						/>
 					</BrowserView>
 				</>
