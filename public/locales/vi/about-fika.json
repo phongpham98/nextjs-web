@@ -1,0 +1,29 @@
+{
+  "header": "Chúng tôi tạo ra ứng dụng Fika dựa trên mong muốn đem công nghệ tối ưu và sự đổi mới mang tính định hướng vào bối cảnh hẹn hò trực tuyến hiện tại, góp phần tạo ra một nền tảng hẹn hò và tương tác cộng đồng độc đáo không giống bất kỳ nền tảng nào khác.",
+  "core_value": {
+    "growth": {
+      "title": "Phát triển",
+      "description": "Không ngừng phát triển để trở thành phiên bản tốt nhất của chính mình - không phải của bất kỳ ai khác. Mọi thách thức đều là cơ hội để học hỏi, trưởng thành và phát triển."
+    },
+    "empower": {
+      "title": "trao quyền",
+      "description": "Chúng tôi tin rằng khi được trao quyền, ai cũng có thể làm được bất cứ điều gì trong cuộc sống. Chúng tôi tin tưởng vào việc trao quyền cho những người xung quanh chúng tôi, tạo ra một cộng đồng tích cực và quả cảm."
+    },
+    "auth": {
+      "title": "Xác tín",
+      "description": "Chúng tôi yêu thích tính chân thực và tin rằng sống 'thật' tốt hơn là 'hoàn hảo'. Chúng tôi khuyến khích mọi người hãy là chính mình, yêu bản thân và mọi thứ khiến họ trở nên độc đáo."
+    }
+  },
+  "reason": {
+    "title": "Tại sao thị trường <br /> Châu Á là điểm khởi đầu?",
+    "description": "“Tôi cùng Denise - người bạn đồng sáng lập Fika đều là người Thuỵ Điển gốc Á. Chúng tôi thường nói về việc “quay trở lại” châu Á, để kết nối nhiều hơn với cội nguồn và bằng cách nào đó có thể đóng góp nhiều hơn. Đặc biệt, Denise được sinh ra với dòng máu Việt, sau một thời gian chuyển về làm việc và sinh sống tại Việt Nam, đã đánh giá được sự bùng nổ và tiềm năng phong phú của thị trường tại đây. <br /><br />  Khi tôi đến thăm Việt Nam lần đầu tiên vào năm 2019, tôi đã rất ngạc nhiên khi biết các ứng dụng hẹn hò vốn rất phổ biến ở Mỹ và châu  u đã gặp phải những định kiến nhất định khi du nhập vào Việt Nam. Chúng tôi đã tìm hiểu kỹ hơn và hiểu lý do tại sao các ứng dụng nước ngoài ấy không phù hợp với tư duy của người dùng châu Á và nhất là tại thị trường Việt Nam. Đặc biệt là khi văn hoá Á Đông rất đề cao tình yêu và sự kết đôi. Chúng tôi nhìn thấy rõ nhu cầu và cả tiềm năng của thị trường. Ngay như bản thân chúng tôi cũng có nhiều bạn bè đang thực sự tìm kiếm một nửa đích thực của cuộc đời mình. Đối với chúng tôi, dường như không còn gì phù hợp hơn cơ hội này để kiến tạo những kết nối và các mối quan hệ ý nghĩa nhất cho những con người Á Đông!",
+    "quote": "“Mục tiêu của chúng tôi là tạo ra một ứng dụng hẹn hò tốt nhất tại Việt Nam cũng như khu vực Đông Nam Á và sau đó là toàn cầu hoá.”"
+  },
+  "rank": {
+    "download": "Lượt tải",
+    "matches": "Kết nối",
+    "female_users": "Người dùng nữ",
+    "verified_users": "Người dùng",
+    "ranking": "Xếp hạng: Google Play"
+  }
+}

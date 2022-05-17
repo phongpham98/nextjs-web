@@ -74,7 +74,7 @@ module.exports = {
 			},
 			{
 				source: '/en/investor-relations',
-				destination: '/en/-hop-tac-va-dau-tu',
+				destination: '/en/hop-tac-va-dau-tu',
 				locale: false
 			},
 		]

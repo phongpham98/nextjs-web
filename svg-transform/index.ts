@@ -1,1 +1,1 @@
-export { default as PenAlt } from "./PenAlt";
+export { default as Core } from "./Core";

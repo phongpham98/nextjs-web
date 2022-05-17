@@ -1,0 +1,29 @@
+{
+  "header": "We started our app because we wanted to use state-of-the-art technology and innovative adaptations of the current online dating landscape to create a new social & dating platform unlike any other.",
+  "core_value": {
+    "growth": {
+      "title": "GROWTH",
+      "description": "We constantly aim to grow and become better. We are all about becoming the best version of ourselves and are not afraid to face challenges to grow and develop."
+    },
+    "empower": {
+      "title": "EMPOWERMENT",
+      "description": "We believe that by being empowered, anyone can do anything in life. We believe in empowering others around us, creating a positive and brave community."
+    },
+    "auth": {
+      "title": "AUTHENTICITY",
+      "description": "We love authenticity and believe that being “real” is better than being “perfect”. We encourage people to be themselves, love themselves and everything that makes them unique."
+    }
+  },
+  "reason": {
+    "title": "WHY IS ASIA <br /> OUR FIRST START?",
+    "description": "“My co-founder and I are from Sweden but with Asian heritage, and we were often talking about “returning” to Asia, to connect more with our roots and to contribute somehow. My co-founder has Vietnamese heritage, and after having previously lived and worked in Vietnam, she knew about the dynamic market and its opportunities. <br /><br /> When I visited Vietnam for the first time in 2019, I was surprised that dating apps that are so popular in the U.S. and Europe, were surrounded by a large stigma in Vietnam. We dug more into it and found it clear that the foreign apps in Vietnam were not very compatible with the Asian user and mindset. At the same time, there is a big social pressure in Asia to find love. We clearly saw the market opportunity. With both of us having many friends looking for a compatible person to spend their lives with, this seemed like the perfect opportunity to fight loneliness and help Asian people create meaningful connections with one another.",
+    "quote": "“Our goal is to create the best dating app in Vietnam as well as in Southeast Asia.”"
+  },
+  "rank": {
+    "download": "Download",
+    "matches": "Connections",
+    "female_users": "Female users",
+    "verified_users": "Verified users",
+    "ranking": "Ranking: Google Play"
+  }
+}
