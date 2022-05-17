@@ -1,5 +1,6 @@
 import { RootState } from '@redux/store';
 import SvgClose from '@svgs/Close';
+import SvgCloseThin from '@svgs/CloseThin';
 import SvgPlus from '@svgs/Plus';
 import { Col, Row } from 'antd';
 import { forEach } from 'lodash';
@@ -61,7 +62,7 @@ const UploadImages: React.FunctionComponent<IUploadImagesProps> = ({ setFiles })
 								const s = source.filter((item: any, index: number) => index !== idx);
 								setSelectedFiles(s);
 							}}>
-								<SvgClose />
+								<SvgCloseThin color='black' />
 							</DeleteIcon>
 						</ImageContainer>
 					</Col>

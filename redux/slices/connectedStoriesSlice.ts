@@ -1,5 +1,5 @@
 import { ConnectedStoryApi } from "@api";
-import { ApiListResponse } from "@interfaces/model";
+import { ApiListResponse, StoryModel } from "@interfaces/model";
 import { PostModel, PostRequest, Tag } from "@interfaces/posts";
 import { ConnectedStoryState } from "@redux/states";
 import { RootState } from "@redux/store";
@@ -34,7 +34,7 @@ const loveStorySlice = createSlice({
     },
     upload_stories: (
       state,
-      action: PayloadAction<ApiListResponse<PostModel>>
+      action: PayloadAction<ApiListResponse<StoryModel>>
     ) => {
       state.loading = false;
       state.stories = [...state.stories.concat(action.payload.items)];

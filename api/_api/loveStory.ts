@@ -22,7 +22,7 @@ export const fetchConnectedStories = (query: PostRequest) => {
       skipNulls: true,
     }
   );
-  return request<ApiListResponse<PostModel>>("GET", Endpoint + "/stories?" + q);
+  return request<ApiListResponse<StoryModel>>("GET", Endpoint + "/stories?" + q);
 };
 
 export const fetchStoryById = (link?: string, id?: string, language?: string) => {
