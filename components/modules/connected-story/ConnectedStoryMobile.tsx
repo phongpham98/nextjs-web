@@ -2,8 +2,8 @@ import LoveStoryContentMobile from '@components/pages/connected-story/content/Co
 import RenderSmoothImage from '@utils/components/RenderSmoothImage';
 import { GeneralImageWrapper } from '@utils/styled-components/GeneralStyled';
 import parse from 'html-react-parser';
+import { useTranslation } from 'next-i18next';
 import * as React from 'react';
-import { useTranslation } from 'react-i18next';
 import { HeaderTitle, StoryHeaderContent, StoryHeaderMobile, SubTitle } from './ConnectedStoryMobileStyled';
 
 interface ILoveStoryMobileProps {

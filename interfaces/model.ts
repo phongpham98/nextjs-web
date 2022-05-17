@@ -223,3 +223,35 @@ export interface PressMagazine {
   title: string;
   date: number;
 }
+
+export interface MemberModel {
+  avatar: string;
+  avatar_key?: string;
+  created_at?: number;
+  deactivated?: boolean;
+  facebook?: string;
+  id: string;
+  language: LanguageType;
+  linkedin?: string;
+  name: string;
+  position: string;
+  twitter?: string;
+  updated_at?: number;
+}
+
+export interface QAModel {
+  id: string;
+  answers: string;
+  banner: string;
+  banner_key: string;
+  created_at: string;
+  deactivated: boolean;
+  homepage: boolean;
+  language: LanguageType;
+  link: string;
+  question: string;
+  tags: Tag[];
+  thumbnail: string;
+  thumbnail_key: string;
+  updated_at: string;
+}

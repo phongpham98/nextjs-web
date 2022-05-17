@@ -7,7 +7,7 @@ import { Avatar, Col, Row } from 'antd';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'next-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import HrLine from '../HrLine';
 import { AuthorInfor, AuthorJob, AuthorTitle, AuthorWrapper, BlogCommentContainer, CommentText, CommentWrapper, PagingWrapper, PostACommentTitleWrapper } from './BlogCommentStyled';

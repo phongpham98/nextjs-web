@@ -82,3 +82,16 @@ export interface StoryRequest {
   deactivated?: boolean;
   files?: RcFile[] | string[];
 }
+
+export interface QuestionRequest {
+	email: string;
+	contents: string;
+	name: string;
+	language: string;
+	tags: string[];
+	title?: string;
+	created_at?: Date;
+	updated_at?: Date;
+	deactivated?: boolean;
+  }
+  

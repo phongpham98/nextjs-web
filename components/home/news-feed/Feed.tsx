@@ -21,6 +21,7 @@ const Feed = ({ story, showDate, url }: FeedProps) => {
 								<RenderSmoothImage
 									width='500'
 									height='350'
+									
 									src={'/16banner.jpg'}
 									alt={story.title} />
 							</FeedImage>

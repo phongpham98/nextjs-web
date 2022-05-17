@@ -1,0 +1,48 @@
+{
+  "popular_question_title": "Những Câu hỏi thường gặp",
+  "support_centre_title": "Trung tâm hỗ trợ",
+  "popular_questions": [
+    {
+      "question": "Fika là gì?",
+      "answer": "Fika là ứng dụng hẹn hò, kết bạn tích hợp trí tuệ nhân tạo đầu tiên tại Đông Nam Á cho phép kết bạn, trò chuyện, hẹn hò và gặp gỡ những người mới thú vị. Trên Fika, bạn có thể dễ dàng kết nối, trò chuyện và hẹn hò với những người “hợp gu” của mình."
+    },
+    {
+      "question": "Tôi có thể tải app Fika ở đâu?",
+      "answer": "Bạn đã có thể tải ứng dụng Fika xuống qua App Store & Google Play.Để tải Fika, vui lòng ấn vào link sau đây:  <a aria-label='download fika' rel='noreferrer' href='https://app.adjust.com/r5xvidr' target='_blank'  >https://app.adjust.com/r5xvidr.</a> cho ios và  <a aria-label='download fika' rel='noreferrer' href='https://play.google.com/store/apps/details?id=com.meetai.dating.android&hl=en&gl=US' target='_blank'  >https://play.google.com/store/apps/details?id=com.meetai.dating.android&hl=en&gl=US.</a> cho android."
+    },
+    {
+      "question": "Tôi có phải trả tiền để sử dụng Fika không?",
+      "answer": "Fika là một app miễn phí để tải xuống và sử dụng, nhưng để có được trải nghiệm tốt nhất trên app ​Fika, kể từ ngày 28 tháng 4 năm 2021, tất cả người dùng có thể mua thêm các tính năng ĐẶC BIỆT, chẳng hạn như xem ai thích bạn, tua lại hành động hoặc có thể thả like không giới hạn bằng xu Fika. Xu Fika có thể được mua trực tiếp trong app hoặc người dùng có thể mua thông qua App Store và Google Play."
+    },
+    {
+      "question": "Kiểm duyệt hồ sơ là như thế nào?",
+      "answer": "Tại Fika, chúng tôi xem trọng sự an toàn và tính xác thực. Tất cả người dùng đăng ký trên Fika sẽ được yêu cầu xác minh hồ sơ của họ để đảm bảo rằng tất cả ảnh của họ là “chính chủ” và đáp ứng tiêu chuẩn nhất định do chúng tôi đưa ra. Chúng tôi mong muốn cung cấp một môi trường an toàn và xác thực, không có hồ sơ giả mạo cho người dùng của chúng tôi."
+    },
+    {
+      "question": "Làm sao để profile của tôi được duyệt?",
+      "answer": "Các quy tắc kiểm duyệt ảnh của chúng tôi được đưa ra để bảo vệ cộng đồng người dùng. Những bức ảnh đẹp và chất lượng cao sẽ giúp bạn truyền tải được những điểm thu hút củabản thân và tăng cơ hội kết nối được thêm với nhiều người. Vui lòng làm theo hướng dẫn về việc đăng ảnh của chúng tôi theo quy tắc ở bên dưới: <br/> &ensp;&ensp; - Luôn chọn ảnh rõ mặt: Đảm bảo mọi người có thể nhìn thấy rõ khuôn mặt của bạn. Đừng giấu mình dưới lớp kính râm hoặc che mặt bằng những chiếc mũ..<br/> &ensp;&ensp;- Hãy tải lên ít nhất 1 ảnh rõ mặt: Chúng tôi không những người dùng của mình cảm thấy thất vọng khi gặp gỡ nhau ngoài đời.<br/> &ensp;&ensp;- BLuôn trung thật và chân thành: Sử dụng ảnh được chụp trong thời gian gần đây. Không sử dụng ảnh từ hơn 5 năm về trước. Ảnh hồ sơ của bạn phải trông tự nhiên và có chất lượng tốt để mọi người có thể biết chính xác con người thật của bạn.<br/>&ensp;&ensp; - Đừng dùng ảnh chất lượng thấp: Đừng dùng ảnh có nhiều filter hoặc quá tối/ mờ, Hãy chỉ dùng ảnh chất lượng cao để hồ sơ của bạn được chú ý nhiều hơn."
+    },
+    {
+      "question": "Làm sao để tôi vô hiệu hoá tài khoản trên Fika?",
+      "answer": "Bạn luôn có thể vô hiệu hoá hoặc xóa hồ sơ của mình trên Fika nếu muốn. Thao tác này được thực hiện trực tiếp trong ứng dụng. Fika luôn khuyến nghị những người dùng nên chọn “vô hiệu hoá”  hơn là xóa hồ sơ, vì sau khi xóa hồ sơ, các thông tin, tin nhắn và hồ sơ của người dùng sẽ không thể truy cập lại được nữa."
+    },
+    {
+      "question": "Tại sao tôi không thể sử dụng app Fika?",
+      "answer": "Fika có thể được sử dụng trên hầu hết các thiết bị di động, nhưng có lẽ bạn đang sử dụng một thiết bị mà Fika chưa thể được tối ưu hóa. Nếu bạn không thể đăng ký Fika vì lý do này, vui lòng cho chúng tôi biết trực tiếp bằng cách gửi tin nhắn cho chúng tôi tại đây và chúng tôi sẽ cố gắng hết sức để giúp bạn."
+    }
+  ],
+  "support_centres": [
+    {
+      "title": "Tin mới",
+      "link": "/tin-tuc"
+    },
+    {
+      "title": "Dành cho Merchant",
+      "link": "/tin-tuc/hop-tac-va-dau-tu"
+    },
+    {
+      "title": "Tuyển dụng tại Fika",
+      "link": "/tuyen-dung"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+	"popular_question_title": "Popular questions",
+    "support_centre_title": "Support centre",
+    "popular_questions": [
+      {
+        "question": "What is fika?",
+        "answer": "Fika is a female-focused AI social & dating app that has skyrocketed up the list on app stores since its debut in 2020. Fika prioritizes users’ safety and has only 100% verified users via a selfie photo submission. Using innovative AI (Artificial Intelligence), Fika matches users most suitable for each other. Use Fika to find friends, date, or network – we're the all-in-one app for your social life!"
+      },
+      {
+        "question": "Where Can I Download Fika?",
+        "answer": "We are available to download on the App Store & Google Play. Just click this link: <a aria-label='download fika' rel='noreferrer' href='https://app.adjust.com/r5xvidr' target='_blank'  >https://app.adjust.com/r5xvidr.</a> for ios and  <a aria-label={''download fika} rel='noreferrer' href='https://play.google.com/store/apps/details?id=com.meetai.dating.android&hl=en&gl=US' target='_blank'  >https://play.google.com/store/apps/details?id=com.meetai.dating.android&hl=en&gl=US.</a> for android"
+      },
+      {
+        "question": "Do I Have To Pay To Use Fika, Or Is It Free?",
+        "answer": "Fika is free to download and use. And all our premium features – rewind, reveal and explorer pass – are also free inside the app."
+      },
+      {
+        "question": "What Is Profile Verification?",
+        "answer": "At Fika, we value safety and authenticity. All users who register on Fika will need to verify their profiles to ensure that all photos are real and meet our standards. We aim to provide a safe environment, free from fake profiles and spam for our users."
+      },
+      {
+        "question": "What Is Photo Verification?",
+        "answer": "Our photo moderation rules are in place to protect our community. Clear and high-quality photos will help you convey your self and increase your chances of getting more quality matches. Please follow our photo guidelines below: <br/> &ensp;&ensp; - Show your face: Make sure people can see your face. Don't hide under sunglasses or cover your face with big hats.<br/> &ensp;&ensp;- Make sure you upload one full-face photo: We don't want you to be disappointed meeting people. No catfishing!<br/> &ensp;&ensp;- Be honest & keep it real: Use photos that show the current you. Don't use photos from over five years ago. Your profile pictures should look natural, clear and focused so people can get an accurate idea of who you are.<br/>&ensp;&ensp; - Don't use low-quality photos: Don't use heavily filtered images or too dark or blurry."
+      },
+      {
+        "question": "How Do I Deactivate My Account On Fika?",
+        "answer": "You can always pause or delete your account directly in the app. Fika always recommends users to take a break rather than delete the account because once deleted, matches, messages and the user’s profile are no longer retrievable."
+      },
+      {
+        "question": "Why Can't I Sign Up To Use Fika?",
+        "answer": "Fika is available for almost all devices, but perhaps you have a device we didn't optimize for yet. If that is the case and you cannot sign up to Fika, please let us know directly by sending us a message here, and we’ll be doing our best to help you."
+      }
+    ],
+    "support_centres": [
+      {
+        "title": "Latest News",
+        "link": "/news"
+      },
+      {
+        "title": "for merchants",
+        "link": "/news/investor-relations"
+      },
+      {
+        "title": "careers at fika",
+        "link": "/career"
+      }
+    ]
+}

@@ -77,6 +77,21 @@ module.exports = {
 				destination: '/en/hop-tac-va-dau-tu',
 				locale: false
 			},
+			{
+				source: '/en/fika-team',
+				destination: '/en/doi-ngu',
+				locale: false
+			},
+			{
+				source: '/en/faqs',
+				destination: '/en/hoi-dap',
+				locale: false
+			},
+			{
+				source: '/en/career',
+				destination: '/en/tuyen-dung',
+				locale: false
+			},
 		]
 	},
 	async redirects() {

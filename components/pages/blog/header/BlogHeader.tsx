@@ -1,7 +1,7 @@
 import { GeneralHeaderWrapper } from '@utils/styled-components/GeneralStyled';
 import { Col, Row } from 'antd';
+import { useTranslation } from 'next-i18next';
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { BlogHeaderContainer, BlogImageContainer, BlogText, BlogTitle, Image, SubTitleP, Text } from './BlogHeaderStyled';
 
 const BlogHeader = () => {

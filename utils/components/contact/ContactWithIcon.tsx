@@ -1,5 +1,6 @@
 import React from 'react';
 import { ActionTitle, ContactArea, ContactInforContainer, ContactInforDetail, IconContainer } from './FikaContactStyled';
+import parse from 'html-react-parser'
 
 interface ContactWithIconProps {
 	icon?: any;
@@ -20,7 +21,7 @@ const ContactWithIcon = ({ icon, title, detail }: ContactWithIconProps) => {
 					{title}
 				</ActionTitle>
 				<ContactInforDetail>
-					{detail}
+					{parse(detail)}
 				</ContactInforDetail>
 			</ContactArea>
 		</ContactInforContainer>

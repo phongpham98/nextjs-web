@@ -1,5 +1,5 @@
+import SvgPenAlt from '@svgs/PenAlt';
 import React from 'react';
-import SvgPenAlt from 'svg-transform/PenAlt';
 import { StickyContainer } from './StickySendStoryStyled';
 
 const StickySendStory = ({ onClick }: any) => {

@@ -3,7 +3,9 @@ import {
   CommentModel,
   EventModel,
   InstaPost,
+  MemberModel,
   PressMagazine,
+  QAModel,
   QuizItemModel,
   SearchModel,
   StoryModel,
@@ -161,4 +163,20 @@ export interface PressFikaState extends BaseState {
   news: LatestNew[];
   total: number;
   query: PostRequest;
+}
+
+export interface FikaTeamState extends BaseState {
+  members: MemberModel[];
+  total?: number;
+  query: PostRequest;
+  ceo: MemberModel | null;
+  cto: MemberModel | null;
+}
+
+export interface QAState extends BaseState {
+  qas: QAModel[];
+  query: PostRequest;
+  isOpenModal: boolean;
+  total: number;
+  qaDetail: QAModel | null;
 }

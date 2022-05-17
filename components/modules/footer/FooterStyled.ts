@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 export const FooterContainer = styled.div`
   padding: 30px 10%;
+  margin-top: 2rem;
   background-color: ${colors.primary};
   color: white;
   max-height: 420px;

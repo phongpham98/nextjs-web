@@ -26,6 +26,8 @@ import { blogCommentReducer } from "./slices/comment";
 import { loveStoryReducer } from "./slices/connectedStoriesSlice";
 import { sendStoryReducer } from "./slices/sendStory";
 import { eventReducer } from "./slices/event";
+import { fikaTeamReducer } from "./slices/team";
+import { QaReducer } from "./slices/qna";
 const createNoopStorage = () => {
   return {
     getItem(_key: any) {
@@ -62,6 +64,8 @@ const rootReducer = combineReducers({
   sendStory: sendStoryReducer,
   event: eventReducer,
   pressFika: pressFikaReducer,
+  team: fikaTeamReducer,
+  qna: QaReducer
 });
 
 const persistedReducer = persistReducer(
