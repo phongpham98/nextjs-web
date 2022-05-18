@@ -15,7 +15,10 @@ interface IPrivacyPolicyMobileProps {
 
 const PrivacyPolicyMobile: React.FunctionComponent<IPrivacyPolicyMobileProps> = (props) => {
 	const { t } = useTranslation('policy');
-	const list: Policy[] = t('detail', { returnObjects: true })
+	const [list, setList] = React.useState<Policy[]>([])
+	React.useEffect(() => {
+		setList(t('detail', { returnObjects: true }))
+	}, [])
 	return (
 		<React.Fragment>
 			<GeneralHeaderMobileContainer>
@@ -29,7 +32,7 @@ const PrivacyPolicyMobile: React.FunctionComponent<IPrivacyPolicyMobileProps> = 
 					{parse(t('header_mobile'))}
 				</PrivacyPolicyMobileText>
 				{
-					list.map(item => {
+					list?.map(item => {
 						return (
 							<React.Fragment key={item.id}>
 								<PrivacePolictyItemTitle>

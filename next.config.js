@@ -107,6 +107,11 @@ module.exports = {
 				destination: '/en/chinh-sach-bao-mat',
 				locale: false
 			},
+			{
+				source: '/en/how-to-delete-or-pause-account',
+				destination: '/en/xoa-hoac-vo-hieu-hoa-tai-khoan',
+				locale: false
+			},
 		]
 	},
 	async redirects() {

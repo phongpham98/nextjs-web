@@ -1,0 +1,31 @@
+{
+  "header_title": "Hướng dẫn <br /> vô hiệu hóa tài khoản",
+  "title": "Hướng dẫn vô hiệu hóa tài khoản",
+  "steps": [
+    {
+      "step": "Bước 1",
+      "step_title": "Đăng nhập vào app Fika",
+      "step_detail": "Để tự xoá được tài khoản, trước tiên bạn cần đăng nhập vào app Fika thành công."
+    },
+    {
+      "step": "Bước 2",
+      "step_title": "Tìm mục tài khoản",
+      "step_detail": "Vào trang Thiết lập -> Chọn mục Tài khoản."
+    },
+    {
+      "step": "Bước 3",
+      "step_title": "Thực hiện vô hiệu hóa hoặc xóa tài khoản",
+      "step_detail": "Bạn sẽ có 2 sự lựa chọn: Vô hiệu hóa hoặc xóa vĩnh viễn tài khoản.<br/><br/><ul><li>Bằng cách vô hiệu hoá tài khoản của bản thân, hồ sơ của bạn sẽ không được hiện lên phần Khám phá của Fika hay trong các tính năng khác trên app, đồng nghĩa với mọi người sẽ không thể trò chuyện với bạn. Các match của bạn sẽ tạm thời bị hủy cho đến khi bạn trở lại.</li><li>Bằng cách xóa tài khoản của mình, bạn sẽ mất tất cả lịch sử, match và cuộc trò chuyện của mình. Hành động này là vĩnh viễn và không thể được đảo ngược, vì vậy Fika không khuyến khích người dùng thực hiện thao tác này nếu bạn có cân nhắc lựa chọn khác.</li></ul>"
+    },
+    {
+      "step": "Bước 4",
+      "step_title": "Lựa chọn lý do vô hiệu hoá/xoá tài khoản",
+      "step_detail": "Bạn có thể cải thiện trải nghiệm bằng cách cho Fika biết lý do vì sao bạn muốn vô hiệu hoá tài khoản nhé. Nếu vẫn muốn tiếp tục, hãy nhấn nút “Vô hiệu hoá tài khoản”."
+    },
+    {
+      "step": "Bước 5",
+      "step_title": "Nếu bạn muốn quay trở lại và sử dụng Fika",
+      "step_detail": "Bạn luôn có thể quay trở lại và sử dụng Fika bằng cách lập lại tài khoản mới hoặc kích hoạt lại tài khoản cũ. Tất cả tài khoản mới đều phải được xác minh lại để đảm bảo tính xác thực."
+    }
+  ]
+}

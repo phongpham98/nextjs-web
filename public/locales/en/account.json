@@ -1,0 +1,31 @@
+{
+  "header_title": "How to <br /> Pause or Delete<br /> Your Fika Account",
+  "title": "How to Pause or Delete Your Fika Account",
+  "steps": [
+    {
+      "step": "Step 1",
+      "step_title": "Log in",
+      "step_detail": "To pause or delete your account, you need to first log into the Fika app."
+    },
+    {
+      "step": "Step 2",
+      "step_title": "Go into Account Setting",
+      "step_detail": "Go to setting screen -> Account Settings"
+    },
+    {
+      "step": "Step 3",
+      "step_title": "Pause or delete your account",
+      "step_detail": "You will have 2 options: Pause or Delete your account<br/><br/><ul><li>By pausing your account, you’ll not be seen on Discovery, and people will not be able to chat with you. Your connections will be temporarily unconnected until you return.</li><li>By deleting your account, you’ll lose all your history, matches, and chats. This action is permanent, and something Fika doesn’t recommend unless you’re 100% sure.</li></ul>"
+    },
+    {
+      "step": "Step 4",
+      "step_title": "Choose a reason",
+      "step_detail": "Please help us improve Fika by letting us know why you’re pausing or deleting your account."
+    },
+    {
+      "step": "Step 5",
+      "step_title": "You can always come back!",
+      "step_detail": "If you wish to use Fika again, you can sign up to a new account or reactivate your paused account. All newly-activated accounts must be verified again for the safety of our community."
+    }
+  ]
+}

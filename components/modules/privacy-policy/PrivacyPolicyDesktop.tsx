@@ -17,7 +17,10 @@ interface IPrivacyPolicyDesktopProps {
 
 const PrivacyPolicyDesktop: React.FunctionComponent<IPrivacyPolicyDesktopProps> = (props) => {
 	const { t } = useTranslation('policy');
-	const list: Policy[] = t('detail', { returnObjects: true })
+	const [list, setList] = React.useState<Policy[]>([])
+	React.useEffect(() => {
+		setList(t('detail', { returnObjects: true }))
+	}, [])
 	return (
 		<React.Fragment>
 			<GeneralContentWrapper>
@@ -37,7 +40,7 @@ const PrivacyPolicyDesktop: React.FunctionComponent<IPrivacyPolicyDesktopProps> 
 						{parse(t('header'))}
 					</PrivacyPolicyText>
 					{
-						list.map(item => {
+						list?.map(item => {
 							return (
 								<React.Fragment key={item.id}>
 									<PrivacePolictyItemTitle className={item.id === 1 || item.id === 2 || item.id === 14 ? ' big-title' : ''} >
