@@ -13,7 +13,7 @@ const Reason = () => {
 		<ReasonContainer>
 			<Row justify="center" gutter={{ xs: 30, sm: 40, lg: 80 }}>
 				<Col style={{ display: "flex" }} xs={24} sm={11} xl={10}>
-					<LazyLoad throttle={100} height={100} once>
+					<LazyLoad offset={300} throttle={100} height={100} once>
 						<img width="100%" src={'/about-fika1.png'} alt={t("reason.title")} />
 					</LazyLoad>
 				</Col>

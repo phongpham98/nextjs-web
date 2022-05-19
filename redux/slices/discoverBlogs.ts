@@ -5,6 +5,7 @@ import { CategoryRequest } from "@interfaces/request";
 import { DiscoverState } from "@redux/states";
 import { RootState } from "@redux/store";
 import { AnyAction, createSlice } from "@reduxjs/toolkit";
+import Router from "next/router";
 import { ThunkDispatch } from "redux-thunk";
 
 const initialState: DiscoverState = {
@@ -56,6 +57,7 @@ export function getCTOBlogs() {
         cate_id: categoryLink.cto[locale],
         page: 1,
         limit: 1,
+        language: Router.locale,
       };
 
       const resp = await HomeApi.fetchCeoBlog(query);
@@ -77,6 +79,7 @@ export function getCeoBlogs() {
         cate_id: categoryLink.ceo[locale],
         page: 1,
         limit: 2,
+        language: Router.locale,
       };
       const resp = await HomeApi.fetchCeoBlog(query);
       if (resp) {

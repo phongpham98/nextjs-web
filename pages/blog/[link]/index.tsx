@@ -17,12 +17,12 @@ type Props = {
 const Desktop = dynamic(() => import('@components/modules/blog-detail/BlogDetailDesktop'), { ssr: false })
 const Mobile = dynamic(() => import('@components/modules/blog-detail/BlogDetailMoible'), { ssr: false })
 
-const BlogDetail: InferGetStaticPropsType<typeof getStaticProps> = ({ data }: Props) => {
+const BlogDetail = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
 	const isMobile = isMobileDevice();
 	return (
 		<>
 			<Head>
-				<title>{data.title}</title>
+				<title>{data ? data.title : "Fika Connects"}</title>
 			</Head>
 			{isMobile ? <React.Fragment>
 				<Mobile />
@@ -40,7 +40,23 @@ const BlogDetail: InferGetStaticPropsType<typeof getStaticProps> = ({ data }: Pr
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
-	let data: any = '';
+	let data: PostModel = {
+		id: 'string',
+		title: 'string',
+		banner: 'string',
+		comments: 0,
+		contents: 'string',
+		author: {
+			id: '',
+			name: '',
+			username: ''
+		},
+		tags: [],
+		likes: 0,
+		link: 'string',
+		created_at: 0,
+		category: {}
+	};
 	if (params && typeof params.link === 'string') {
 		const res = await fetchByLinkorId(params.link, undefined, locale)
 		if (res) {

@@ -12,6 +12,7 @@ import { RootState } from '@redux/store';
 import DownloadFika from '@utils/components/DownloadFika';
 import HrLine from '@utils/components/HrLine';
 import RenderSmoothImage from '@utils/components/RenderSmoothImage';
+import RenderSmoothNextImage from '@utils/components/RenderSmoothNextImage';
 import ShareButton from '@utils/components/share/ShareButton';
 import { GeneralTitlePostDetailH1, MotoP, ShareAndLikeContainer } from '@utils/styled-components/GeneralContentStyled';
 import { GeneralHeaderMobileContainer, GeneralImageWrapper, GeneralPaddingMobile, MarginBottonDiv } from '@utils/styled-components/GeneralStyled';
@@ -19,7 +20,6 @@ import { Col, Space } from 'antd';
 import parse from 'html-react-parser';
 import { useRouter } from 'next/router';
 import React from 'react';
-import LazyLoad from 'react-lazyload';
 import { useDispatch, useSelector } from 'react-redux';
 import { ContentMobileContainer, StoryMobileContainer } from './StoryDetiailStyled';
 
@@ -31,7 +31,7 @@ const StoryDetailMobile = () => {
 	const { latestBlogs } = useSelector((state: RootState) => state.blog);
 
 	const [loading, setLoading] = React.useState<boolean>(false);
-	
+
 	const fetchBlogDetail = async () => {
 		setLoading(true)
 		try {
@@ -67,11 +67,9 @@ const StoryDetailMobile = () => {
 			{/* {loading === true && <Loader />} */}
 			<GeneralHeaderMobileContainer>
 				{storyDetail && !loading ? (
-					<LazyLoad throttle={100} height={100} once>
-						<GeneralImageWrapper>
-							<RenderSmoothImage width='500' height='500' src={storyDetail.thumbnail} alt={storyDetail.title} />
-						</GeneralImageWrapper>
-					</LazyLoad>
+					<GeneralImageWrapper>
+						<RenderSmoothNextImage width='500' height='500' src={storyDetail.thumbnail ? storyDetail.thumbnail : ''} alt={storyDetail.title} />
+					</GeneralImageWrapper>
 				) : <GeneralImageWrapper>
 					<RenderSmoothImage width='500' height='500' alt={''} src={''} />
 				</GeneralImageWrapper>}

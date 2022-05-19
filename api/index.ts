@@ -8,7 +8,7 @@ import * as ConnectedStoryApi from "./_api/loveStory";
 // import * as DatingSpotApi from './_api/datingSpot';
 import * as QaApi from "./_api/qna";
 import * as TeamApi from "./_api/team";
-// import * as CategoryApi from './_api/category';
+import * as CategoryApi from './_api/category';
 import * as CareerDetailApi from "./_api/careerDetail";
 // import * as CeoBlogApi from './_api/discoverBlog';
 import * as JobApi from './_api/job';
@@ -28,7 +28,7 @@ export {
   ConnectedStoryApi,
   QaApi,
   TeamApi,
-  // CategoryApi,
+  CategoryApi,
   CareerDetailApi,
   // CeoBlogApi,
   JobApi,

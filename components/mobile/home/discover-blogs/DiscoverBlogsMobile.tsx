@@ -15,7 +15,7 @@ interface IDiscoverBlogsMobileProps {
 }
 
 const DiscoverBlogsMobile: React.FunctionComponent<IDiscoverBlogsMobileProps> = (props) => {
-	const { t } = useTranslation('button');
+	const { t } = useTranslation(['button', 'routes']);
 	const { blogs, ctoBlogs } = useSelector((state: RootState) => state.discover);
 	const router = useRouter();
 	const dispatch = useDispatch();
@@ -30,16 +30,13 @@ const DiscoverBlogsMobile: React.FunctionComponent<IDiscoverBlogsMobileProps> = 
 				<SectionTitle marginBottom="20" icon={<SvgStar />} title={"Discover blogs"} />
 				<Space style={{ width: "100%" }} size={30} direction="vertical">
 					{blogs.length > 0 ? <FeedMobile
-						onClick={() => router.push(`/blog/` + blogs[0].link)}
-						url={`/blog/` + blogs[0].link}
+						url={`/${t('blogs', {ns: 'routes'})}/` + blogs[0].link}
 						showDate={true} blog={blogs[0]} /> : null}
 					<FeedMobile
-						onClick={() => router.push(`/blog/` + ctoBlogs.link)}
-						url={`/blog/` + ctoBlogs.link}
+						url={`/${t('blogs', {ns: 'routes'})}/` + ctoBlogs.link}
 						showDate={true} blog={ctoBlogs} />
 					{blogs.length > 1 ? <FeedMobile
-						onClick={() => router.push(`/blog/` + blogs[1].link)}
-						url={`/blog/` + blogs[1].link}
+						url={`/${t('blogs', {ns: 'routes'})}/` + blogs[1].link}
 						showDate={true} blog={blogs[1]} /> : null}
 					<div style={{ textAlign: "center" }}>
 						<FikaButton onClick={() => router.push(`/blog`)} name={(t('explore_all'))} />

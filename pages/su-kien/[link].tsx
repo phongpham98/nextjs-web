@@ -11,18 +11,15 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import React from 'react'
 
-type Props = {
-	data: EventModel
-}
 const Desktop = dynamic(() => import('@components/modules/event-detail/EventDetailDesktop'), { ssr: false })
 const Mobile = dynamic(() => import('@components/modules/event-detail/EventDetailMobile'), { ssr: false })
 
-const EventDetail: InferGetStaticPropsType<typeof getStaticProps> = ({ data }: Props) => {
+const EventDetail = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
 	const isMobile = isMobileDevice();
 	return (
 		<>
 			<Head>
-				<title>{data.name}</title>
+				<title>{data ? data.name : "Fika Connects"}</title>
 			</Head>
 			{isMobile ? <React.Fragment>
 				<Mobile />

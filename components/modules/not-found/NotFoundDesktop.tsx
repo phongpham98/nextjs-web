@@ -9,14 +9,14 @@ interface INotFoundDesktopProps {
 }
 
 const NotFoundDesktop: React.FunctionComponent<INotFoundDesktopProps> = (props) => {
-	const { t } = useTranslation('common');
+	const { t } = useTranslation(['common', 'button']);
 	const router = useRouter();
 	return (
 		<NotFoundContainer>
 			<NotFoundText>404</NotFoundText>
 			<ExplainText>{parse(t('not_found'))}</ExplainText>
 			<div onClick={() => router.back()} style={{ marginTop: "40px" }}>
-				<FikaButton name="Go back" />
+				<FikaButton name={t('go_back')} />
 			</div>
 		</NotFoundContainer>
 	);

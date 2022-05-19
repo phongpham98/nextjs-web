@@ -14,6 +14,7 @@ const Feed = dynamic(() => import('./Feed'))
 const ZodiacHighlight: React.FunctionComponent<IRelationshipHighlightProps> = (props) => {
 	const { zodiacHighlight: highlightBlog } = useSelector((state: RootState) => state.home);
 	const dispatch = useDispatch();
+	const {t} = useTranslation('routes')
 	React.useEffect(() => {
 		dispatch(getZodiacHighlight())
 	}, [dispatch]);
@@ -24,12 +25,12 @@ const ZodiacHighlight: React.FunctionComponent<IRelationshipHighlightProps> = (p
 				<>
 					<MobileView>
 						<FeedMobile
-							url={`/blog/` + highlightBlog.link}
+							url={`/${t('blogs', {ns: 'routes'})}/` + highlightBlog.link}
 							showDate={false} blog={highlightBlog} />
 					</MobileView>
 					<BrowserView>
 						<Feed
-							url={`/blog/` + highlightBlog.link}
+							url={`/${t('blogs', {ns: 'routes'})}/` + highlightBlog.link}
 							showDate={false}
 							story={highlightBlog}
 						/>

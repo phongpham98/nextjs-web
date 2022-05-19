@@ -13,7 +13,7 @@ import Link from 'next/link';
 import * as React from 'react';
 import LazyLoad from 'react-lazyload';
 import { useDispatch, useSelector } from 'react-redux';
-import { BackgroundDiv, EventItem, EventSubTitle, EventTitleH2, ImageContainer } from './EventContentStyled';
+import { BackgroundDiv, EventImageContainer, EventItem, EventSubTitle, EventTitleH2 } from './EventContentStyled';
 
 interface IEventContentMobileProps {
 }
@@ -46,8 +46,8 @@ const EventContentMobile: React.FunctionComponent<IEventContentMobileProps> = (p
 					{events.map((event, idx) => {
 						return (
 							<EventItem key={event.id}>
-								<ImageContainer>
-									<LazyLoad throttle={100} height={100} once>
+								<EventImageContainer>
+									<LazyLoad offset={300} throttle={100} height={100} once>
 										<Link href={`/${t('event')}/` + event.link}>
 											<a>
 												<GeneralImageWrapper>
@@ -57,7 +57,7 @@ const EventContentMobile: React.FunctionComponent<IEventContentMobileProps> = (p
 										</Link>
 									</LazyLoad>
 									<BackgroundDiv></BackgroundDiv>
-								</ImageContainer>
+								</EventImageContainer>
 								<Link href={`/${t('event')}/` + event.link}>
 									<a>
 										<EventTitleH2>

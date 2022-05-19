@@ -2,17 +2,16 @@
 import { clear, getAllEvents, update_query } from '@redux/slices/event';
 import { RootState } from '@redux/store';
 import InfiniteScrollPosts from '@utils/components/infinite-scroll-posts/InfiniteScrollPosts';
-import RenderSmoothImage from '@utils/components/RenderSmoothImage';
+import RenderSmoothNextImage from '@utils/components/RenderSmoothNextImage';
 import StickyDownload from '@utils/components/StickyDownload';
 import { GeneralImageWrapper } from '@utils/styled-components/GeneralStyled';
 import { Col, Row } from 'antd';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import * as React from 'react';
 import LazyLoad from 'react-lazyload';
 import { useDispatch, useSelector } from 'react-redux';
-import { BackgroundDiv, EventContentContainer, EventItem, EventSubTitle, EventTitleH2, EventImageContainer } from './EventContentStyled';
+import { BackgroundDiv, EventContentContainer, EventImageContainer, EventItem, EventSubTitle, EventTitleH2 } from './EventContentStyled';
 
 interface IEventContentProps {
 }
@@ -52,11 +51,11 @@ const EventContent: React.FunctionComponent<IEventContentProps> = (props) => {
 								<div style={{ height: "100%", position: "relative" }}>
 									<EventItem hasPaddingTop={idx % 2 === 0 ? false : true}>
 										<EventImageContainer>
-											<LazyLoad throttle={100} height={100} once>
+											<LazyLoad offset={300} throttle={100} height={100} once>
 												<Link href={`/${t('event')}/` + event.link}>
 													<a>
 														<GeneralImageWrapper>
-															<RenderSmoothImage width='436' height='327' src={event.thumbnail ? event.thumbnail : ''} alt={event.name ? event.name : ''} />
+															<RenderSmoothNextImage width='436' height='327' src={event.thumbnail ? event.thumbnail : ''} alt={event.name ? event.name : ''} />
 														</GeneralImageWrapper>
 													</a>
 												</Link>

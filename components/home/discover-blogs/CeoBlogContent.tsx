@@ -25,7 +25,7 @@ const CeoBlogContent: React.FunctionComponent<ICeoBlogContentProps> = ({ blog })
 					: null}
 				<span>{renderDateFollowLanguage(blog.created_at)}</span>
 			</PathDateWrapper>
-			<Link aria-label={blog.title} href={`/blog/` + blog.link}>
+			<Link aria-label={blog.title} href={`/${t('blogs', {ns: 'routes'})}/` + blog.link}>
 				<a>
 					<CeoBlogTitleH3>
 						{blog.title}
@@ -35,14 +35,14 @@ const CeoBlogContent: React.FunctionComponent<ICeoBlogContentProps> = ({ blog })
 			<CeoContentP>
 				{blog.short_description}
 			</CeoContentP>
-			<Link href={`/blog/` + blog.category.link}>
+			<Link href={`/${t('blogs', {ns: 'routes'})}/` + blog.category.link}>
 				<a>
 					<ReadMoreText>
 						{"<"}<span style={{ textDecoration: "underline" }}> {t('read_more')} </span>{">"}
 					</ReadMoreText>
 				</a>
 			</Link>
-			<ShareContent banner={blog.banner} thumbnail={blog.thumbnail} url={`/blog/` + blog.link} story={blog} />
+			<ShareContent banner={blog.banner} thumbnail={blog.thumbnail} url={`/${t('blogs', {ns: 'routes'})}/` + blog.link} story={blog} />
 		</CeoBlogContentContainer >
 	);
 };

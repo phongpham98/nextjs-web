@@ -1,7 +1,7 @@
 import { getSelfDevelopmentHighlight } from '@redux/slices/home';
 import { RootState } from '@redux/store';
+import { useTranslation } from 'next-i18next';
 import dynamic from 'next/dynamic';
-import { useRouter } from 'next/router';
 import * as React from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
 import { useDispatch, useSelector } from 'react-redux';
@@ -12,7 +12,7 @@ const Feed = dynamic(() => import('./Feed'))
 const SelfDevelopmentHighLight: React.FunctionComponent<ISelfDevelopmentHighLightProps> = (props) => {
 	const { selfDevelopmentHighlight: highlightBlog } = useSelector((state: RootState) => state.home);
 	const dispatch = useDispatch();
-	const router = useRouter()
+	const {t} = useTranslation('routes')
 
 	React.useEffect(() => {
 		dispatch(getSelfDevelopmentHighlight())
@@ -23,12 +23,12 @@ const SelfDevelopmentHighLight: React.FunctionComponent<ISelfDevelopmentHighLigh
 				<>
 					<MobileView>
 						<FeedMobile
-							url={`/blog/` + highlightBlog.link}
+							url={`/${t('blogs', {ns: 'routes'})}/` + highlightBlog.link}
 							showDate={false} blog={highlightBlog} />
 					</MobileView>
 					<BrowserView>
 						<Feed
-							url={`/blog/` + highlightBlog.link}
+							url={`/${t('blogs', {ns: 'routes'})}/` + highlightBlog.link}
 							showDate={false}
 							story={highlightBlog}
 						/>

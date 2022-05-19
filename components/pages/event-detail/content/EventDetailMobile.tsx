@@ -36,7 +36,7 @@ const EventDetailMobile = (props: Props) => {
 					<DownloadFika onClick={() => clickDownloadEvent('Event')} />
 					{latestBlogs ? <LatestPosts type="blog" posts={latestBlogs.slice(0, 3)} /> : null}
 					<HrLine margin="0" />
-					<LazyLoad>
+					<LazyLoad offset={300}>
 						<MoreEvents />
 					</LazyLoad>
 				</Space>

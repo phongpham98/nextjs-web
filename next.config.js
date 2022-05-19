@@ -8,7 +8,7 @@ module.exports = {
 	async rewrites() {
 		return [
 			{
-				source: '/en/about',
+				source: '/en/about-fika',
 				destination: '/en/ve-fika',
 				locale: false
 			},
@@ -53,13 +53,23 @@ module.exports = {
 				locale: false
 			},
 			{
-				source: '/en/social-spot',
+				source: '/en/social-spots',
 				destination: '/en/dia-diem-gap-go',
 				locale: false
 			},
 			{
 				source: '/en/event',
 				destination: '/en/su-kien',
+				locale: false
+			},
+			{
+				source: '/en/blogs',
+				destination: '/en/blog',
+				locale: false
+			},
+			{
+				source: '/en/blogs/:link',
+				destination: '/en/blog/:link',
 				locale: false
 			},
 			{
@@ -112,6 +122,16 @@ module.exports = {
 				destination: '/en/xoa-hoac-vo-hieu-hoa-tai-khoan',
 				locale: false
 			},
+			{
+				source: '/en/category/:link',
+				destination: '/en/danh-muc/:link',
+				locale: false
+			},
+			{
+				source: '/en/search',
+				destination: '/en/tim-kiem',
+				locale: false
+			},
 		]
 	},
 	async redirects() {
@@ -123,7 +143,7 @@ module.exports = {
 			},
 			{
 				source: '/en/ve-fika',
-				destination: '/en/about',
+				destination: '/en/about-fika',
 				permanent: true,
 			},
 			{

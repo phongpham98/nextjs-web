@@ -13,7 +13,7 @@ const LoadingLoveStories: React.FunctionComponent<ILoadingLoveStoriesProps> = (p
 			<Row gutter={[{ xs: 50, md: 80, xl: 150, xxl: 200 }, 55]}>
 				{[1, 2, 3].map(l => {
 					return (
-						<Col span={8}>
+						<Col key={l} span={8}>
 							<FakeImage>
 								<div className='fake-image'></div>
 								<LoadingMoto />
@@ -23,7 +23,7 @@ const LoadingLoveStories: React.FunctionComponent<ILoadingLoveStoriesProps> = (p
 				})}
 				{[1, 2, 3].map(l => {
 					return (
-						<Col span={8}>
+						<Col key={l} span={8}>
 							<FakeImage>
 								<div className='fake-image'></div>
 							</FakeImage>

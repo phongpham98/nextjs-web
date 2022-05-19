@@ -29,7 +29,7 @@ const FeedContent = ({ small, story, bigTitle = false, showDate = true, url, hea
 		<FeedContentWrapper className={showDate ? "" : "gap"}>
 			<PathDateWrapper style={small ? { marginBottom: "5px" } : {}}>
 				{story.category ?
-					<Link href={'/' + story.category.id === "61ad91d5e4547b9970a74aa9" || story.category.id === "61ada1afe4547b9970a74acf" ? t('news') : `${t('category')}/${story.category.link}`}>
+					<Link href={'/' + story.category.id === "61ad91d5e4547b9970a74aa9" || story.category.id === "61ada1afe4547b9970a74acf" ? t('news') : `/${t('category')}/${story.category.link}`}>
 						<a>
 							<PathDiv className='categories' onClick={() => {
 								clickCategoryEvent(story.category.name);

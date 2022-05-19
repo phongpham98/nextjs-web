@@ -18,6 +18,9 @@ const Footer = () => {
 	const [display, setDisplay] = useState<boolean>(false)
 	useEffect(() => {
 		dispatch(getPresses());
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
+	useEffect(() => {
 		setTimeout(() => {
 			setDisplay(true)
 		}, 500)

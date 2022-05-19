@@ -4,6 +4,7 @@ import { loadMoreBlogs, update_query } from '@redux/slices/blog';
 import { RootState } from '@redux/store';
 import HrLine from '@utils/components/HrLine';
 import { Space } from 'antd';
+import { useTranslation } from 'next-i18next';
 import * as React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -17,6 +18,7 @@ const MoreBlogsMobile: React.FunctionComponent<IMoreBlogsMobileProps> = (props) 
 		fetchMoreData();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
+	const {t} = useTranslation('routes')
 	const fetchMoreData = () => {
 		const newQuery: PostRequest = {
 			limit: 9,
@@ -33,7 +35,7 @@ const MoreBlogsMobile: React.FunctionComponent<IMoreBlogsMobileProps> = (props) 
 					return (
 						<React.Fragment key={blog.id}>
 							<FeedMobile 
-							url={`/blog/` + blog.link}
+							url={`/${t('blogs', {ns: 'routes'})}/` + blog.link}
 							 blog={blog} />
 							<HrLine margin="0" />
 						</React.Fragment>

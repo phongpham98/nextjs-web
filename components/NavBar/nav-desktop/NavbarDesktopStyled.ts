@@ -9,7 +9,7 @@ interface NavBarDesktopProps {
 export const NavConatiner = styled.div<NavBarDesktopProps>`
   max-height: 73px;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   padding: 0 ${(props) => (props.isHome === true ? "10%" : "80px")};
   background-color: ${colors.primary};
   position: sticky;
@@ -35,20 +35,23 @@ export const NavConatiner = styled.div<NavBarDesktopProps>`
 
 export const LogoNavBar = styled.div`
   width: 100px;
+  height: 100%;
   display: flex;
   font-size: 11rem;
+  align-items: center;
+  /* margin-bottom: 4px; */
   @media ${device.tablet768} {
     width: 80px;
   }
 
   @media ${device.laptop1024} {
     width: 90px;
-    margin-top: 0.5rem;
+    /* margin-top: 0.5rem; */
   }
 
   @media ${device.laptop1280} {
     width: 100px;
-    margin-top: 0.3rem;
+    /* margin-top: 0.3rem; */
   }
 
   @media ${device.laptop1440} {
@@ -56,7 +59,7 @@ export const LogoNavBar = styled.div`
   }
   @media ${device.laptop1600} {
     width: 140px;
-    margin-bottom: 0.3rem;
+    /* margin-bottom: 0.3rem; */
     font-size: 13rem;
   }
 `;
@@ -64,14 +67,14 @@ export const LogoNavBar = styled.div`
 export const NavLanguage = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 
   & .language {
     font-weight: 500;
     text-transform: uppercase;
   }
   @media ${device.tablet768} {
-    gap: 0rem;
+    gap: 0.2rem;
     & .ant-select {
       font-size: 0.6rem;
       min-width: 70px;
@@ -90,7 +93,8 @@ export const NavLanguage = styled.div`
   }
 
   @media ${device.laptop1024} {
-    margin-top: 12px;
+    gap: 0.5rem;
+    /* margin-top: 12px; */
   }
 
   @media ${device.laptop1280} {
@@ -110,13 +114,61 @@ export const NavLanguage = styled.div`
   }
 `;
 
+export const LanguageItem = styled.div`
+  color: #898a90;
+  &:hover {
+    color: red;
+  }
+  background-color: ${colors.primary};
+`;
+
+export const SelectLanguageContainer = styled.div``;
+
+export const LanguageDiv = styled.div`
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-transform: uppercase;
+  @media ${device.tablet768} {
+    font-size: 0.6rem;
+  }
+  @media ${device.tablet960} {
+    font-size: 0.75rem;
+  }
+  @media ${device.laptop1280} {
+    font-size: 1rem;
+  }
+  @media ${device.laptop1440} {
+    font-size: 1rem;
+  }
+`;
+
 export const IconSearch = styled.span`
   display: inline-flex;
   cursor: pointer;
+  margin-bottom: 1px;
   @media ${device.laptop1280} {
     font-size: 1rem;
   }
   @media ${device.laptop1440} {
     font-size: 1.1rem;
+  }
+`;
+
+export const ModalSearchContainer = styled.div`
+  & * {
+    color: black;
+	width: 100%;
+  }
+  & .search-input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid black;
+  }
+  & .input{
+	  font-size: 1.7rem;
   }
 `;

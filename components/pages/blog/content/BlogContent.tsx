@@ -1,7 +1,7 @@
 import FeedContent from '@components/home/news-feed/FeedContent';
 import { PostRequest } from '@interfaces/posts';
 import { getBlogs, loadMoreBlogs, update_query } from '@redux/slices/blog';
-import { clear, getLatestNews } from '@redux/slices/news';
+import { getLatestNews } from '@redux/slices/news';
 import { RootState } from '@redux/store';
 import CategoriesAndTags from '@utils/components/categories-tags/CategoriesAndTags';
 import BlogLoading from '@utils/components/categories-tags/loading/BlogLoading';
@@ -11,8 +11,8 @@ import InfiniteScrollPosts from '@utils/components/infinite-scroll-posts/Infinit
 import RenderSmoothImage from '@utils/components/RenderSmoothImage';
 import { GeneralImageWrapper } from '@utils/styled-components/GeneralStyled';
 import { Col, Row } from 'antd';
+import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import FeedItem from '../feed-item/FeedItem';
@@ -24,16 +24,16 @@ const BlogContent = () => {
 	const { latestNews } = useSelector((state: RootState) => state.news);
 	const [hasMore, setHasMore] = useState<boolean>(true);
 	const dispatch = useDispatch();
-	const router = useRouter();
+	const {t} = useTranslation('routes');
 
 	useEffect(() => {
-		dispatch(clear());
+		// dispatch(clear());
 		// if (state)
 		// 	dispatch(getBlogs(state.tags ? state.tags : []));
 		// else
 		dispatch(getBlogs());
 		dispatch(getLatestNews());
-	}, [dispatch]);
+	}, []);
 
 	const fetchMoreData = () => {
 		if (blogs.length + (loadBlogs?.length ? loadBlogs.length : 0) >= total) {
@@ -58,7 +58,7 @@ const BlogContent = () => {
 		{blogs.length > 0 ? (<Row gutter={60}>
 			<Col span={16}>
 				<BlogContentHeader>
-					<Link href={`/blog/${blogs[0].link}`}>
+					<Link href={`/${t('blogs', {ns: 'routes'})}/${blogs[0].link}`}>
 						<a>
 							<BigImageContainer>
 								<GeneralImageWrapper>
@@ -69,7 +69,7 @@ const BlogContent = () => {
 					</Link>
 
 					<FeedContent
-						url={`/blog/` + blogs[0].link}
+						url={`/${t('blogs', {ns: 'routes'})}/` + blogs[0].link}
 						bigTitle={true}
 						small={true}
 						story={blogs[0]} />
@@ -81,9 +81,9 @@ const BlogContent = () => {
 							<React.Fragment key={blog.id}>
 								<FeedItem
 									image={blog.thumbnail}
-									url={`/blog/` + blog.link}
+									url={`/${t('blogs', {ns: 'routes'})}/` + blog.link}
 									feedContent={<FeedContent
-										url={`/blog/` + blog.link}
+										url={`/${t('blogs', {ns: 'routes'})}/` + blog.link}
 										bigTitle={true}
 										small={true}
 										story={blog} />}
@@ -98,7 +98,7 @@ const BlogContent = () => {
 						{blogs.slice(5, 9).map(blog => {
 							return (
 								<Col key={blog.id} sm={24} md={12}>
-									<Link href={`/blog/` + blog.link}>
+									<Link href={`/${t('blogs', {ns: 'routes'})}/` + blog.link}>
 										<a maria-label={blog.title} style={{ color: 'black' }}>
 											<GridImageContainer>
 												<GeneralImageWrapper>
@@ -109,7 +109,7 @@ const BlogContent = () => {
 									</Link>
 									<BlogGridContent >
 										<FeedContent
-											url={`/blog/` + blog.link}
+											url={`/${t('blogs', {ns: 'routes'})}/` + blog.link}
 											small={true}
 											story={blog} />
 									</BlogGridContent>
@@ -124,10 +124,10 @@ const BlogContent = () => {
 							return (
 								<React.Fragment key={blog.id}>
 									<FeedItem
-										url={`/blog/` + blog.link}
+										url={`/${t('blogs', {ns: 'routes'})}/` + blog.link}
 										image={blog.thumbnail}
 										feedContent={<FeedContent
-											url={`/blog/` + blog.link}
+											url={`/${t('blogs', {ns: 'routes'})}/` + blog.link}
 											bigTitle={true}
 											small={true}
 											story={blog} />}

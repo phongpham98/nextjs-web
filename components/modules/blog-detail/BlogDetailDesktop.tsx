@@ -124,12 +124,12 @@ const BlogDetailDesktop: React.FunctionComponent<IBlogDetailDesktopProps> = (pro
 				</Row>
 			</ContentWrapper>
 			<DownloadFika onClick={() => clickDownloadEvent('Fika Blog')} />
-			<LazyLoad>
+			<LazyLoad offset={300}>
 				<div id="div1">
 					{blogDetail ? <BlogComment nextPost={nextBlog} prevPost={prevBlog} type="blog" author={blogDetail.author} postId={blogDetail.id} /> : null}
 				</div>
 			</LazyLoad>
-			<LazyLoad>
+			<LazyLoad offset={300}>
 				<MoreBlogs />
 			</LazyLoad>
 		</ArticleContainer>

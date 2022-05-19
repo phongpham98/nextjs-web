@@ -130,10 +130,10 @@ const NewsDetailDesktop: React.FunctionComponent<INewsDetailDesktopProps> = (pro
 				</Row>
 			</ContentWrapper>
 			<DownloadFika onClick={() => clickDownloadEvent('Fika News Detail')} />
-			<LazyLoad>
+			<LazyLoad offset={300}>
 				{newsDetail ? <BlogComment type='news' nextPost={nextBlog} prevPost={prevBlog} author={newsDetail.author} postId={newsDetail.id} /> : null}
 			</LazyLoad>
-			<LazyLoad>
+			<LazyLoad offset={400}>
 				<MoreNews />
 			</LazyLoad>
 		</ArticleContainer>

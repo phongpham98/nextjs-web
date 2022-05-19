@@ -43,7 +43,7 @@ const EventDetailDesktop: React.FunctionComponent<IEventDetailDesktopProps> = (p
 			<Space style={{ width: "100%" }} size={60} direction="vertical">
 				<EventDetailContent />
 				<HrLine margin="30" />
-				<LazyLoad>
+				<LazyLoad offset={300}>
 					<MoreEvents />
 				</LazyLoad>
 			</Space>

@@ -1,5 +1,6 @@
 import { getSexAndLoveHighlight } from '@redux/slices/home';
 import { RootState } from '@redux/store';
+import { useTranslation } from 'next-i18next';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import * as React from 'react';
@@ -14,8 +15,9 @@ const Feed = dynamic(() => import('./Feed'))
 
 const SexAndLoveHighlight: React.FunctionComponent<IDatingAdviceHighLightProps> = (props) => {
 	const { sexAndLoveHighlight: highlightBlog } = useSelector((state: RootState) => state.home);
-	const router = useRouter();
 	const dispatch = useDispatch();
+	const {t} = useTranslation('routes')
+
 	React.useEffect(() => {
 		dispatch(getSexAndLoveHighlight())
 	}, []);
@@ -25,12 +27,12 @@ const SexAndLoveHighlight: React.FunctionComponent<IDatingAdviceHighLightProps> 
 				<>
 					<MobileView>
 						<FeedMobile
-							url={`/blog/` + highlightBlog.link}
+							url={`/${t('blogs', {ns: 'routes'})}/` + highlightBlog.link}
 							showDate={false} blog={highlightBlog} />
 					</MobileView>
 					<BrowserView>
 						<Feed
-							url={`/blog/` + highlightBlog.link}
+							url={`/${t('blogs', {ns: 'routes'})}/` + highlightBlog.link}
 							showDate={false}
 							story={highlightBlog}
 						/>

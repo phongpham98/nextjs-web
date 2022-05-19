@@ -1,7 +1,7 @@
 import FeedContent from '@components/home/news-feed/FeedContent';
 import { getBlogs } from '@redux/slices/blog';
 import { RootState } from '@redux/store';
-import RenderSmoothImage from '@utils/components/RenderSmoothImage';
+import RenderSmoothNextImage from '@utils/components/RenderSmoothNextImage';
 import { CommentTextH3, ImageMoreBlogContainer } from '@utils/styled-components/GeneralContentStyled';
 import { GeneralImageWrapper } from '@utils/styled-components/GeneralStyled';
 import { Col, Row, Space } from 'antd';
@@ -21,7 +21,7 @@ const MoreBlogs = () => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [blogDetail]);
 
-	const { t } = useTranslation('common')
+	const { t } = useTranslation(['common', 'routes'])
 
 	return (
 		<MoreStoriesContainer>
@@ -32,12 +32,12 @@ const MoreBlogs = () => {
 						{blogs?.slice(0, 6).map(blog => {
 							return (
 								<Col key={blog.id} sm={24} md={8}>
-									<Link href={`/blog/` + blog.link}>
+									<Link href={`/${t('blogs', { ns: 'routes' })}/` + blog.link}>
 										<a>
 											<ImageMoreBlogContainer>
-												<LazyLoad throttle={100} height={100} once>
+												<LazyLoad offset={300} throttle={100} height={100} once>
 													<GeneralImageWrapper>
-														<RenderSmoothImage width='500' height='500' src={blog.thumbnail} alt={blog.title} />
+														<RenderSmoothNextImage width='500' height='500' src={blog.thumbnail ? blog.thumbnail : ''} alt={blog.title} />
 													</GeneralImageWrapper>
 												</LazyLoad>
 											</ImageMoreBlogContainer>
@@ -47,7 +47,7 @@ const MoreBlogs = () => {
 										<FeedContent
 											small={true}
 											headingTag="h4"
-											url={`/blog/` + blog.link}
+											url={`/${t('blogs', { ns: 'routes' })}/` + blog.link}
 											story={blog} />
 									</FeedContentWrapper>
 								</Col>

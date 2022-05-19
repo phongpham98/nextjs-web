@@ -8,6 +8,7 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "@fortawesome/fontawesome-free": "^6.1.0",
     "@fortawesome/fontawesome-svg-core": "^6.1.0",
     "@fortawesome/free-brands-svg-icons": "^6.1.0",

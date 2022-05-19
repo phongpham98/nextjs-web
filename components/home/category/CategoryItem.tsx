@@ -1,5 +1,5 @@
 import { SingleTopicContainer, TopicImage, TopicTitle } from "@components/home/topics/TopicStyled";
-import { CategoryHome } from "@redux/states";
+import { CategoryHome } from "@interfaces/model";
 import RenderSmoothImage from "@utils/components/RenderSmoothImage";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";

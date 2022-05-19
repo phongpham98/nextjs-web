@@ -27,7 +27,7 @@ const Tags = ({ tags }: TagsProps) => {
 
 	return (
 		<TagContainer>
-			<TagTitleH3>Tags</TagTitleH3>
+			{tags.length > 0 ? <TagTitleH3>Tags</TagTitleH3> : null}
 			<TagContent>
 				{
 					tags.map(tag => {

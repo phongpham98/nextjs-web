@@ -4,6 +4,8 @@
   "connected_story": "Câu chuyện kết nối",
   "social_spots": "Địa điểm gặp gỡ",
   "news": "Tin tức",
+  "investor": "Đầu tư và hợp tác",
+  "fika_in_the_press": "Tin tức về fika",
   "news_children": [
     {
       "name": "Đầu tư và hợp tác",
@@ -15,26 +17,35 @@
     }
   ],
   "blogs": "Blog",
+  "fika_blogs": "Fika Blog",
+  "ceo": "CEO Denise Sandquist Blog",
+  "cto": "CTO Oscar Xing Luo Blog",
   "blogs_children": [
     {
       "name": "Fika's Blogs",
       "link": "blog"
     },
     {
-      "name": "CEO Denise Sandquist's Blog",
+      "name": "CEO Denise Sandquist Blog",
       "link": "ceo-denise-sandquist-blogs"
     },
     {
-      "name": "CTO Oscar Xing Luo's Blog",
+      "name": "CTO Oscar Xing Luo Blog",
       "link": "cto-oscar-xing-luo-blogs"
     }
   ],
   "event": "Sự kiện",
   "about": "Về fika",
+  "faq": "Hỏi-đáp",
+  "career": "Tuyển dụng",
+  "contact": "Liên hệ",
+  "privacy_policy": "Chính sách bảo mật",
+  "account": "Vô hiệu hóa tài khoản",
+  "fika_team": "Đội ngũ của Fika",
   "about_children": [
     {
-      "name": "Fika Team",
-      "link": "fika-team"
+      "name": "Đội ngũ của Fika",
+      "link": "doi-ngu"
     },
     {
       "name": "Hỏi-đáp",

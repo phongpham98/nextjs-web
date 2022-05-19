@@ -19,7 +19,7 @@ import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import DownloadButton from '../DownloadButton';
-import { BtnDownLoadContainer, DivContainer, FikaButtonContainer, FikaInvestorBtn, FikaPressBtn, HandLeftIcon, IconSearch, InvestorWrapper, SearchContainer, SearchWithIcon, StickyContainer, TopicContainer } from './CateAndTagsStyled';
+import { BtnDownLoadContainer, CategorySideBarItem, DivContainer, FikaButtonContainer, FikaInvestorBtn, FikaPressBtn, HandLeftIcon, IconSearch, InvestorWrapper, SearchContainer, SearchWithIcon, StickyContainer, TopicContainer } from './CateAndTagsStyled';
 import { LoadingContainer } from './SearchResultsStyled';
 
 export type PostType = "blog" | "news" | "connected-stories" | "q&a";
@@ -47,7 +47,7 @@ const CategoriesAndTags = ({
 	const [searchTerm, setSearchTerm] = React.useState<string>("");
 	const debouncedSearchTerm: string = useDebounce<string>(searchTerm, 500);
 	const { results, loading, searchValue } = useSelector((state: RootState) => state.search);
-	const { t } = useTranslation(['button', 'routes', 'title']);
+	const { t } = useTranslation(['routes', 'button', 'title']);
 	const router = useRouter();
 
 	useEffect(() => {
@@ -59,10 +59,14 @@ const CategoriesAndTags = ({
 	useEffect(() => {
 		if (debouncedSearchTerm) {
 			dispatch(debounceSearch(debouncedSearchTerm))
+			router.push({
+				pathname: `/${t('search')}`,
+				search: `?value=${searchValue}`
+			})
 		} else {
 			// dispatch(clear());
 		}
-	}, [debouncedSearchTerm]);
+	}, [debouncedSearchTerm, searchValue]);
 
 	return (
 		<DivContainer>
@@ -77,7 +81,7 @@ const CategoriesAndTags = ({
 							if (e.key === "Enter") {
 								router.push({
 									pathname: `/${t('search')}`,
-									search: `?q=${searchValue}`
+									search: `?value=${searchValue}`
 								})
 							}
 						}}
@@ -107,7 +111,7 @@ const CategoriesAndTags = ({
 						if (searchValue) {
 							router.push({
 								pathname: `/${t('search')}`,
-								search: `?q=${searchValue}`
+								search: `?value=${searchValue}`
 							})
 						}
 					}}>
@@ -120,11 +124,13 @@ const CategoriesAndTags = ({
 				<TopicContainer>
 					{categories?.map(topic => {
 						return (
-							<Link href={`/${t('category')}/` + topic.link}>
+							<Link href={`/${t('category', { ns: 'routes' })}/` + topic.link} key={topic.id}>
 								<a>
-									<div onClick={() => {
+									<CategorySideBarItem onClick={() => {
 										clickCategoryEvent(topic.name);
-									}} className="topic categories" key={topic.id}>{topic.name}</div>
+									}} className="topic categories" key={topic.id}>
+										{topic.name}
+									</CategorySideBarItem>
 								</a>
 							</Link>
 
@@ -133,7 +139,9 @@ const CategoriesAndTags = ({
 				</TopicContainer>
 			</div>}
 			<StickyContainer>
-				{hasLatestPosts && <LatestPosts type={type ? type : "blog"} posts={latestPosts} />}
+				{hasLatestPosts &&
+					<LatestPosts type={type ? type : "blog"} posts={latestPosts} />
+				}
 
 				<Tags tags={tags} />
 				{hasDownloadButton && <BtnDownLoadContainer>

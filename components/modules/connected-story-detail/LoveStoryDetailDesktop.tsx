@@ -124,14 +124,14 @@ const LoveStoryDetailDesktop: React.FunctionComponent<ILoveStoryDetailDesktopPro
 						})}
 					</LoadingContentWrapper>
 				</React.Fragment>}
-			<LazyLoad>
+			<LazyLoad offset={300}>
 				<SendStoryContainer>
 					<Col md={16}>
 						<SendStoryForm />
 					</Col>
 				</SendStoryContainer>
 			</LazyLoad>
-			<LazyLoad height={200}>
+			<LazyLoad offset={300} height={200}>
 				<MoreStories />
 			</LazyLoad>
 		</ArticleContainer>

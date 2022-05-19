@@ -17,12 +17,12 @@ type Props = {
 const Desktop = dynamic(() => import('@components/modules/news-detail/NewsDetailDesktop'), { ssr: false })
 const Mobile = dynamic(() => import('@components/modules/news-detail/NewsDetailMobile'), { ssr: false })
 
-const NewsDetail: InferGetStaticPropsType<typeof getStaticProps> = ({ data }: Props) => {
+const NewsDetail = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
 	const isMobile = isMobileDevice();
 	return (
 		<>
 			<Head>
-				<title>{data.title}</title>
+				<title>{data ? data.title : "Fika Connects"}</title>
 			</Head>
 			{isMobile ? <React.Fragment>
 				<Mobile />

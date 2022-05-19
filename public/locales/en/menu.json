@@ -4,6 +4,8 @@
   "connected_story": "Connected stories",
   "social_spots": "Social spots",
   "news": "news",
+  "investor": "Investor Relations",
+  "fika_in_the_press": "Fika in the press",
   "news_children": [
     {
       "name": "Investor Relations",
@@ -15,6 +17,9 @@
     }
   ],
   "blogs": "blogs",
+  "fika_blogs": "Fika's Blogs",
+  "ceo": "CEO Denise Sandquist's Blogs",
+  "cto": "CTO Oscar Xing Luo's Blogs",
   "blogs_children": [
     {
       "name": "Fika's Blogs",

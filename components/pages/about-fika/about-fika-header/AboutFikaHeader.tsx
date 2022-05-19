@@ -1,19 +1,16 @@
-import RenderSmoothImage from '@utils/components/RenderSmoothImage';
+import RenderSmoothNextImage from '@utils/components/RenderSmoothNextImage';
 import { GeneralHeaderWrapper, GeneralImageWrapper } from '@utils/styled-components/GeneralStyled';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
-import LazyLoad from 'react-lazyload';
 import { SubTitleText, TitleText, TitleWrapper } from './AboutFikaHeaderStyled';
 
 const AboutFikaHeader = () => {
 	const { t } = useTranslation('about-fika');
 	return (
 		<GeneralHeaderWrapper>
-			<LazyLoad throttle={100} height={100} once>
-				<GeneralImageWrapper>
-					<RenderSmoothImage width='1500' height='600' src={'/about_banner.jpg'} alt={t("header")} />
-				</GeneralImageWrapper>
-			</LazyLoad>
+			<GeneralImageWrapper>
+				<RenderSmoothNextImage width='1500' height='600' src={'/about_banner.jpg'} alt={t("header")} />
+			</GeneralImageWrapper>
 			<TitleWrapper>
 				<TitleText color="black">
 					The female-focused

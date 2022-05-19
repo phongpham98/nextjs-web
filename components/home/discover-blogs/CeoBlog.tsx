@@ -1,4 +1,5 @@
 import { PostModel } from '@interfaces/posts';
+import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import React from 'react';
 import CeoBlogContent from './CeoBlogContent';
@@ -10,11 +11,11 @@ interface SingleBlogProps {
 
 
 const CeoBlog = ({ blog }: SingleBlogProps) => {
-
+	const {t} = useTranslation('routes')
 	return (
 		<CeoBlogContainer >
 			<ImageWrapper>
-				<Link href={`/blog/` + blog.link}>
+				<Link href={`/${t('blogs', {ns: 'routes'})}/` + blog.link}>
 					<a>
 						<CeoImageContainer>
 							<CeoImage src={blog.thumbnail} alt={blog.title} />

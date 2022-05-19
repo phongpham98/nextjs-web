@@ -1,19 +1,26 @@
 {
 	"personality": "personality",
 	"blogs": "blogs",
+	"ceo": "ceo-denise-sandquist-blogs",
+	"cto": "cto-oscar-xing-luo-blogs",
 	"connected_story": "connected-story",
 	"fika_in_the_press": "fika-in-the-press",
 	"news": "news",
 	"category": "category",
 	"social_spots": "social-spots",
 	"event": "event",
-	"about_fika": "about-fika",
-	"invesor": "investor-relations",
+	"about": "about-fika",
 	"career": "career",
+	"fika_team": "fika-team",
+	"faq": "faqs",
+	"contact": "contact",
+	"privacy_policy": "privacy-policy",
+	"account": "pause-or-delete-account",
 
 	"free_personality_test": "free-personality-test",
 	"detail": "detail",
 	"search": "search",
 	"investor": "investor-relations",
 	"job": "jobs"
+
 }

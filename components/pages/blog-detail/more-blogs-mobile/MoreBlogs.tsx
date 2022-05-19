@@ -5,6 +5,7 @@ import { RootState } from '@redux/store';
 import { CommentText } from '@utils/components/comment/BlogCommentStyled';
 import HrLine from '@utils/components/HrLine';
 import { Space } from 'antd';
+import { useTranslation } from 'next-i18next';
 import * as React from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
@@ -13,6 +14,7 @@ interface IMoreBlogsProps {
 
 const MoreBlogs: React.FunctionComponent<IMoreBlogsProps> = () => {
 	const { blogs, blogDetail } = useSelector((state: RootState) => state.blog);
+	const {t} = useTranslation('routes')
 	const dispatch = useDispatch();
 	React.useEffect(() => {
 		if (blogDetail) {
@@ -30,7 +32,7 @@ const MoreBlogs: React.FunctionComponent<IMoreBlogsProps> = () => {
 						return (
 							<React.Fragment key={blog.id}>
 								<FeedMobile
-									url={`/blog/` + blog.link}
+									url={`/${t('blogs', {ns: 'routes'})}/` + blog.link}
 									blog={blog} />
 								<HrLine margin="0" />
 							</React.Fragment>

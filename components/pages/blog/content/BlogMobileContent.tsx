@@ -24,7 +24,7 @@ interface IBlogMobileContentProps {
 const BlogMobileContent: React.FunctionComponent<IBlogMobileContentProps> = (props) => {
 	const { blogs, query, loadBlogs, total } = useSelector((state: RootState) => state.blog);
 	const { newsList } = useSelector((state: RootState) => state.news);
-	const { t } = useTranslation('button');
+	const { t } = useTranslation(['button', 'routes']);
 	const firstBlog = blogs.length > 0 ? blogs[0] : undefined;
 	const router = useRouter();
 	const dispatch = useDispatch();
@@ -63,7 +63,7 @@ const BlogMobileContent: React.FunctionComponent<IBlogMobileContentProps> = (pro
 				<Space style={{ width: "100%" }} size={20} direction="vertical">
 					{firstBlog ? (
 						<FeedMobile
-							url={`/blog/` + firstBlog.link}
+							url={`/${t('blogs', {ns: 'routes'})}/` + firstBlog.link}
 							 blog={firstBlog} />
 					) : <FeedMobileLoading />}
 					<HrLine margin="0" />
@@ -72,8 +72,7 @@ const BlogMobileContent: React.FunctionComponent<IBlogMobileContentProps> = (pro
 						return (
 							<React.Fragment key={blog.id}>
 								<FeedTitleFirst
-									onClick={() => router.push(`/blog/` + blog.link)}
-									url={`/blog/` + blog.link}
+									url={`/${t('blogs', {ns: 'routes'})}/` + blog.link}
 									key={blog.id} story={blog} />
 								<HrLine margin="0" />
 							</React.Fragment>
@@ -84,7 +83,7 @@ const BlogMobileContent: React.FunctionComponent<IBlogMobileContentProps> = (pro
 						return (
 							<React.Fragment key={blog.id}>
 								<FeedMobile
-									url={`/blog/` + blog.link}
+									url={`/${t('blogs', {ns: 'routes'})}/` + blog.link}
 									 blog={blog} />
 								<HrLine margin="0" />
 							</React.Fragment>
@@ -96,7 +95,7 @@ const BlogMobileContent: React.FunctionComponent<IBlogMobileContentProps> = (pro
 						return (
 							<React.Fragment key={blog.id}>
 								<FeedMobile
-									url={`/blog/` + blog.link}
+									url={`/${t('blogs', {ns: 'routes'})}/` + blog.link}
 									blog={blog} />
 								<HrLine margin="0" />
 							</React.Fragment>

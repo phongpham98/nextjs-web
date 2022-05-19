@@ -31,7 +31,7 @@ const PressFikaMobile: React.FunctionComponent<IPressFikaMobileProps> = (props) 
 							<Row gutter={20} key={mag.id}>
 								<Col span={10}>
 									<MagImage>
-										<LazyLoad throttle={100} height={100} once>
+										<LazyLoad offset={300} throttle={100} height={100} once>
 											<GeneralImage src={mag.thumbnail} alt={mag.title} width="100%" style={{ border: "1px solid #A0A0A0" }} />
 										</LazyLoad>
 									</MagImage>

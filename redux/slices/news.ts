@@ -99,7 +99,7 @@ export function getLatestNews(tags?: string[]) {
     newQuery.language = Router.locale;
     let response = await NewsApi.fetchListNews(newQuery);
     if (response) {
-      dispatch(newsSlice.actions.update_news_list(response));
+      dispatch(newsSlice.actions.update_latest_news(response.items));
     }
     try {
     } catch (error: any) {

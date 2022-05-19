@@ -19,8 +19,8 @@ const FikaMembersMobile: React.FunctionComponent<IFikaMembersMobileProps> = (pro
 	return (
 		<MembersMobileContainer>
 			<Space style={{ width: "100%" }} size={30} direction="vertical">
-				<FikaMember name={ceo?.name} image={ceo?.avatar} position={ceo?.position} />
-				<FikaMember name={cto?.name} image={cto?.avatar} position={cto?.position} />
+				<FikaMember name={ceo?.name} image={ceo? ceo.avatar: ''} position={ceo?.position} />
+				<FikaMember name={cto?.name} image={cto? cto.avatar: ''} position={cto?.position} />
 				{members && members.map(m => {
 					return (
 						<FikaMember key={m.id} name={m.name} image={m?.avatar} position={m.position} />

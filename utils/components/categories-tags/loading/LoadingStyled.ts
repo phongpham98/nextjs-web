@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { ILoadingTitleProps } from "./LoadingTitle";
 
-const GeneralLoadingWrapper = styled.div<ILoadingTitleProps>`
+const GeneralLoadingWrapper = styled.span<ILoadingTitleProps>`
   background-color: #f2f3f5;
   padding: 0 1rem;
   border-radius: 1rem;
@@ -37,7 +37,7 @@ export const LoadingContentWrapper = styled.div`
 
 export const LoadingStoriesContainer = styled.div``;
 
-export const FakeImage = styled.image`
+export const FakeImage = styled.div`
   width: 100%;
   & .fake-image {
     width: 100%;

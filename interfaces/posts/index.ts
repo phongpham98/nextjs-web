@@ -1,5 +1,4 @@
-import { ApiListResponse } from "@interfaces/model";
-import { CategoryHome } from "@redux/states";
+import { ApiListResponse, CategoryHome } from "@interfaces/model";
 
 export interface Author {
   id: string;
@@ -26,17 +25,17 @@ export interface PostModel {
   id: string;
   title: string;
   banner: string;
-  banner_key?: string;
-  thumbnail?: string;
-  thumbnail_key?: string;
   comments: number;
   contents: string;
   author: Author;
-  short_description?: string;
-  category: CategoryItem;
   tags: Tag[];
   likes: number;
   link: string;
+  banner_key?: string;
+  thumbnail?: string;
+  thumbnail_key?: string;
+  short_description?: string;
+  category: CategoryItem;
   language?: LanguageType;
   homepage?: boolean;
   created_at: number;

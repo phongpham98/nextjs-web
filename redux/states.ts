@@ -1,5 +1,6 @@
 import {
   AssignResult,
+  CategoryHome,
   CommentModel,
   EventModel,
   InstaPost,
@@ -12,8 +13,8 @@ import {
   StoryModel,
   UserResult,
 } from "@interfaces/model";
-import { LanguageType, PostModel, PostRequest } from "@interfaces/posts";
-import { QueryModel } from "@interfaces/request";
+import { LanguageType, PostModel, PostRequest, Tag } from "@interfaces/posts";
+import { CategoryRequest, QueryModel } from "@interfaces/request";
 
 interface BaseState {
   loading?: boolean;
@@ -21,19 +22,6 @@ interface BaseState {
   error?: string | null;
 }
 
-export interface CategoryHome {
-  id?: string;
-  name: string;
-  type: string;
-  banner?: string;
-  banner_key?: string;
-  thumbnail?: string;
-  link: string;
-  thumbnail_key?: string;
-  homepage?: boolean;
-  language?: LanguageType;
-  deactivated?: boolean;
-}
 
 export interface HomeState extends BaseState {
   categories?: CategoryHome[];
@@ -185,4 +173,14 @@ export interface CareerDetailState extends BaseState {
   jobs: JobModel[];
   jobs_by_department: any | null;
   total: number;
+}
+
+export interface CategoryState extends BaseState {
+  category: CategoryHome | null;
+  blogs: PostModel[];
+  total: number;
+  query: CategoryRequest;
+  loadBlogs: PostModel[];
+  tags?: Tag[];
+  // item:
 }

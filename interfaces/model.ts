@@ -267,3 +267,23 @@ export interface JobModel {
   position: string;
   updated_at: number;
 }
+
+export interface TagResponse {
+  id: string;
+  language?: string;
+  name: string;
+}
+
+export interface CategoryHome {
+  id?: string;
+  name: string;
+  type: string;
+  banner?: string;
+  banner_key?: string;
+  thumbnail?: string;
+  link: string;
+  thumbnail_key?: string;
+  homepage?: boolean;
+  language?: LanguageType;
+  deactivated?: boolean;
+}

@@ -15,11 +15,9 @@ const AboutFikaMobile: React.FunctionComponent<IAboutFikaMobileProps> = (props) 
 	return (
 		<React.Fragment>
 			<GeneralHeaderMobileContainer>
-				<LazyLoad throttle={100} height={100} once>
-					<GeneralImageWrapper>
-						<RenderSmoothImage width='412' height='412' src={'/about-fka.jpg'} alt="about fika" />
-					</GeneralImageWrapper>
-				</LazyLoad>
+				<GeneralImageWrapper>
+					<RenderSmoothImage width='412' height='412' src={'/about-fka.jpg'} alt="about fika" />
+				</GeneralImageWrapper>
 				<HeaderMobileContent>
 					<HeaderTitle>
 						The female-focused

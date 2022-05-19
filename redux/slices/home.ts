@@ -89,6 +89,7 @@ export function getCategories() {
       const query: CategoryHomeRequest = {
         homepage: true,
         deactivated: false,
+        language: Router.locale,
       };
       const response = await HomeApi.getCategories(query);
       if (response) dispatch(homeSlice.actions.update_categories(response));
@@ -111,7 +112,7 @@ export function getLatestNews(highlight = false) {
         limit: 10,
         highlight: highlight,
         deactivated: false,
-		language: Router.locale
+        language: Router.locale,
       };
 
       const response = await HomeApi.fetchLatestNews(query);
@@ -141,7 +142,7 @@ export function getHighlightNews() {
         limit: 1,
         highlight: false,
         deactivated: false,
-		language: Router.locale
+        language: Router.locale,
       };
 
       const response = await NewsApi.fetchListNews(query);
@@ -165,6 +166,7 @@ export function getSelfDevelopmentHighlight() {
         cate_id: categoryLink.self_development[locale],
         page: 1,
         limit: 1,
+        language: locale,
       };
 
       const resp = await HomeApi.fetchCeoBlog(query);
@@ -190,6 +192,7 @@ export function getZodiacHighlight() {
         cate_id: categoryLink.personalities[locale],
         page: 1,
         limit: 1,
+        language: locale,
       };
 
       const response = await HomeApi.fetchCeoBlog(query);
@@ -201,9 +204,7 @@ export function getZodiacHighlight() {
   };
 }
 export function getSexAndLoveHighlight() {
-  return async (
-    dispatch: ThunkDispatch<{}, {}, AnyAction>,
-  ) => {
+  return async (dispatch: ThunkDispatch<{}, {}, AnyAction>) => {
     dispatch(homeSlice.actions.loading());
     try {
       const locale = currentLocale();
@@ -211,6 +212,7 @@ export function getSexAndLoveHighlight() {
         cate_id: categoryLink.love_n_sex_advice[locale],
         page: 1,
         limit: 1,
+        language: locale,
       };
 
       const response = await HomeApi.fetchCeoBlog(query);

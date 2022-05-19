@@ -29,5 +29,9 @@
   "more_news": "More news",
   "more_blogs": "More blogs",
   "more_stories": "More stories",
-  "not_found": "Opps! the page you are looking for <br /> can't be found"
+  "not_found": "Opps! the page you are looking for <br /> can't be found",
+  "modal_search": {
+    "title": "Enter search keywords",
+    "placeholder": "Search"
+  }
 }

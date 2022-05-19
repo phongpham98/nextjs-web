@@ -1,15 +1,15 @@
 export const clickCategoryEvent = (name: string) => {
-  window.dataLayer.push({
-    event: "click-category",
-    categoryName: name,
-  });
+//   window.dataLayer.push({
+//     event: "click-category",
+//     categoryName: name,
+//   });
 };
 
 export const clickTagEvent = (name: string) => {
-  window.dataLayer.push({
-    event: "click-tag",
-    tagName: name,
-  });
+//   window.dataLayer.push({
+//     event: "click-tag",
+//     tagName: name,
+//   });
 };
 
 export const clickDownloadEvent = (location: string) => {
@@ -26,15 +26,15 @@ export const doPersonalityTest = () => {
 };
 
 export const clickVideoYoutube = (name: string) => {
-  window.dataLayer.push({
-    event: "click-video-youtube",
-    videoName: name,
-  });
+//   window.dataLayer.push({
+//     event: "click-video-youtube",
+//     videoName: name,
+//   });
 };
 
 export const pageViewEvent = (name: string) => {
-  window.dataLayer.push({
-    event: "page-view",
-    pageName: name,
-  });
+//   window.dataLayer.push({
+//     event: "page-view",
+//     pageName: name,
+//   });
 };

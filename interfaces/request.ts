@@ -102,3 +102,10 @@ export interface CVRequest {
   language: string;
   file?: RcFile | string;
 }
+
+export interface CategoryRequest {
+  cate_id: string;
+  page?: number;
+  limit?: number;
+  language?: string;
+}

@@ -77,6 +77,13 @@ export const IconSearch = styled.span`
   }
 `;
 
+export const CategorySideBarItem = styled.h5`
+  color: ${colors.grey};
+  &:hover {
+    color: ${colors.grey};
+  }
+`;
+
 interface StickyContainerProps {
   noSticky?: boolean;
 }
@@ -171,7 +178,9 @@ export const TopicContainer = styled.div`
   gap: 10px;
   text-transform: uppercase;
   color: #898a90;
-  font-size: 12px;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: font-weight 0.2s ease-in-out;
   cursor: pointer;
   & .topic:hover {
     color: black;

@@ -1,7 +1,7 @@
 import FeedContent from '@components/home/news-feed/FeedContent';
 import { PostModel } from '@interfaces/posts';
 import { Col, Row } from 'antd';
-import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 import React from 'react';
 import { BlogGridContainer, BlogGridContent, GridImage, GridImageContainer } from './BlogGridStyled';
 
@@ -10,7 +10,7 @@ interface BlogGridProps {
 }
 
 const BlogGrid = ({ blogs }: BlogGridProps) => {
-	const router = useRouter();
+	const {t} = useTranslation('routes')
 	return (
 		<BlogGridContainer>
 			<Row gutter={[40, 40]}>
@@ -22,7 +22,7 @@ const BlogGrid = ({ blogs }: BlogGridProps) => {
 							</GridImageContainer>
 							<BlogGridContent >
 								<FeedContent
-									url={`/blog/` + blog.link}
+									url={`/${t('blogs', {ns: 'routes'})}/` + blog.link}
 									small={true} story={blog} />
 							</BlogGridContent>
 						</Col>

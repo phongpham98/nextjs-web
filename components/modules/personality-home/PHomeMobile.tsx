@@ -25,7 +25,7 @@ const PHomeMobile: React.FunctionComponent<IPHomeMobileProps> = (props) => {
 			</GeneralHeaderMobileContainer>
 			<NavMobile hasMarginBottom={true} hasSearchFirst={true} />
 			<PersonalityMobileBody />
-			<LazyLoad height={200}>
+			<LazyLoad offset={300} height={200}>
 				<TookQuizBanner />
 			</LazyLoad>
 		</React.Fragment>
