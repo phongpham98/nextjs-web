@@ -4,7 +4,7 @@ import parse from 'html-react-parser';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
 import LazyLoad from 'react-lazyload';
-import { Quote, ReasonContainer, ReasonContent, ReasonDetailContainer, Title } from './ReasonStyled';
+import { Quote, ReasonContainer, ReasonContent, ReasonDetailContainer, ReasonTitleH2 } from './ReasonStyled';
 
 const Reason = () => {
 	const { t } = useTranslation('about-fika');
@@ -19,9 +19,9 @@ const Reason = () => {
 				</Col>
 				<Col xs={24} sm={11} xl={10}>
 					<ReasonDetailContainer>
-						<Title>
+						<ReasonTitleH2>
 							{parse(t("reason.title"))}
-						</Title>
+						</ReasonTitleH2>
 						<ReasonContent>
 							{parse(t("reason.description"))}
 						</ReasonContent>

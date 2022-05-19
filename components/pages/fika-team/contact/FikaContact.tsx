@@ -9,7 +9,7 @@ import { useTranslation } from 'next-i18next';
 import React from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import FikaContactSlider from './FikaContactSlider';
-import { ContactDetailContainer, ContactSubTitle, ContactTitleContainer, FikaContactContainer, Title } from './FikaContactStyled';
+import { ContactDetailContainer, ContactSubTitle, ContactTitleContainer, FikaContactContainer, ContactTitleH2 } from './FikaContactStyled';
 const FikaContact = () => {
 
 
@@ -24,11 +24,11 @@ const FikaContact = () => {
 				<Col xs={24} sm={14}>
 					<ContactDetailContainer>
 						<ContactTitleContainer>
-							<Title>
+							<ContactTitleH2>
 								{t('work_at_fika', { ns: 'career' })}
 								<br />
 								{t('are_u_interested', { ns: 'career' })}
-							</Title>
+							</ContactTitleH2>
 							<div style={{ display: 'inline-flex', fontSize: '3rem' }}>
 								<SvgDoubleQuote />
 							</div>

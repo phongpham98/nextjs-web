@@ -3,6 +3,7 @@ import { RootState } from '@redux/store';
 import SvgChevronLeft from '@svgs/ChevronLeft';
 import SvgChevronRight from '@svgs/ChevronRight';
 import { GeneralImage } from '@utils/styled-components/GeneralStyled';
+import Link from 'next/link';
 import React from 'react';
 import LazyLoad from 'react-lazyload';
 import { useSelector } from 'react-redux';
@@ -50,7 +51,13 @@ const MagazineSlider = () => {
 						<div style={{ position: "relative", width: "100%", paddingTop: "100%" }}>
 							<MagazineTitleWrapper>
 								<MagBrand>{mag.author}</MagBrand>
-								<MagazineTitle href={mag.link} rel="nofolow noreferrer" target={'_blank'} >{mag.title}</MagazineTitle>
+								<Link href={mag.link}>
+									<a rel="nofolow noreferrer" target={'_blank'} >
+										<MagazineTitle >
+											{mag.title}
+										</MagazineTitle>
+									</a>
+								</Link>
 								<MagazineTime>{renderDateFollowLanguage(mag.date)}</MagazineTime>
 							</MagazineTitleWrapper>
 							<LazyLoad throttle={100} height={100} once>

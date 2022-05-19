@@ -15,28 +15,28 @@ export const TitleH2 = styled.h2`
   margin: 0;
 `;
 
-export const TitleH3 = styled.h2`
+export const TitleH3 = styled.h3`
   text-transform: uppercase;
   font-family: "Playfair Display", serif;
   font-weight: 500;
   margin: 0;
 `;
 
-export const TitleH4 = styled.h2`
+export const TitleH4 = styled.h4`
   text-transform: uppercase;
   font-family: "Playfair Display", serif;
   font-weight: 500;
   margin: 0;
 `;
 
-export const TitleH5 = styled.h2`
+export const TitleH5 = styled.h5`
   text-transform: uppercase;
   font-family: "Playfair Display", serif;
   font-weight: 500;
   margin: 0;
 `;
 
-export const TitleH6 = styled.h2`
+export const TitleH6 = styled.h6`
   text-transform: uppercase;
   font-family: "Playfair Display", serif;
   font-weight: 500;

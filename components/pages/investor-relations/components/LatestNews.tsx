@@ -4,7 +4,7 @@ import isMobileDevice from '@helpers/isMobile';
 import { getListNews } from '@redux/slices/news';
 import { RootState } from '@redux/store';
 import { CommentText } from '@utils/components/comment/BlogCommentStyled';
-import RenderSmoothImage from '@utils/components/RenderSmoothImage';
+import RenderSmoothNextImage from '@utils/components/RenderSmoothNextImage';
 import { ImageMoreBlogContainer } from '@utils/styled-components/GeneralContentStyled';
 import { GeneralImageWrapper } from '@utils/styled-components/GeneralStyled';
 import { Col, Row, Space } from 'antd';
@@ -21,7 +21,7 @@ interface ILatestNewsProps {
 const LatestNews: React.FunctionComponent<ILatestNewsProps> = () => {
 	const mobile = isMobileDevice();
 	const dispatch = useDispatch();
-	const {t} = useTranslation('routes')
+	const { t } = useTranslation('routes')
 
 	React.useEffect(() => {
 		dispatch(getListNews())
@@ -40,20 +40,21 @@ const LatestNews: React.FunctionComponent<ILatestNewsProps> = () => {
 							<Col key={news.id} xs={24} sm={24} md={8}>
 								<ImageMoreBlogContainer>
 									<LazyLoad throttle={100} height={100} once>
-									<Link href={`/${t('news')}/${t('detail')}/${news.link}`}>
-										<a>
-											<GeneralImageWrapper>
-											<RenderSmoothImage width='500' height='500' src={news.thumbnail} alt={news.title} />
-										</GeneralImageWrapper>
+										<Link href={`/${t('news')}/${t('detail')}/${news.link}`}>
+											<a>
+												<GeneralImageWrapper>
+													<RenderSmoothNextImage width='500' height='500' src={news.thumbnail? news.thumbnail: ''} alt={news.title} />
+												</GeneralImageWrapper>
 											</a>
 										</Link>
-										
+
 									</LazyLoad>
 								</ImageMoreBlogContainer>
 								<FeedContentWrapper>
 									<FeedContent
 										url={`/${t('news')}/${t('detail')}/${news.link}`}
 										small={true}
+										headingTag="h3"
 										story={news} />
 								</FeedContentWrapper>
 							</Col>

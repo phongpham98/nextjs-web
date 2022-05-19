@@ -33,7 +33,7 @@ export const ReasonDetailContainer = styled.div`
   }
 `;
 
-export const Title = styled(TitleH2)`
+export const ReasonTitleH2 = styled(TitleH2)`
   font-weight: 500;
   font-size: 1.3rem;
   color: black;

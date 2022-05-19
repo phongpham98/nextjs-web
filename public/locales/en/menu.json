@@ -36,6 +36,12 @@
   ],
   "event": "events",
   "about": "About fika",
+  "faq": "Faqs",
+  "career": "Career",
+  "contact": "Contact",
+  "privacy_policy": "Privacy Policy",
+  "account": "Pause Or Delete Account",
+  "fika_team": "Fika Team",
   "about_children": [
     {
       "name": "Fika Team",

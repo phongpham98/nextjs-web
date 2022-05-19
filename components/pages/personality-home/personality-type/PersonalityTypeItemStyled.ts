@@ -54,7 +54,7 @@ interface Props {
   isSlider?: boolean;
 }
 
-export const PersonalityName = styled.h5<Props>`
+export const PersonalityName = styled.h4<Props>`
   font-weight: bold;
   margin-top: ${(props) => (props.isSlider ? "10px" : "25px")};
   color: #25282b;

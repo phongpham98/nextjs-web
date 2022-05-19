@@ -60,7 +60,7 @@ export const PagingWrapper = styled.div`
   margin: 20px 0;
 `;
 
-export const CommentText = styled.div`
+export const CommentText = styled.h2`
   font-family: "Playfair Display";
   font-size: 26px;
   text-transform: uppercase;

@@ -20,6 +20,7 @@ const FaqPage: InferGetStaticPropsType<typeof getStaticProps> = (props: Props) =
 			<Head>
 				<title>{t('faqs')}</title>
 			</Head>
+			<h1 style={{ display: 'none' }}>{t('faqs')}</h1>
 			{isMobile ? <React.Fragment>
 				<Mobile />
 				<FooterMobile />

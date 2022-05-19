@@ -7,7 +7,7 @@ import useImage from '../../hooks/useImage';
 const RenderSmoothNextImage: React.FunctionComponent<ImageProps> = ({ src, ...props }) => {
 	const { loaded } = useImage({ src })
 	return (
-		<Image {...props} className={cx("smooth-image", { loaded })} src={src ? src : '/header-blog.png'} />
+		<Image layout='fill' objectFit='cover' {...props} className={cx("smooth-image", { loaded })} src={src ? src : '/header-blog.png'} />
 	);
 };
 

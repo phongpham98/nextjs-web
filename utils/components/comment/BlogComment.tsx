@@ -76,7 +76,7 @@ const BlogComment = ({ postId, author, type, nextPost, prevPost }: Props) => {
 					<CommentWrapper>
 						<PostACommentTitleWrapper>
 							<CommentText>{t("comment.post_comment")}</CommentText>
-							<SvgPenAlt />
+							<SvgPenAlt color='FFF' />
 						</PostACommentTitleWrapper>
 						<Comment postId={postId} />
 					</CommentWrapper>

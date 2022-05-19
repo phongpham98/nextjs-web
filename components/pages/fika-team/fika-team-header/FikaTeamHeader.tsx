@@ -2,13 +2,13 @@ import { useTranslation } from 'next-i18next';
 import React from 'react';
 import CountUp from 'react-countup';
 import { AboutFikaSubTitle } from '../fika-team-content/FikaTeamContentStyled';
-import { CharacterContainer, CharacterItem, CharacterPercent, CharacterTitle, HeaderContainer, Title } from './FikaTeamHeaderStyled';
+import { CharacterContainer, CharacterItem, CharacterPercent, CharacterTitle, HeaderContainer, FikaTeamTitleH1 } from './FikaTeamHeaderStyled';
 
 const FikaTeamHeader = () => {
 	const { t } = useTranslation('fika-team');
 	return (
 		<HeaderContainer>
-			<Title>{t("header_title")}</Title>
+			<FikaTeamTitleH1>{t("header_title")}</FikaTeamTitleH1>
 			<AboutFikaSubTitle>{t("header_sub_title")}</AboutFikaSubTitle>
 			<CharacterContainer>
 				<CharacterItem>

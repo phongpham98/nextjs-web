@@ -1,4 +1,6 @@
 import { StoryModel } from '@interfaces/model';
+import RenderSmoothImage from '@utils/components/RenderSmoothImage';
+import { GeneralImageWrapper } from '@utils/styled-components/GeneralStyled';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import React from 'react';
@@ -15,7 +17,9 @@ const LoveItem = ({ story }: LoveItemProps) => {
 				<Link href={`/${t('connected_story')}/` + story.link}>
 					<a>
 						<ImageContainer>
-							<LoveItemImage src={story.thumbnail} alt={story.title} />
+							<GeneralImageWrapper>
+								<RenderSmoothImage src={story.thumbnail} alt={story.title} />
+							</GeneralImageWrapper>
 							<OpactityImage />
 						</ImageContainer>
 					</a>

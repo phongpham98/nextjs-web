@@ -4,7 +4,7 @@ import { GeneralContentWrapper, GeneralImageWrapper } from '@utils/styled-compon
 import parse from 'html-react-parser';
 import { useTranslation } from 'next-i18next';
 import * as React from 'react';
-import { PrivacePolictyItemContent, PrivacePolictyItemTitle, PrivacyPolicyBodyContainer, PrivacyPolicyHeaderContainer, PrivacyPolicyText } from './PrivacyPolicyStyled';
+import { PrivacePolictyItemContent, PrivacePolictyItemTitleH2, PrivacePolictyItemTitleH3, PrivacyPolicyBodyContainer, PrivacyPolicyHeaderContainer, PrivacyPolicyTextH1 } from './PrivacyPolicyStyled';
 
 export type Policy = {
 	id: number,
@@ -36,16 +36,19 @@ const PrivacyPolicyDesktop: React.FunctionComponent<IPrivacyPolicyDesktopProps> 
 				</PrivacyPolicyHeaderContainer>
 
 				<PrivacyPolicyBodyContainer>
-					<PrivacyPolicyText>
+					<PrivacyPolicyTextH1>
 						{parse(t('header'))}
-					</PrivacyPolicyText>
+					</PrivacyPolicyTextH1>
 					{
 						list?.map(item => {
 							return (
 								<React.Fragment key={item.id}>
-									<PrivacePolictyItemTitle className={item.id === 1 || item.id === 2 || item.id === 14 ? ' big-title' : ''} >
-										{item.title}
-									</PrivacePolictyItemTitle>
+									{item.id === 1 || item.id === 2 || item.id === 14 ?
+										<PrivacePolictyItemTitleH2 className={' big-title'} >
+											{item.title}
+										</PrivacePolictyItemTitleH2> : <PrivacePolictyItemTitleH3 >
+											{item.title}
+										</PrivacePolictyItemTitleH3>}
 									<PrivacePolictyItemContent>
 										{parse(item.content)}
 									</PrivacePolictyItemContent>

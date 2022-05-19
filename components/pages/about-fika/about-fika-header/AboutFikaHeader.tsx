@@ -9,13 +9,12 @@ const AboutFikaHeader = () => {
 	return (
 		<GeneralHeaderWrapper>
 			<GeneralImageWrapper>
-				<RenderSmoothNextImage width='1500' height='600' src={'/about_banner.jpg'} alt={t("header")} />
+				<RenderSmoothNextImage width='1500' height='400' src={'/about_banner.jpg'} alt={t("header")} />
 			</GeneralImageWrapper>
 			<TitleWrapper>
 				<TitleText color="black">
 					The female-focused
-				</TitleText>
-				<TitleText color="black">
+					<br />
 					AI social & dating app
 				</TitleText>
 				<SubTitleText color="black">

@@ -65,7 +65,7 @@ export const CoreValueDetail = styled.div`
   }
 
   @media ${device.laptop1024} {
-    font-size: 12px;
+    font-size: 0.8rem;
   }
 
   @media ${device.laptop1440} {

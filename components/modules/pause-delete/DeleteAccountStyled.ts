@@ -6,7 +6,7 @@ export const DeleteAccountTitle = styled.h1`
   font-size: 1.5rem;
 `;
 
-export const StepCount = styled.h3`
+export const StepCount = styled.h2`
   text-transform: uppercase;
   font-weight: bold;
   & span {

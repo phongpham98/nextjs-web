@@ -1,7 +1,9 @@
 import { renderDateFollowLanguage } from '@helpers/renderDateFollowLanguage';
 import { RootState } from '@redux/store';
+import RenderSmoothNextImage from '@utils/components/RenderSmoothNextImage';
 import { GeneralContentWrapper, GeneralImage } from '@utils/styled-components/GeneralStyled';
 import { Col, Row } from 'antd';
+import Link from 'next/link';
 import React from 'react';
 import LazyLoad from 'react-lazyload';
 import { useSelector } from 'react-redux';
@@ -23,11 +25,11 @@ const MagsPressFika = () => {
 								<Row gutter={20} key={mag.id}>
 									<Col span={6}>
 										<MagImage>
-											<LazyLoad throttle={100} height={100} once>
-												<MagColumnTilte href={mag.link} rel="noreferrer nofollow" target="_blank">
-													<GeneralImage src={mag.thumbnail} alt={mag.title} width="100%" style={{ border: "1px solid #A0A0A0" }} />
-												</MagColumnTilte>
-											</LazyLoad>
+											<Link href={mag.link}>
+												<a rel="noreferrer nofollow" target="_blank">
+													<RenderSmoothNextImage src={mag.thumbnail} alt={mag.title} width="100%" style={{ border: "1px solid #A0A0A0" }} />
+												</a>
+											</Link>
 										</MagImage>
 									</Col>
 									<Col span={15}>
@@ -35,9 +37,13 @@ const MagsPressFika = () => {
 											<MagColumnBrand>
 												{mag.author}
 											</MagColumnBrand>
-											<MagColumnTilte href={mag.link} rel="noreferrer nofollow" target="_blank">
-												{mag.title}
-											</MagColumnTilte>
+											<Link href={mag.link}>
+												<a rel="noreferrer nofollow" target="_blank">
+													<MagColumnTilte>
+														{mag.title}
+													</MagColumnTilte>
+												</a>
+											</Link>
 											<MagColumnDate>
 												{renderDateFollowLanguage(mag.date)}
 											</MagColumnDate>

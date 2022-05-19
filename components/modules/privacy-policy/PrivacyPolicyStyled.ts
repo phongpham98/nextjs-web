@@ -19,7 +19,7 @@ export const PrivacyPolicyContent = styled.div`
   place-items: center;
 `;
 
-export const PrivacyPolicyText = styled.div`
+export const PrivacyPolicyTextH1 = styled.h1`
   background-color: white;
   font-weight: 700;
   /* padding: 1rem 3rem; */
@@ -68,7 +68,30 @@ export const PrivacyPolicyMobileText = styled.div`
   }
 `;
 
-export const PrivacePolictyItemTitle = styled.h3`
+export const PrivacePolictyItemTitleH2 = styled.h2`
+  font-weight: bold;
+  font-size: 1.2rem;
+  &.big-title {
+    font-size: 1.7rem;
+  }
+  @media ${device.mobileS} {
+    font-size: 1.1rem;
+    &.big-title {
+      font-size: 1.4rem;
+    }
+  }
+  @media ${device.mobileM} {
+    font-size: 1.2rem;
+  }
+  @media ${device.tablet768} {
+    font-size: 1.2rem;
+    &.big-title {
+      font-size: 1.7rem;
+    }
+  }
+`;
+
+export const PrivacePolictyItemTitleH3 = styled.h3`
   font-weight: bold;
   font-size: 1.2rem;
   &.big-title {

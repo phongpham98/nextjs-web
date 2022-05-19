@@ -50,7 +50,7 @@ export const ContactTitleContainer = styled.div`
   gap: 20px;
 `;
 
-export const Title = styled.div`
+export const ContactTitleH2 = styled.h2`
   font-family: "Playfair Display";
   text-transform: uppercase;
   font-weight: 500;

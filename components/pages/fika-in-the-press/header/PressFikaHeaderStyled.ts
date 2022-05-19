@@ -1,5 +1,5 @@
 import { device } from "@configs/screensSizes";
-import { TitleH3 } from "@utils/styled-components/GeneralTitleStyled";
+import { TitleH1, TitleH3 } from "@utils/styled-components/GeneralTitleStyled";
 import styled from "styled-components";
 
 export const PressFikaHeaderContainer = styled.div`
@@ -16,7 +16,7 @@ export const PressFikaHeaderContainer = styled.div`
   }
 `;
 
-export const PressFikaTitle = styled(TitleH3)`
+export const PressFikaTitle = styled(TitleH1)`
   font-size: 70px;
   margin-bottom: 60px;
   color: black;
@@ -88,7 +88,7 @@ export const MagBrand = styled(TitleH3)`
   }
 `;
 
-export const MagTitle = styled.div`
+export const MagTitleH2 = styled.h2`
   font-weight: 500;
   text-transform: uppercase;
   text-align: center;

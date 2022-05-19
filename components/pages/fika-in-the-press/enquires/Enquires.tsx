@@ -18,7 +18,7 @@ const Enquires = () => {
 					{t('contact.press.desc')}
 				</EnquiresDescription>
 				<EnquireContactContainer>
-					<ContactWithIcon icon={<SvgMail />} title="message us" detail={<a aria-label={'contact us'} rel="noreferrer nofollow" target='_blank' href='https://www.facebook.com/messages/t/101187824833257'>m.me/fikaconnects</a>} />
+					<ContactWithIcon icon={<SvgMail />} title="message us" detail={`<a aria-label={'contact us'} rel="noreferrer nofollow" target='_blank' href='https://www.facebook.com/messages/t/101187824833257'>m.me/fikaconnects</a>`} />
 					<ContactWithIcon icon={<SvgPhone />} title="phone us" detail="+84944798739" />
 				</EnquireContactContainer>
 			</EnquiresContainer>

@@ -21,6 +21,7 @@ const Contact: InferGetStaticPropsType<typeof getStaticProps> = (props: Props) =
 			<Head>
 				<title>{t('contact')}</title>
 			</Head>
+			<h1 style={{ display: 'none' }}>{t('contact')}</h1>
 			{isMobile ? <React.Fragment>
 				<Mobile />
 				<FooterMobile />

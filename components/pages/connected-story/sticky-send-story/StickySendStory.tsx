@@ -7,7 +7,7 @@ const StickySendStory = ({ onClick }: any) => {
 	return (
 		<StickyContainer onClick={onClick}>
 			send us your story
-			<SvgPenAlt />
+			<SvgPenAlt color='black'/>
 		</StickyContainer>
 	);
 };

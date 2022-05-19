@@ -55,7 +55,7 @@ export const MagazineTitleWrapper = styled.div`
   }
 `;
 
-export const MagazineTitle = styled.a`
+export const MagazineTitle = styled.h2`
   color: white;
   &:hover {
     color: white;

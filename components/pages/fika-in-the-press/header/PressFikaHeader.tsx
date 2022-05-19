@@ -1,11 +1,12 @@
 import { RootState } from '@redux/store';
-import RenderSmoothImage from '@utils/components/RenderSmoothImage';
+import RenderSmoothNextImage from '@utils/components/RenderSmoothNextImage';
 import { GeneralImageWrapper } from '@utils/styled-components/GeneralStyled';
 import { Col, Row } from 'antd';
 import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { MagazineContainer, MagBrand, MagTitle, MagTitleWrapper, PressFikaHeaderContainer, PressFikaTitle, PressSubContent } from './PressFikaHeaderStyled';
+import { MagazineContainer, MagBrand, MagTitleH2, MagTitleWrapper, PressFikaHeaderContainer, PressFikaTitle, PressSubContent } from './PressFikaHeaderStyled';
 
 const PressFikaHeader = () => {
 	const { t } = useTranslation('title');
@@ -24,18 +25,20 @@ const PressFikaHeader = () => {
 							<MagazineContainer>
 								<PressSubContent href={mag.link} rel="noreferrer nofollow" target="_blank" >
 									<GeneralImageWrapper>
-										<RenderSmoothImage width='500' height='500' src={mag.banner} alt={mag.title} />
+										<RenderSmoothNextImage width='500' height='500' src={mag.banner} alt={mag.title} />
 									</GeneralImageWrapper>
 								</PressSubContent>
 								<MagTitleWrapper>
 									<MagBrand>{mag.author}</MagBrand>
 								</MagTitleWrapper>
 							</MagazineContainer>
-							<MagTitle>
-								<PressSubContent href={mag.link} rel="noreferrer nofollow" target="_blank" >
-									{mag.title}
-								</PressSubContent>
-							</MagTitle>
+							<Link href={mag.link}>
+								<a rel="noreferrer nofollow" target="_blank" >
+									<MagTitleH2>
+										{mag.title}
+									</MagTitleH2>
+								</a>
+							</Link>
 						</Col>
 					)
 				})}

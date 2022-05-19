@@ -58,7 +58,7 @@ export const MagColumnBrand = styled(TitleH2)`
   }
 `;
 
-export const MagColumnTilte = styled.a`
+export const MagColumnTilte = styled.h2`
   text-transform: uppercase;
   font-weight: 500;
   cursor: pointer;

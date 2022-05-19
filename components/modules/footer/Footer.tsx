@@ -63,7 +63,7 @@ const Footer = () => {
 						return (
 							<PressContent key={item.id}>
 								<div style={{ paddingTop: "4px" }}>
-									<SvgPenAlt />
+									<SvgPenAlt color='FFF' />
 								</div>
 								<PressDetail href={item.link} target="_blank" rel="noreferrer nofollow">
 									<span>{item.author}</span> - {item.title}

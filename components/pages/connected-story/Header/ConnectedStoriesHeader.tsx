@@ -45,7 +45,7 @@ const TextWrapper = styled.div`
   }
 `;
 
-const Title = styled.h1`
+const StoryTitleH1 = styled.h1`
   text-transform: uppercase;
   color: white;
   font-family: Bludhaven;
@@ -114,7 +114,7 @@ const ConnectedStoryHeader = () => {
 		<DivWrapper>
 			<ImageHeader src={'/love.jpg'} alt="couple" />
 			<TextWrapper>
-				<Title>{t('connected_story')}</Title>
+				<StoryTitleH1>{t('connected_story')}</StoryTitleH1>
 				<SubTitle>
 					{parse(t('header_description', {ns: 'story'}))}
 				</SubTitle>

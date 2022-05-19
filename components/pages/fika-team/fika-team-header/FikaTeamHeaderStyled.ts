@@ -26,7 +26,7 @@ export const HeaderContainer = styled.div`
   }
 `;
 
-export const Title = styled.div`
+export const FikaTeamTitleH1 = styled.h1`
   font-family: 'Playfair Display', serif;
   text-transform: uppercase;
   @media ${device.tablet768} {
