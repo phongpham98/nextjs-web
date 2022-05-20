@@ -174,7 +174,7 @@ export interface EventModel {
   author?: Author;
   banner?: string;
   banner_key?: string;
-  created_at?: number;
+  created_at: number;
   deactivated?: boolean;
   description?: string;
   galleries?: Gallery[];
@@ -184,12 +184,15 @@ export interface EventModel {
   link?: string;
   likes?: number;
   name?: string;
-  public_date?: string;
+  public_date?: number;
   short_description?: string;
   tags?: Tag[];
   thumbnail?: string;
   thumbnail_key?: string;
   updated_at?: number;
+  seo_title?: string;
+  seo_description?: string;
+  seo_keywords?: string[];
 }
 
 export interface PopularQuestion {
@@ -286,4 +289,7 @@ export interface CategoryHome {
   homepage?: boolean;
   language?: LanguageType;
   deactivated?: boolean;
+  seo_title?: string;
+  seo_description?: string;
+  seo_keywords?: string[];
 }

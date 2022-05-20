@@ -8,5 +8,10 @@
   "are_u_interested": "ARE YOU INTERESTED IN JOINING US?",
   "visit_us": "visit us",
   "mail_us": "mail us",
-  "contact_desc": "To get in touch with the Team at Fika, feel free to contact us via Messenger, phone, or email. We’d love to hear from you!"
+  "contact_desc": "To get in touch with the Team at Fika, feel free to contact us via Messenger, phone, or email. We’d love to hear from you!",
+  "seo": {
+	  "title": "Finding great opportunities at Fika",
+	  "description": "Fika is offering you the best potential opportunity and dynamic working environment that you will have chance to grow and achive your success",
+	  "keywords": "career"
+  }
 }

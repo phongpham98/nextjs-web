@@ -9,7 +9,7 @@ const AboutFikaHeader = () => {
 	return (
 		<GeneralHeaderWrapper>
 			<GeneralImageWrapper>
-				<RenderSmoothNextImage width='1500' height='400' src={'/about_banner.jpg'} alt={t("header")} />
+				<RenderSmoothNextImage src={'/about_banner.jpg'} alt={t("header")} />
 			</GeneralImageWrapper>
 			<TitleWrapper>
 				<TitleText color="black">

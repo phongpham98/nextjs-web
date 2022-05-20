@@ -11,7 +11,6 @@ import { update_story_detail } from '@redux/slices/connectedStoriesSlice';
 import { RootState } from '@redux/store';
 import DownloadFika from '@utils/components/DownloadFika';
 import HrLine from '@utils/components/HrLine';
-import RenderSmoothImage from '@utils/components/RenderSmoothImage';
 import RenderSmoothNextImage from '@utils/components/RenderSmoothNextImage';
 import ShareButton from '@utils/components/share/ShareButton';
 import { GeneralTitlePostDetailH1, MotoP, ShareAndLikeContainer } from '@utils/styled-components/GeneralContentStyled';
@@ -68,10 +67,10 @@ const StoryDetailMobile = () => {
 			<GeneralHeaderMobileContainer>
 				{storyDetail && !loading ? (
 					<GeneralImageWrapper>
-						<RenderSmoothNextImage width='500' height='500' src={storyDetail.thumbnail ? storyDetail.thumbnail : ''} alt={storyDetail.title} />
+						<RenderSmoothNextImage src={storyDetail.thumbnail ? storyDetail.thumbnail : ''} alt={storyDetail.title} />
 					</GeneralImageWrapper>
 				) : <GeneralImageWrapper>
-					<RenderSmoothImage width='500' height='500' alt={''} src={''} />
+					<RenderSmoothNextImage alt={''} src={''} />
 				</GeneralImageWrapper>}
 
 			</GeneralHeaderMobileContainer>

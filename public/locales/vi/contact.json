@@ -10,5 +10,10 @@
   "ask": {
     "title": "Những câu hỏi thường gặp",
     "desc": "Muốn biết thêm thông tin về việc sử dụng app? Xem thêm tại đây"
+  },
+  "seo": {
+	  "title": "Liên hệ với Fika đơn giản và nhanh chóng",
+	  "description": "Đừng ngại liên hệ với Fika bất cứ lúc nào khi bạn có thắc mắc hoặc chia sẻ các ý tưởng cùng chúng tôi",
+	  "keywords": "liên hệ"
   }
 }

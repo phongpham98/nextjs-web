@@ -37,7 +37,7 @@ const MoreBlogs = () => {
 											<ImageMoreBlogContainer>
 												<LazyLoad offset={300} throttle={100} height={100} once>
 													<GeneralImageWrapper>
-														<RenderSmoothNextImage width='500' height='500' src={blog.thumbnail ? blog.thumbnail : ''} alt={blog.title} />
+														<RenderSmoothNextImage  src={blog.thumbnail ? blog.thumbnail : ''} alt={blog.title} />
 													</GeneralImageWrapper>
 												</LazyLoad>
 											</ImageMoreBlogContainer>

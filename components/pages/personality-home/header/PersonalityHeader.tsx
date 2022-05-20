@@ -12,7 +12,7 @@ const PersonalityHeader = () => {
 	return (
 		<PeronslaityHomeHeaderContainer>
 			<GeneralImageWrapper>
-				<RenderSmoothNextImage width='412' height='412' alt="fika personality quiz" src={router.locale === "vi" ? bannerVN.src : bannerEN.src} />
+				<RenderSmoothNextImage alt="fika personality quiz" src={router.locale === "vi" ? bannerVN.src : bannerEN.src} />
 			</GeneralImageWrapper>
 		</PeronslaityHomeHeaderContainer>
 	);

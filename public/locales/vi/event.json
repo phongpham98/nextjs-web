@@ -1,6 +1,11 @@
 {
   "header": {
     "title": "Sự kiện",
-    "description": "Những nhân vật đặc biệt, không gian độc đáo, thông điệp ý nghĩa… và còn gì hơn thế nữa? Với Fika, mỗi sự kiện không chỉ là những dịp đặc biệt để gặp gỡ, mà còn là những khoảnh khắc ghi dấu không thể nào quên! "
+    "description": "Những nhân vật đặc biệt, không gian độc đáo, thông điệp ý nghĩa… và còn gì hơn thế nữa? Với Fika, mỗi sự kiện không chỉ là những dịp đặc biệt để gặp gỡ, mà còn là những khoảnh khắc ghi dấu không thể nào quên!"
+  },
+  "seo": {
+	  "title": "Những sự kiện thú vị mang tới cho bạn kết nối ý nghĩa",
+	  "description": "Nhân vật đặc biệt, không gian độc đáo, thông điệp ý nghĩa… hơn thế, mỗi sự kiện của Fika đều là dịp đặc biệt với những kết nối không thể nào quên.",
+	  "keywords": "sự kiện"
   }
 }

@@ -1,6 +1,6 @@
 import { SingleTopicContainer, TopicImage, TopicTitle } from "@components/home/topics/TopicStyled";
 import { CategoryHome } from "@interfaces/model";
-import RenderSmoothImage from "@utils/components/RenderSmoothImage";
+import RenderSmoothNextImage from "@utils/components/RenderSmoothNextImage";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 
@@ -19,7 +19,7 @@ const CategoryItem = (props: TopicProps) => {
 				<Link href={`/${t('category')}/` + link}>
 					<a>
 						<TopicImage>
-							<RenderSmoothImage width="600" height="600" src={thumbnail} alt={item.name} />
+							<RenderSmoothNextImage src={thumbnail ? thumbnail : ''} alt={item.name} />
 						</TopicImage>
 					</a>
 				</Link>

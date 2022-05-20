@@ -55,7 +55,7 @@ const EventContent: React.FunctionComponent<IEventContentProps> = (props) => {
 												<Link href={`/${t('event')}/` + event.link}>
 													<a>
 														<GeneralImageWrapper>
-															<RenderSmoothNextImage width='436' height='327' src={event.thumbnail ? event.thumbnail : ''} alt={event.name ? event.name : ''} />
+															<RenderSmoothNextImage  src={event.thumbnail ? event.thumbnail : ''} alt={event.name ? event.name : ''} />
 														</GeneralImageWrapper>
 													</a>
 												</Link>

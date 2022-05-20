@@ -30,10 +30,6 @@ const CategoryHeader: React.FunctionComponent<ICategoryHeaderProps> = (props) =>
 								<LazyLoad throttle={100} height={100} once>
 									<GeneralImageWrapper>
 										<RenderSmoothNextImage
-											layout='fill'
-											objectFit='cover'
-											width='300'
-											height='500'
 											src={category?.thumbnail ? category.thumbnail : ''} alt={category?.name} />
 									</GeneralImageWrapper>
 								</LazyLoad>

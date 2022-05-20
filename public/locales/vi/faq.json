@@ -44,5 +44,10 @@
       "title": "Tuyển dụng tại Fika",
       "link": "/tuyen-dung"
     }
-  ]
+  ],
+  "seo": {
+	  "title": "Những thắc mắc thường gặp trong phần hỏi đáp",
+	  "description": "Bạn sẽ tìm thấy câu trả lời cho bất cứ thắc mắc nào về Fika trong phần hỏi đáp của chúng tôi",
+	  "keywords": "hỏi đáp"
+  }
 }

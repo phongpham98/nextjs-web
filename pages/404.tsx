@@ -20,6 +20,7 @@ const NotFound: InferGetStaticPropsType<typeof getStaticProps> = (props: Props) 
 		<>
 			<Head>
 				<title>{t('not_found')}</title>
+				<meta name="robots" content="noindex" />
 			</Head>
 			{isMobile ? <React.Fragment>
 				<Mobile />

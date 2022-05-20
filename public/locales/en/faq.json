@@ -44,5 +44,10 @@
         "title": "careers at fika",
         "link": "/career"
       }
-    ]
+    ],
+	"seo": {
+		"title": "Answers for all your questions",
+		"description": "You will find all answers for any of your question about Fika in this FAQ section",
+		"keywords": "faqs"
+	}
 }

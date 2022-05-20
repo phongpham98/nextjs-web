@@ -3,23 +3,19 @@ import useWindowDimensions from '@hooks/useWindowDemension';
 import animationData from '@public/assets/animation/animation.json';
 import { RootState } from '@redux/store';
 import 'animate.css';
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'next-i18next';
+import React, { useEffect, useState } from 'react';
 import Lottie from 'react-lottie';
 import { useSelector } from 'react-redux';
 import AvatarRound from './AvatarRound';
 import { AnimationArea, AvatarContainer, MatchedAvatarContainer, MatchedText } from './MatchedAvatarStyled';
 
 const MatchedAvatar = () => {
-	const { width, height } = useWindowDimensions();
+	const { width } = useWindowDimensions();
 	const desktop = width > 2560;
 	const laptop1600 =  width > 1556
 	const laptop1440 =  width > 1440
 	const laptop1024 =  width > 1024
-	// const width = useCallback(() => {
-	// 	// return { width, height }
-	// 	console.log('a')
-	// }, [])
 	const [showAnimation, setShowAnimation] = useState<boolean>(false);
 	const [currentIdx, setCurrentIdx] = useState<number>(0);
 	const { matches } = useSelector((state: RootState) => state.matched);

@@ -1,6 +1,5 @@
 import { renderDateFollowLanguage } from '@helpers/renderDateFollowLanguage';
 import { PostType } from '@utils/components/categories-tags/CategoriesAndTags';
-import RenderSmoothImage from '@utils/components/RenderSmoothImage';
 import RenderSmoothNextImage from '@utils/components/RenderSmoothNextImage';
 import { GeneralImageWrapper } from '@utils/styled-components/GeneralStyled';
 import { Col, Row } from 'antd';
@@ -15,7 +14,6 @@ export interface LatestPostsProps {
 
 const LatestPosts = ({ posts, type }: LatestPostsProps) => {
 	const { t } = useTranslation(['routes', 'title']);
-	console.log('routes', posts, type)
 
 	const postType = (type: any) => {
 		switch (type) {
@@ -46,7 +44,7 @@ const LatestPosts = ({ posts, type }: LatestPostsProps) => {
 									<a style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center' }}>
 										<PostImageContainer>
 											<GeneralImageWrapper>
-												<RenderSmoothNextImage width='100' height='100' src={item.thumbnail} alt={item.title} />
+												<RenderSmoothNextImage src={item.thumbnail} alt={item.title} />
 											</GeneralImageWrapper>
 										</PostImageContainer>
 									</a>

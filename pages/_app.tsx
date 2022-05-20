@@ -24,6 +24,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 			<Head>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<link rel="shortcut icon" href="/logo-fika.ico" />
+				<meta content="article" property="og:type" />
+				<meta property="og:site_name" content="Fika Connects" />
+				<meta content="summary_large_image" property="twitter:card" />
 			</Head>
 			<GlobalStyle />
 			<div id='side-main'>

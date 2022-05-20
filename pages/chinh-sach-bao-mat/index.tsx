@@ -1,11 +1,13 @@
 import LayoutDesktop from '@components/layout/LayoutDesktop'
 import FooterMobile from '@components/modules/footer/FooterMobile'
 import isMobileDevice from '@helpers/isMobile'
+import SEO from '@utils/components/SEO/SEO'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import React from 'react'
 
 type Props = {}
@@ -15,12 +17,18 @@ const Desktop = dynamic(() => import('@components/modules/privacy-policy/Privacy
 
 const PrivacyPolicy: InferGetStaticPropsType<typeof getStaticProps> = (props: Props) => {
 	const isMobile = isMobileDevice();
-	const { t } = useTranslation('title')
+	const { t } = useTranslation(['policy', 'title'])
+	const router = useRouter();
 	return (
 		<>
-			<Head>
-				<title>{t('privacy_policy')}</title>
-			</Head>
+			<SEO
+				title={t('privacy_policy', { ns: 'title' })}
+				description={t('seo.description')}
+				imgSrc='/seo_image/privacy_policy.jpg'
+				keywords={t('seo.keywords')}
+				seo_title={t('seo.title')}
+				url={`https://${process.env.NEXT_PUBLIC_REACT_APP_DOMAIN}${router.locale === "en" ? "/en" : ""}${router.asPath}`}
+			/>
 			{isMobile ? <React.Fragment>
 				<Mobile />
 				<FooterMobile />

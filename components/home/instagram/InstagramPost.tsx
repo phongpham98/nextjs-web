@@ -1,4 +1,4 @@
-import RenderSmoothImage from '@utils/components/RenderSmoothImage';
+import RenderSmoothNextImage from '@utils/components/RenderSmoothNextImage';
 import { GeneralImageWrapper } from '@utils/styled-components/GeneralStyled';
 import React from 'react';
 import { isMobile } from 'react-device-detect';
@@ -14,7 +14,7 @@ const InstagramPost = ({ img, link }: InstagramPostProps) => {
 	return (
 		<InstagramPostContainer>
 			<GeneralImageWrapper>
-				<RenderSmoothImage width='200' height='200' src={img ? img : ''} alt="fikaconnects" />
+				<RenderSmoothNextImage src={img ? img : ''} alt="fikaconnects" />
 			</GeneralImageWrapper>
 			{!isMobile && (
 				<React.Fragment>

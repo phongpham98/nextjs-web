@@ -5,10 +5,8 @@ import { GeneralHeaderMobileContainer, GeneralImageWrapper, GeneralPaddingMobile
 import parse from 'html-react-parser';
 import { useTranslation } from 'next-i18next';
 import * as React from 'react';
-import { useSelector } from 'react-redux';
-import banner from '../../assets/images/logo/privacy_policy_Eng_Viet_mobile.jpg';
 import { Policy } from './PrivacyPolicyDesktop';
-import { PrivacePolictyItemContent, PrivacePolictyItemTitle, PrivacyPolicyMobileText } from './PrivacyPolicyStyled';
+import { PrivacePolictyItemContent, PrivacePolictyItemTitleH2, PrivacePolictyItemTitleH3, PrivacyPolicyMobileText } from './PrivacyPolicyStyled';
 
 interface IPrivacyPolicyMobileProps {
 }
@@ -23,7 +21,7 @@ const PrivacyPolicyMobile: React.FunctionComponent<IPrivacyPolicyMobileProps> = 
 		<React.Fragment>
 			<GeneralHeaderMobileContainer>
 				<GeneralImageWrapper>
-					<RenderSmoothNextImage layout='fill' objectFit='cover' width='1500' height='537' src={'/privacy_policy_Eng_Viet_mobile.jpg'} alt="Privacy - Policy" />
+					<RenderSmoothNextImage src={'/privacy_policy_Eng_Viet_mobile.jpg'} alt="Privacy - Policy" />
 				</GeneralImageWrapper>
 			</GeneralHeaderMobileContainer>
 			<NavMobile hasMarginBottom={true} hasSearchFirst={true} />
@@ -35,9 +33,12 @@ const PrivacyPolicyMobile: React.FunctionComponent<IPrivacyPolicyMobileProps> = 
 					list?.map(item => {
 						return (
 							<React.Fragment key={item.id}>
-								<PrivacePolictyItemTitle>
-									{item.title}
-								</PrivacePolictyItemTitle>
+								{item.id === 1 || item.id === 2 || item.id === 14 ?
+									<PrivacePolictyItemTitleH2 className={' big-title'} >
+										{item.title}
+									</PrivacePolictyItemTitleH2> : <PrivacePolictyItemTitleH3 >
+										{item.title}
+									</PrivacePolictyItemTitleH3>}
 								<PrivacePolictyItemContent>
 									{parse(item.content)}
 								</PrivacePolictyItemContent>

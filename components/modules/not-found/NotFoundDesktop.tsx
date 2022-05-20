@@ -16,7 +16,7 @@ const NotFoundDesktop: React.FunctionComponent<INotFoundDesktopProps> = (props) 
 			<NotFoundText>404</NotFoundText>
 			<ExplainText>{parse(t('not_found'))}</ExplainText>
 			<div onClick={() => router.back()} style={{ marginTop: "40px" }}>
-				<FikaButton name={t('go_back')} />
+				<FikaButton name={t('go_back', {ns: 'button'})} />
 			</div>
 		</NotFoundContainer>
 	);

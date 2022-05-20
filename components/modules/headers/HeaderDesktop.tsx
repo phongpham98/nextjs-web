@@ -21,7 +21,7 @@ const HeaderDesktop: React.FunctionComponent<IHeaderDesktopProps> = (props) => {
 				</Title>
 				<DownloadArea >
 					<QRCodeContainer>
-						<QrCodeImage width={'100'} height='100' src={'/QR-code.png'} alt="download fika" />
+						<QrCodeImage width={'100'} height='100' src={'/QR_code.png'} alt="download fika" />
 					</QRCodeContainer>
 					<AppContainer>
 						<a aria-label={'download fika'} href="https://play.google.com/store/apps/details?id=com.meetai.dating.android&hl=en&gl=US" target="_blank" rel="noreferrer nofollow">

@@ -1,4 +1,4 @@
-export const HOST = `https://fika-website-be.cinnamonrollsfordevs.com/api/v2`;
+export const HOST = `https://${process.env.NEXT_PUBLIC_REACT_APP_HOST}/api/v2`;
 
 // export const domain = "https://fika-website-dev.cinnamonrollsfordevs.com";
 export const domain = "https://fikaconnects.com";

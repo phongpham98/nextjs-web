@@ -1,3 +1,8 @@
 {
-	"header_desc": "We have articles ranging from self-development and 16 personality traits to insights into the zodiac signs and dating advices, and so much more."
+  "header_desc": "We have articles ranging from self-development and 16 personality traits to insights into the zodiac signs and dating advices, and so much more.",
+  "seo": {
+	"title": "Fika blog is where you can find every answers for your life",
+	"description": "Fika's blog brings you useful tips for your life your journey of 'Identifing your personality - Improving yourself - Dating - Mastering your life'",
+	"keywords": "fika blog"
+}
 }

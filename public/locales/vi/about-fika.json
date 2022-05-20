@@ -25,5 +25,10 @@
     "female_users": "Người dùng nữ",
     "verified_users": "Người dùng",
     "ranking": "Xếp hạng: Google Play"
+  },
+  "seo": {
+	  "title": "Fika tự giới thiệu về mình",
+	  "description": "Fika tự giới thiệu về giá trị, hành trình phát triển và những thành tựu để trở thành ứng dụng hẹn hò online tốt nhất Việt Nam",
+	  "keywords": "giới thiệu"
   }
 }

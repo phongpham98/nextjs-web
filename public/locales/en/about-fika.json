@@ -25,5 +25,10 @@
     "female_users": "Female users",
     "verified_users": "Verified users",
     "ranking": "Ranking: Google Play"
+  },
+  "seo": {
+	  "title": "Fika talks about ourself",
+	  "description": "Fika's story about our core values, our journey to become the best social and dating app in Vietnam",
+	  "keywords": "about fika"
   }
 }

@@ -26,13 +26,8 @@ const PrivacyPolicyDesktop: React.FunctionComponent<IPrivacyPolicyDesktopProps> 
 			<GeneralContentWrapper>
 				<PrivacyPolicyHeaderContainer>
 					<GeneralImageWrapper>
-						<RenderSmoothNextImage layout='fill' objectFit='cover' width='1500' height='537' src={'/privacy_policy_Eng_Viet_web.jpg'} alt="Privacy - Policy" />
+						<RenderSmoothNextImage src={'/privacy_policy_Eng_Viet_web.jpg'} alt="Privacy - Policy" />
 					</GeneralImageWrapper>
-					{/* <PrivacyPolicyContent>
-						<PrivacyPolicyText>
-							{parse(t('privacy_policy.header'))}
-						</PrivacyPolicyText>
-					</PrivacyPolicyContent> */}
 				</PrivacyPolicyHeaderContainer>
 
 				<PrivacyPolicyBodyContainer>

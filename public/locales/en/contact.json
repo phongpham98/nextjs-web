@@ -10,5 +10,10 @@
   "ask": {
     "title": "FREQUENTLY ASKED QUESTIONS",
     "desc": "Need to know how the app works? Check it right here."
+  },
+  "seo": {
+	  "title": "Contacting Fika in always simple and quick",
+	  "description": "Feel free to contact Fika whenever you have question or you'd like to share your ideas with us",
+	  "keywords": "contact"
   }
 }

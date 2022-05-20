@@ -15,7 +15,7 @@ const CareerDetail: React.FunctionComponent<ICareerDetailProps> = (props) => {
 		<React.Fragment>
 			<GeneralHeaderMobileContainer>
 				<GeneralImageWrapper>
-					<RenderSmoothNextImage width='500' height='500' src={'/jobs.jpg'} alt="job at fika" />
+					<RenderSmoothNextImage src={'/jobs.jpg'} alt="job at fika" />
 				</GeneralImageWrapper>
 				<CareerDetailTitleWrapper>
 					<TitleTexth1 color="black">

@@ -1,3 +1,8 @@
 {
-  "header_desc": "Không chỉ giới thiệu tới bạn những địa điểm đang hot nhất trong thành phố mà Fika còn cung cấp thêm nhiều chương trình liên kết – khuyến mại độc đáo dành riêng cho người dùng Fika đấy! Đừng bỏ lỡ cơ hội để trải nghiệm hẹn hò cùng người yêu – khám phá với bạn bè của bạn thêm phần thú vị và đáng nhớ!"
+  "header_desc": "Không chỉ giới thiệu tới bạn những địa điểm đang hot nhất trong thành phố mà Fika còn cung cấp thêm nhiều chương trình liên kết – khuyến mại độc đáo dành riêng cho người dùng Fika đấy! Đừng bỏ lỡ cơ hội để trải nghiệm hẹn hò cùng người yêu – khám phá với bạn bè của bạn thêm phần thú vị và đáng nhớ!",
+  "seo": {
+	  "title": "Địa điểm hẹn hò, kết nối thú vị dành riêng cho bạn",
+	  "description": "Fika có hàng tá địa điểm với những ưu đãi cực hấp dẫn cho bạn chọn làm nơi hẹn hò thú vị hoặc tụ tập cực chất cùng bạn bè",
+	  "keywords": "địa điểm"
+  }
 }

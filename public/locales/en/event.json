@@ -2,5 +2,10 @@
   "header": {
     "title": "Events",
     "description": "A picture is worth a thousand words.<br/> A picture tells a story just as well as, if not better than, a lot of written words. This photo gallery is just some of the ways we celebrate and capture amazing Fika events."
+  },
+  "seo": {
+	  "title": "Our interesting events help you find your meaningful connections",
+	  "description": "Special people, unique spaces, meaningful messages... every Fika's event is a special event for you to find your unforgetable connections",
+	  "keywords": "events"
   }
 }

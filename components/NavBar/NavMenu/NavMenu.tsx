@@ -25,7 +25,6 @@ const NavMenu = () => {
 
 	useEffect(() => {
 		let menu = router.asPath.split("/")[1]
-		console.log('menu', menu, router)
 		setCurrentMenu(menu);
 	}, [router.asPath])
 	// const menuItems: ItemType[] = 

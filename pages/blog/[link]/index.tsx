@@ -3,11 +3,15 @@ import { fetchByLinkorId } from '@api/_api/blog'
 import LayoutDesktop from '@components/layout/LayoutDesktop'
 import FooterMobile from '@components/modules/footer/FooterMobile'
 import isMobileDevice from '@helpers/isMobile'
+import { renderDateFollowLanguage } from '@helpers/renderDateFollowLanguage'
 import { PostModel, PostRequest } from '@interfaces/posts'
+import SEO from '@utils/components/SEO/SEO'
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
+import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import React from 'react'
 
 type Props = {
@@ -17,13 +21,25 @@ type Props = {
 const Desktop = dynamic(() => import('@components/modules/blog-detail/BlogDetailDesktop'), { ssr: false })
 const Mobile = dynamic(() => import('@components/modules/blog-detail/BlogDetailMoible'), { ssr: false })
 
-const BlogDetail = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const BlogDetail: InferGetStaticPropsType<typeof getStaticProps> = ({ data }: Props) => {
 	const isMobile = isMobileDevice();
+	const router = useRouter();
+	const { t } = useTranslation(['title', 'routes']);
 	return (
 		<>
-			<Head>
-				<title>{data ? data.title : "Fika Connects"}</title>
-			</Head>
+			<SEO
+				title={data.title}
+				description={data?.short_description}
+				imgSrc={data.thumbnail}
+				keywords={data.seo_keywords?.join(',')}
+				seo_title={data.title}
+				hasBreadCrumb={true}
+				public_date={renderDateFollowLanguage(data.public_date ? data.public_date : data.created_at, router)}
+				updated_at={renderDateFollowLanguage(data.updated_at ? data.updated_at : data.created_at, router)}
+				parent_name={t('blogs')}
+				parent_url={`https://${process.env.NEXT_PUBLIC_REACT_APP_DOMAIN}${router.locale === "en" ? "/en" : ""}${t('blogs', { ns: 'routes' })}`}
+				url={`https://${process.env.NEXT_PUBLIC_REACT_APP_DOMAIN}${router.locale === "en" ? "/en" : ""}${router.asPath}`}
+			/>
 			{isMobile ? <React.Fragment>
 				<Mobile />
 				<FooterMobile />
@@ -69,7 +85,7 @@ export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
 			// Will be passed to the page component as props
 			data
 		},
-		revalidate: 1
+		revalidate: 60
 	};
 }
 

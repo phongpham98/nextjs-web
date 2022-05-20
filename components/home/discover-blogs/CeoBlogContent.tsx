@@ -1,12 +1,11 @@
+import { colors } from '@configs/globalStyles';
 import { renderDateFollowLanguage } from '@helpers/renderDateFollowLanguage';
 import { PostModel } from '@interfaces/posts';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import * as React from 'react';
-import { useTranslation } from 'next-i18next';
-import { CeoBlogContentContainer, CeoBlogTitleH3, CeoContentP, PathDateWrapper, ReadMoreText } from './CeoBlogContentStyled';
 import ShareContent from '@utils/components/share/ShareContent';
-import { colors } from '@configs/globalStyles';
+import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
+import * as React from 'react';
+import { CeoBlogContentContainer, CeoBlogTitleH3, CeoContentP, PathDateWrapper, ReadMoreText } from './CeoBlogContentStyled';
 interface ICeoBlogContentProps {
 	blog: PostModel;
 }

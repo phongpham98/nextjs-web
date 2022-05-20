@@ -4,28 +4,34 @@ import LayoutDesktop from '@components/layout/LayoutDesktop'
 import FooterMobile from '@components/modules/footer/FooterMobile'
 import isMobileDevice from '@helpers/isMobile'
 import { CategoryHome } from '@interfaces/model'
-import { CategoryResponse } from '@interfaces/posts'
 import { CategoryHomeRequest, CategoryRequest } from '@interfaces/request'
+import SEO from '@utils/components/SEO/SEO'
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import dynamic from 'next/dynamic'
-import Head from 'next/head'
+import { useRouter } from 'next/router'
 import React from 'react'
 
 type Props = {
-	// data: CategoryHome
+	data: CategoryHome
 }
 
 const Desktop = dynamic(() => import('@components/modules/category-detail/CategoryDetailDesktop'), { ssr: false })
 const Mobile = dynamic(() => import('@components/modules/category-detail/CategoryDetailMobile'), { ssr: false })
 
-const CategoryDetail = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const CategoryDetail: InferGetStaticPropsType<typeof getStaticProps> = ({ data }: Props) => {
 	const isMobile = isMobileDevice();
+	const router = useRouter();
 	return (
 		<>
-			<Head>
-				<title>{data ? data.name : 'Fika Connects'}</title>
-			</Head>
+			<SEO
+				title={data?.name}
+				description={data?.seo_description}
+				imgSrc={data?.thumbnail}
+				keywords={data?.seo_keywords?.join(',')}
+				seo_title={data?.seo_title}
+				url={`https://${process.env.NEXT_PUBLIC_REACT_APP_DOMAIN}${router.locale === "en" ? "/en" : ""}${router.asPath}`}
+			/>
 			{isMobile ? <React.Fragment>
 				<Mobile />
 				<FooterMobile />
@@ -45,19 +51,24 @@ export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
 	let data: CategoryHome = {
 		name: "Fika Connects",
 		type: "",
-		link: ''
+		link: '',
+		seo_title: 'string',
+		seo_description: 'string',
+		seo_keywords: [''],
+
 	};
-	if (params && typeof params.link === 'string') {
-		const query: CategoryRequest = {
-			language: locale,
-			cate_id: params.link,
-			page: 1,
-			limit: 1
-		}
-		const res = await fetchCategoryById(query)
-		if (res) {
-			data = res.category
-		}
+	const query: CategoryRequest = {
+		language: locale,
+		cate_id: params && typeof params.link === 'string' ? params.link : '',
+		page: 1,
+		limit: 1
+	}
+	const res = await fetchCategoryById(query)
+	if (res) {
+		data = res.category
+		data.seo_description = 'phong',
+			data.seo_title = 'category',
+			data.seo_keywords = ['keywrod']
 	}
 	return {
 		props: {
@@ -67,6 +78,7 @@ export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
 		},
 		revalidate: 1
 	};
+
 }
 
 export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
@@ -75,9 +87,9 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
 	if (locales)
 		for (const locale of locales) {
 			const query: CategoryHomeRequest = {
-				homepage: true,
 				deactivated: false,
-				language: locale
+				language: locale,
+				type: 'Blog'
 			};
 			const res = await HomeApi.getCategories(query)
 			if (res) {

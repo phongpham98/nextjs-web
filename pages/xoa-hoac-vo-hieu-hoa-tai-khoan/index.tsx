@@ -1,11 +1,13 @@
 import LayoutDesktop from '@components/layout/LayoutDesktop'
 import FooterMobile from '@components/modules/footer/FooterMobile'
 import isMobileDevice from '@helpers/isMobile'
+import SEO from '@utils/components/SEO/SEO'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import React from 'react'
 
 type Props = {}
@@ -15,12 +17,18 @@ const Desktop = dynamic(() => import('@components/modules/pause-delete/DeleteAcc
 
 const PauseOrDeleteAccount: InferGetStaticPropsType<typeof getStaticProps> = (props: Props) => {
 	const isMobile = isMobileDevice();
-	const { t } = useTranslation('title')
+	const { t } = useTranslation(['account', 'title'])
+	const router = useRouter();
 	return (
 		<>
-			<Head>
-				<title>{t('delete_account')}</title>
-			</Head>
+			<SEO
+				title={t('delete_account', { ns: 'title' })}
+				description={t('seo.description')}
+				imgSrc={router.locale === "en" ? '/seo_image/account_en.jpg' : '/seo_image/account_vn.jpg'}
+				keywords={t('seo.keywords')}
+				seo_title={t('seo.title')}
+				url={`https://${process.env.NEXT_PUBLIC_REACT_APP_DOMAIN}${router.locale === "en" ? "/en" : ""}${router.asPath}`}
+			/>
 			{isMobile ? <React.Fragment>
 				<Mobile />
 				<FooterMobile />

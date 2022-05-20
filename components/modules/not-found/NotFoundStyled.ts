@@ -9,6 +9,7 @@ export const NotFoundContainer = styled.div`
   @media ${device.tablet768} {
     /* height: 70vh; */
     margin: 0 200px;
+    margin-bottom: 2rem;
   }
 `;
 

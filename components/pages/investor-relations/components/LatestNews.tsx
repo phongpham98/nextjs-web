@@ -43,7 +43,7 @@ const LatestNews: React.FunctionComponent<ILatestNewsProps> = () => {
 										<Link href={`/${t('news')}/${t('detail')}/${news.link}`}>
 											<a>
 												<GeneralImageWrapper>
-													<RenderSmoothNextImage width='500' height='500' src={news.thumbnail? news.thumbnail: ''} alt={news.title} />
+													<RenderSmoothNextImage src={news.thumbnail? news.thumbnail: ''} alt={news.title} />
 												</GeneralImageWrapper>
 											</a>
 										</Link>

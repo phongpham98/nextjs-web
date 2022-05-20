@@ -6,7 +6,7 @@ import { Space } from 'antd';
 import { useTranslation } from 'next-i18next';
 import * as React from 'react';
 import FikaContactSlider from './FikaContactSlider';
-import { ContactTitleContainer, Title } from './FikaContactStyled';
+import { ContactTitleContainer, ContactTitleH2 } from './FikaContactStyled';
 
 interface IFikaContactMobileProps {
 }
@@ -18,12 +18,12 @@ const FikaContactMobile: React.FunctionComponent<IFikaContactMobileProps> = (pro
 			<Space style={{ width: "100%" }} size={30} direction="vertical">
 				<FikaContactSlider />
 				<ContactTitleContainer>
-					<Title>
+					<ContactTitleH2>
 						{t('work_at_fika')}
 						<br />
 						{t('are_u_interested')}
 						<span><SvgDoubleQuote color='#000' /></span>
-					</Title>
+					</ContactTitleH2>
 				</ContactTitleContainer>
 				<ContactWithIcon icon={<SvgMap />} title={t('visit_us')} detail={`${t("holding", { ns: 'footer' })}
 										<br />

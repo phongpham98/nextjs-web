@@ -10,7 +10,7 @@ const CareerHeader = () => {
 	return (
 		<CareerHeaderContainer>
 			<GeneralImageWrapper>
-				<RenderSmoothNextImage layout='fill' objectFit='cover' width='1500' height='600' src={'/banner-career.jpg'} alt="FIKA is a private company whose values are grounded in creating the conditions for people to perform at their best and feel fulfilled and confident in their work." />
+				<RenderSmoothNextImage src={'/banner-career.jpg'} alt="FIKA is a private company whose values are grounded in creating the conditions for people to perform at their best and feel fulfilled and confident in their work." />
 			</GeneralImageWrapper>
 			<TitleWrapper>
 				<TitleTexth1>

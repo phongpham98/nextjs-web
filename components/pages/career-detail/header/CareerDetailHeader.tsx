@@ -9,7 +9,7 @@ const CareerDetailHeader = () => {
 		<GeneralHeaderWrapper>
 
 			{/* <GeneralImageWrapper> */}
-			<RenderSmoothNextImage layout='fill' objectFit='cover' width='500' height='500' src={'/career-detail.jpg'} alt="We love passionate people who relish a challenge to join us and help drive success for the company and our clients." />
+			<RenderSmoothNextImage src={'/career-detail.jpg'} alt="We love passionate people who relish a challenge to join us and help drive success for the company and our clients." />
 			{/* </GeneralImageWrapper> */}
 
 			<CareerDetailTitleWrapper>

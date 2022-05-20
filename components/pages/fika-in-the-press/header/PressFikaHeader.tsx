@@ -23,11 +23,13 @@ const PressFikaHeader = () => {
 					return (
 						<Col span={7} key={mag.id}>
 							<MagazineContainer>
-								<PressSubContent href={mag.link} rel="noreferrer nofollow" target="_blank" >
-									<GeneralImageWrapper>
-										<RenderSmoothNextImage width='500' height='500' src={mag.banner} alt={mag.title} />
-									</GeneralImageWrapper>
-								</PressSubContent>
+								<Link href={mag.link}>
+									<a rel="noreferrer nofollow" target="_blank" >
+										<GeneralImageWrapper>
+											<RenderSmoothNextImage src={mag.banner} alt={mag.title} />
+										</GeneralImageWrapper>
+									</a>
+								</Link>
 								<MagTitleWrapper>
 									<MagBrand>{mag.author}</MagBrand>
 								</MagTitleWrapper>

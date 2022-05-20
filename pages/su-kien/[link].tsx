@@ -3,24 +3,43 @@ import { fetchEventById } from '@api/_api/event'
 import LayoutDesktop from '@components/layout/LayoutDesktop'
 import FooterMobile from '@components/modules/footer/FooterMobile'
 import isMobileDevice from '@helpers/isMobile'
+import { renderDateFollowLanguage } from '@helpers/renderDateFollowLanguage'
 import { EventModel } from '@interfaces/model'
 import { PostRequest } from '@interfaces/posts'
+import SEO from '@utils/components/SEO/SEO'
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
+import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import dynamic from 'next/dynamic'
-import Head from 'next/head'
+import { useRouter } from 'next/router'
 import React from 'react'
+
+type Props = {
+	data: EventModel
+}
 
 const Desktop = dynamic(() => import('@components/modules/event-detail/EventDetailDesktop'), { ssr: false })
 const Mobile = dynamic(() => import('@components/modules/event-detail/EventDetailMobile'), { ssr: false })
 
-const EventDetail = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const EventDetail: InferGetStaticPropsType<typeof getStaticProps> = ({ data }: Props) => {
 	const isMobile = isMobileDevice();
+	const router = useRouter();
+	const { t } = useTranslation(['title', 'routes'])
 	return (
 		<>
-			<Head>
-				<title>{data ? data.name : "Fika Connects"}</title>
-			</Head>
+			<SEO
+				title={data.name}
+				description={data?.short_description}
+				imgSrc={data.thumbnail}
+				keywords={data.seo_keywords?.join(',')}
+				seo_title={data.name}
+				hasBreadCrumb={true}
+				public_date={renderDateFollowLanguage(data.public_date ? data.public_date : data.created_at, router)}
+				updated_at={renderDateFollowLanguage(data.updated_at ? data.updated_at : data.created_at, router)}
+				parent_name={t('event')}
+				parent_url={`https://${process.env.NEXT_PUBLIC_REACT_APP_DOMAIN}${router.locale === "en" ? "/en" : ""}${t('event', { ns: 'routes' })}`}
+				url={`https://${process.env.NEXT_PUBLIC_REACT_APP_DOMAIN}${router.locale === "en" ? "/en" : ""}${router.asPath}`}
+			/>
 			{isMobile ? <React.Fragment>
 				<Mobile />
 				<FooterMobile />
@@ -37,7 +56,20 @@ const EventDetail = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) =
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
-	let data: any = '';
+	let data: EventModel = {
+		id: 'string',
+		name: 'string',
+		banner: 'string',
+		author: {
+			id: '',
+			name: '',
+			username: ''
+		},
+		tags: [],
+		likes: 0,
+		link: 'string',
+		created_at: 0,
+	};
 	if (params && typeof params.link === 'string') {
 		const res = await fetchEventById(params.link, locale)
 		if (res) {

@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { SectionTitle, Title } from '@components/pages/connected-story/send-story/SendStoryFormMobileStyled';
 import { CVRequest } from '@interfaces/request';
 import { sendCV } from '@redux/slices/careerDetail';

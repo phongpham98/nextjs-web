@@ -91,7 +91,6 @@ export function getCategoryByLink(link: string, tags?: Tag[]) {
         q.tags = list;
       }
       const response = await CategoryApi.fetchBlogs(q);
-	  console.log(response)
       if (response) {
         dispatch(categorySlice.actions.update_blogs(response));
       }

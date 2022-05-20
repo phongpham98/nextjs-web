@@ -1,12 +1,13 @@
 import { RootState } from '@redux/store';
-import { GeneralImage } from '@utils/styled-components/GeneralStyled';
+import RenderSmoothNextImage from '@utils/components/RenderSmoothNextImage';
+import { GeneralImageWrapper } from '@utils/styled-components/GeneralStyled';
 import { Col, Row } from 'antd';
 import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 import * as React from 'react';
-import LazyLoad from 'react-lazyload';
 import { useSelector } from 'react-redux';
 import { MobileHeader, PressTitle } from './MobileStyled';
-import { MagazineContainer, MagBrand, MagTitle, MagTitleWrapper, PressSubContent } from './PressFikaHeaderStyled';
+import { MagazineContainer, MagBrand, MagTitleH2, MagTitleWrapper } from './PressFikaHeaderStyled';
 
 interface IPressFikaMobileHeaderProps {
 }
@@ -25,18 +26,24 @@ const PressFikaMobileHeader: React.FunctionComponent<IPressFikaMobileHeaderProps
 					return (
 						<Col span={24} key={mag.id}>
 							<MagazineContainer>
-								<LazyLoad throttle={100} height={100} once>
-									<GeneralImage src={mag.banner} alt={mag.title} />
-								</LazyLoad>
+								<Link href={mag.link}>
+									<a rel="noreferrer nofollow" target="_blank" >
+										<GeneralImageWrapper>
+											<RenderSmoothNextImage src={mag.banner} alt={mag.title} />
+										</GeneralImageWrapper>
+									</a>
+								</Link>
 								<MagTitleWrapper>
 									<MagBrand>{mag.author}</MagBrand>
 								</MagTitleWrapper>
 							</MagazineContainer>
-							<MagTitle>
-								<PressSubContent href={mag.link} rel="noreferrer nofollow" target="_blank" >
-									{mag.title}
-								</PressSubContent>
-							</MagTitle>
+							<Link href={mag.link}>
+								<a rel="noreferrer nofollow" target="_blank" >
+									<MagTitleH2>
+										{mag.title}
+									</MagTitleH2>
+								</a>
+							</Link>
 						</Col>
 					)
 				})}

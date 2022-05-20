@@ -1,3 +1,8 @@
 {
-	"header_desc": "The latest news and breaking stories about Fika you shouldn’t miss!"
+	"header_desc": "The latest news and breaking stories about Fika you shouldn’t miss!",
+	"seo": {
+		"title": "",
+		"description": "",
+		"keywords": "tin tức"
+	}
 }

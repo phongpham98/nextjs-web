@@ -27,5 +27,10 @@
       "step_title": "You can always come back!",
       "step_detail": "If you wish to use Fika again, you can sign up to a new account or reactivate your paused account. All newly-activated accounts must be verified again for the safety of our community."
     }
-  ]
+  ],
+  "seo": {
+	  "title": "How to delete your account on Fika",
+	  "description": "You can pause or delete your account anytime at Fika and you can always come back anytime",
+	  "keywords": "delete fika account"
+  }
 }

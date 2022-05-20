@@ -70,7 +70,7 @@
       "items": [
         {
           "name": "ISTJ",
-          "characters":  ["Chân thành", "có trách nhiệm", "thực tế"],
+          "characters": ["Chân thành", "có trách nhiệm", "thực tế"],
           "image_src": "/istj.png"
         },
         {
@@ -95,7 +95,11 @@
       "items": [
         {
           "name": "ISTP",
-          "characters": ["Lưu trữ những kiến thức mới", "Logic", "có định hướng"],
+          "characters": [
+            "Lưu trữ những kiến thức mới",
+            "Logic",
+            "có định hướng"
+          ],
           "image_src": "/istp.png"
         },
         {
@@ -115,5 +119,10 @@
         }
       ]
     }
-  ]
+  ],
+  "seo": {
+    "title": "Find out your personality type by taking Fika's customized personality test",
+    "description": "Do you think you know yourself? Try our personality test to find your best match partner, most suitable job and improve yourself",
+    "keywords": "personality test"
+  }
 }

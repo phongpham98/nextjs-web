@@ -63,7 +63,7 @@ const CategoryContent: React.FunctionComponent<ICategoryContentProps> = (props) 
 								<Link href={`/${t('blogs', {ns: 'routes'})}/` + blogs[0].link}>
 									<a>
 										<GeneralImageWrapper>
-											<RenderSmoothNextImage layout='fill' objectFit='cover' width='500' height='500' src={blogs[0].banner} alt={blogs[0].title} />
+											<RenderSmoothNextImage src={blogs[0].banner} alt={blogs[0].title} />
 										</GeneralImageWrapper>
 									</a>
 								</Link>
@@ -100,7 +100,7 @@ const CategoryContent: React.FunctionComponent<ICategoryContentProps> = (props) 
 									return (
 										<Col key={blog.id} sm={24} md={12}>
 											<GridImageContainer>
-												<RenderSmoothNextImage layout='fill' objectFit='cover' src={blog.thumbnail ? blog.thumbnail : ''} alt={blog.title} />
+												<RenderSmoothNextImage  src={blog.thumbnail ? blog.thumbnail : ''} alt={blog.title} />
 											</GridImageContainer>
 											<BlogGridContent>
 												<FeedContent

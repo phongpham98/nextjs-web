@@ -12,5 +12,10 @@
   "grow_rate_desc": "Không chỉ phát triển nhanh, sở hữu lượt tải ấn tượng và liên tục nằm trong top app Phong cách sống tại AppStore hay Google Play, ứng dụng Fika còn mong muốn sự phát triển bền vững bằng cách liên tục cung cấp tính năng mới và hệ sinh thái Nội dung – Hoạt động – Giá trị thực, nhằm giữ vững chỉ số duy trì từ người dùng – điều quan trọng nhất làm nên sự khác biệt của một app hẹn hò công nghệ chất lượng.",
   "seed_funding_title": "Các tính năng mới bám sát nhu cầu thực tế",
   "seed_funding_desc": "Đội ngũ phát triển của Fika không bao giờ dừng lại! Chúng tôi liên tục cung cấp các tính năng sát nhất với nhu cầu của người dùng:<br/><br/>&#9;&#9;&#9;Giao diện mới gợi mở, thân thiện.<br/>&#9;&#9;&#9;Quy trình xác minh nhanh chóng, bảo mật.<br/>&#9;&#9;&#9;Hoạt động mới tích hợp MỖI NGÀY trong app.<br/>&#9;&#9;&#9;Tặng thưởng giá trị cho người dùng.",
-  "map_title": "Fika hướng đến sự phát triển tại các khu vực trọng điểm kinh tế trên toàn bộ Việt Nam."
+  "map_title": "Fika hướng đến sự phát triển tại các khu vực trọng điểm kinh tế trên toàn bộ Việt Nam.",
+  "seo": {
+	  "title": "Fika là đối tác hoàn hảo để bạn đầu tư và hợp tác",
+	  "description": "Nếu bạn có bất kỳ ý tưởng hay ho nào muốn đầu tư hoặc hợp tác với Fika, hãy liên lạc với chúng tôi ngay nhé!",
+	  "keywords": "đầu tư"
+  }
 }

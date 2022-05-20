@@ -1,3 +1,8 @@
 {
-  "header_desc": "Đây là nơi bạn có thể tìm thấy những bài viết được phân chia theo những nhóm chủ đề quan trọng nhất trong hành trình “Phát triển bản thân – Hẹn hò – Kết đôi – Cuộc sống”. Hãy để Fika đồng hành cùng bạn!"
+  "header_desc": "Đây là nơi bạn có thể tìm thấy những bài viết được phân chia theo những nhóm chủ đề quan trọng nhất trong hành trình “Phát triển bản thân – Hẹn hò – Kết đôi – Cuộc sống”. Hãy để Fika đồng hành cùng bạn!",
+  "seo": {
+	"title": "Fika blog - nơi chia sẻ với bạn mọi điều về cuộc sống",
+	"description": "Fika blog mang đến cho bạn những bài viết hữu ích cho hành trình 'Định hình tính cách - Phát triển bản thân - Hẹn hò - Làm chủ cuộc sống'",
+	"keywords": "fika blog"
+}
 }

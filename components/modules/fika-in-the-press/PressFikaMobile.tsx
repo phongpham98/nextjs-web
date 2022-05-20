@@ -10,6 +10,7 @@ import HrLine from '@utils/components/HrLine';
 import { GeneralImage, GeneralPaddingMobile } from '@utils/styled-components/GeneralStyled';
 import { Col, Row, Space } from 'antd';
 import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 import React from 'react';
 import LazyLoad from 'react-lazyload';
 import { useSelector } from 'react-redux';
@@ -41,9 +42,13 @@ const PressFikaMobile: React.FunctionComponent<IPressFikaMobileProps> = (props) 
 										<MagColumnBrand>
 											{mag.author}
 										</MagColumnBrand>
-										<MagColumnTilte href={mag.link} rel="noreferrer nofollow" target="_blank">
-											{mag.title}
-										</MagColumnTilte>
+										<Link href={mag.link}>
+											<a rel="noreferrer nofollow" target="_blank">
+												<MagColumnTilte>
+													{mag.title}
+												</MagColumnTilte>
+											</a>
+										</Link>
 										<MagColumnDate>
 											{renderDateFollowLanguage(mag.date)}
 										</MagColumnDate>

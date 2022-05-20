@@ -23,7 +23,7 @@ const CareerContentMobile: React.FunctionComponent<ICareerContentMobileProps> = 
 				<GeneralPaddingMobile>
 					<GeneralHeaderMobileContainer>
 						<GeneralImageWrapper>
-							<RenderSmoothNextImage layout='fill' objectFit='contain' src={'/career-why.jpg'} alt="Why you'll love working at fika?" />
+							<RenderSmoothNextImage src={'/career-why.jpg'} alt="Why you'll love working at fika?" />
 						</GeneralImageWrapper>
 					</GeneralHeaderMobileContainer>
 					<ReasonContainer>
