@@ -17,5 +17,10 @@
     "strength_weakness": "Strength & Weakness for ",
     "friendship": "Friendship for ",
     "relationship": "Relationship for "
+  },
+  "seo": {
+	  "title": "{{code}} personality",
+	  "description": "{{code}} personality and relationships",
+	  "keywords": "{{code}}"
   }
 }

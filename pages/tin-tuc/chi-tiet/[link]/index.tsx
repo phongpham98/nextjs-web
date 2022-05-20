@@ -28,14 +28,14 @@ const NewsDetail: InferGetStaticPropsType<typeof getStaticProps> = ({ data }: Pr
 	return (
 		<>
 			<SEO
-				title={data.title}
+				title={data?.title}
 				description={data?.short_description}
-				imgSrc={data.thumbnail}
-				keywords={data.seo_keywords?.join(',')}
-				seo_title={data.title}
+				imgSrc={data?.thumbnail}
+				keywords={data?.seo_keywords?.join(',')}
+				seo_title={data?.title}
 				hasBreadCrumb={true}
-				public_date={renderDateFollowLanguage(data.public_date ? data.public_date : data.created_at, router)}
-				updated_at={renderDateFollowLanguage(data.updated_at ? data.updated_at : data.created_at, router)}
+				public_date={renderDateFollowLanguage(data?.public_date ? data?.public_date : data?.created_at, router)}
+				updated_at={renderDateFollowLanguage(data?.updated_at ? data?.updated_at : data?.created_at, router)}
 				parent_name={t('news')}
 				parent_url={`https://${process.env.NEXT_PUBLIC_REACT_APP_DOMAIN}${router.locale === "en" ? "/en" : ""}${t('news', { ns: 'routes' })}`}
 				url={`https://${process.env.NEXT_PUBLIC_REACT_APP_DOMAIN}${router.locale === "en" ? "/en" : ""}${router.asPath}`}
@@ -73,11 +73,15 @@ export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
 		created_at: 0,
 		category: {}
 	};
-	if (params && typeof params.link === 'string') {
-		const res = await fetchNewsByLinkOrId(params.link, undefined, locale)
-		if (res) {
-			data = res
+	try {
+		if (params && typeof params.link === 'string') {
+			const res = await fetchNewsByLinkOrId(params.link, undefined, locale)
+			if (res) {
+				data = res
+			}
 		}
+	} catch (error) {
+		console.log('error', error)
 	}
 	return {
 		props: {
@@ -92,26 +96,30 @@ export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
 export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
 
 	let paths: any[] = [];
-	if (locales)
-		for (const locale of locales) {
-			const q: PostRequest = {
-				page: 1,
-				limit: 300,
-				language: locale
-			};
-			const res = await NewsApi.fetchListNews(q)
-			if (res) {
-				res.items.forEach(post => {
-					paths.push({
-						params: {
-							link: post.link,
-						},
-						locale,
-					});
-				})
+	try {
+		if (locales)
+			for (const locale of locales) {
+				const q: PostRequest = {
+					page: 1,
+					limit: 300,
+					language: locale
+				};
+				const res = await NewsApi.fetchListNews(q)
+				if (res) {
+					res.items.forEach(post => {
+						paths.push({
+							params: {
+								link: post.link,
+							},
+							locale,
+						});
+					})
+				}
 			}
-		}
-	paths = paths.flat();
+		paths = paths.flat();
+	} catch (error) {
+		console.log('error', error)
+	}
 	return {
 		paths,
 		fallback: true

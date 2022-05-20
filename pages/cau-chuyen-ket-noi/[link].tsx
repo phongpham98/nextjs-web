@@ -28,14 +28,14 @@ const ConnectedStoryDetail: InferGetStaticPropsType<typeof getStaticProps> = ({ 
 	return (
 		<>
 			<SEO
-				title={data.title}
+				title={data?.title}
 				description={data?.slogan}
-				imgSrc={data.thumbnail}
-				keywords={data.seo_keywords?.join(',')}
-				seo_title={data.title}
+				imgSrc={data?.thumbnail}
+				keywords={data?.seo_keywords?.join(',')}
+				seo_title={data?.title}
 				hasBreadCrumb={true}
-				public_date={renderDateFollowLanguage(data.public_date ? data.public_date : data.created_at, router)}
-				updated_at={renderDateFollowLanguage(data.updated_at ? data.updated_at : data.created_at, router)}
+				public_date={renderDateFollowLanguage(data?.public_date ? data?.public_date : data?.created_at, router)}
+				updated_at={renderDateFollowLanguage(data?.updated_at ? data?.updated_at : data?.created_at, router)}
 				parent_name={t('connected_story')}
 				parent_url={`https://${process.env.NEXT_PUBLIC_REACT_APP_DOMAIN}${router.locale === "en" ? "/en" : ""}${t('connected_story', { ns: 'routes' })}`}
 				url={`https://${process.env.NEXT_PUBLIC_REACT_APP_DOMAIN}${router.locale === "en" ? "/en" : ""}${router.asPath}`}
@@ -73,11 +73,15 @@ export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
 		created_at: 0,
 		category: {}
 	};
-	if (params && typeof params.link === 'string') {
-		const res = await fetchStoryById(params.link, undefined, locale)
-		if (res) {
-			data = res
+	try {
+		if (params && typeof params.link === 'string') {
+			const res = await fetchStoryById(params.link, undefined, locale)
+			if (res) {
+				data = res
+			}
 		}
+	} catch (error) {
+		console.log('error', error)
 	}
 	return {
 		props: {

@@ -57,18 +57,22 @@ export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
 		seo_keywords: [''],
 
 	};
-	const query: CategoryRequest = {
-		language: locale,
-		cate_id: params && typeof params.link === 'string' ? params.link : '',
-		page: 1,
-		limit: 1
-	}
-	const res = await fetchCategoryById(query)
-	if (res) {
-		data = res.category
-		data.seo_description = 'phong',
-			data.seo_title = 'category',
-			data.seo_keywords = ['keywrod']
+	try {
+		const query: CategoryRequest = {
+			language: locale,
+			cate_id: params && typeof params.link === 'string' ? params.link : '',
+			page: 1,
+			limit: 1
+		}
+		const res = await fetchCategoryById(query)
+		if (res) {
+			data = res.category
+			data.seo_description = 'phong',
+				data.seo_title = 'category',
+				data.seo_keywords = ['keywrod']
+		}
+	} catch (error) {
+		console.log('error', error)
 	}
 	return {
 		props: {
@@ -84,26 +88,30 @@ export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
 export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
 
 	let paths: any[] = [];
-	if (locales)
-		for (const locale of locales) {
-			const query: CategoryHomeRequest = {
-				deactivated: false,
-				language: locale,
-				type: 'Blog'
-			};
-			const res = await HomeApi.getCategories(query)
-			if (res) {
-				res.forEach(blog => {
-					paths.push({
-						params: {
-							link: blog.link,
-						},
-						locale,
-					});
-				})
+	try {
+		if (locales)
+			for (const locale of locales) {
+				const query: CategoryHomeRequest = {
+					deactivated: false,
+					language: locale,
+					type: 'Blog'
+				};
+				const res = await HomeApi.getCategories(query)
+				if (res) {
+					res.forEach(blog => {
+						paths.push({
+							params: {
+								link: blog.link,
+							},
+							locale,
+						});
+					})
+				}
 			}
-		}
-	paths = paths.flat();
+		paths = paths.flat();
+	} catch (error) {
+		console.log('error', error)
+	}
 	return {
 		paths,
 		fallback: true

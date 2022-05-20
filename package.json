@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "REACT_APP_FLAVOR=dev NEXT_PUBLIC_REACT_APP_DOMAIN='fika-website-dev.cinnamonrollsfordevs.com' NEXT_PUBLIC_REACT_APP_HOST=fika-website-be.cinnamonrollsfordevs.com next",
     "stop": "REACT_APP_FLAVOR=dev NEXT_PUBLIC_REACT_APP_DOMAIN='fika-website-dev.cinnamonrollsfordevs.com' NEXT_PUBLIC_REACT_APP_HOST=fika-website-be.cinnamonrollsfordevs.com react-scripts next stop",
-    "build": "CI='' REACT_APP_FLAVOR=dev NEXT_PUBLIC_REACT_APP_DOMAIN='fika-website-dev.cinnamonrollsfordevs.com' NEXT_PUBLIC_REACT_APP_HOST=fika-website-be.cinnamonrollsfordevs.comnext next build",
+    "build": "CI='' REACT_APP_FLAVOR=dev NEXT_PUBLIC_REACT_APP_DOMAIN='fika-website-dev.cinnamonrollsfordevs.com' NEXT_PUBLIC_REACT_APP_HOST=fika-website-be.cinnamonrollsfordevs.com next build",
     "start": "REACT_APP_FLAVOR=dev NEXT_PUBLIC_REACT_APP_DOMAIN='fika-website-dev.cinnamonrollsfordevs.com' NEXT_PUBLIC_REACT_APP_HOST=fika-website-be.cinnamonrollsfordevs.com next start",
     "start:production": "REACT_APP_FLAVOR=production NEXT_PUBLIC_REACT_APP_DOMAIN='fikaconnects.com' NEXT_PUBLIC_REACT_APP_HOST=cms-be.keepfika.com next start",
     "build:production": "CI=''  REACT_APP_FLAVOR=production NEXT_PUBLIC_REACT_APP_DOMAIN='fikaconnects.com' NEXT_PUBLIC_REACT_APP_HOST=cms-be.keepfika.com next build",

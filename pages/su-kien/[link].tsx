@@ -28,14 +28,14 @@ const EventDetail: InferGetStaticPropsType<typeof getStaticProps> = ({ data }: P
 	return (
 		<>
 			<SEO
-				title={data.name}
+				title={data?.name}
 				description={data?.short_description}
-				imgSrc={data.thumbnail}
-				keywords={data.seo_keywords?.join(',')}
-				seo_title={data.name}
+				imgSrc={data?.thumbnail}
+				keywords={data?.seo_keywords?.join(',')}
+				seo_title={data?.name}
 				hasBreadCrumb={true}
-				public_date={renderDateFollowLanguage(data.public_date ? data.public_date : data.created_at, router)}
-				updated_at={renderDateFollowLanguage(data.updated_at ? data.updated_at : data.created_at, router)}
+				public_date={renderDateFollowLanguage(data?.public_date ? data?.public_date : data?.created_at, router)}
+				updated_at={renderDateFollowLanguage(data?.updated_at ? data?.updated_at : data?.created_at, router)}
 				parent_name={t('event')}
 				parent_url={`https://${process.env.NEXT_PUBLIC_REACT_APP_DOMAIN}${router.locale === "en" ? "/en" : ""}${t('event', { ns: 'routes' })}`}
 				url={`https://${process.env.NEXT_PUBLIC_REACT_APP_DOMAIN}${router.locale === "en" ? "/en" : ""}${router.asPath}`}
@@ -70,11 +70,15 @@ export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
 		link: 'string',
 		created_at: 0,
 	};
-	if (params && typeof params.link === 'string') {
-		const res = await fetchEventById(params.link, locale)
-		if (res) {
-			data = res
+	try {
+		if (params && typeof params.link === 'string') {
+			const res = await fetchEventById(params.link, locale)
+			if (res) {
+				data = res
+			}
 		}
+	} catch (error) {
+		console.log('error', error)
 	}
 	return {
 		props: {

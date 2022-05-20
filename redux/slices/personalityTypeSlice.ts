@@ -2,6 +2,7 @@ import { PersonalityApi } from "@api";
 import { PersonalityTypeState } from "@redux/states";
 import { RootState } from "@redux/store";
 import { AnyAction, createSlice } from "@reduxjs/toolkit";
+import Router from "next/router";
 import { ThunkDispatch } from "redux-thunk";
 const initState: PersonalityTypeState = {
   content: null,
@@ -34,7 +35,7 @@ export const getPersonalityContent = (type: string) => {
   ) => {
     dispatch(personalityTypeSlice.actions.loading());
     try {
-      const response = await PersonalityApi.fetchPersonalityType(type);
+      const response = await PersonalityApi.fetchPersonalityType(type, Router.locale);
       if (response) {
         dispatch(personalityTypeSlice.actions.update_content(response));
       }

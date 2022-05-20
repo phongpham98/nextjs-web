@@ -5,9 +5,9 @@ import request from "../request";
 
 const Endpoint = HOST;
 
-export const fetchPersonalityType = (code: string) => {
+export const fetchPersonalityType = (code: string, language?: string) => {
   return request<AssignResult>(
     "GET",
-    Endpoint + "/content/" + code + "?language=" + Router.locale
+    Endpoint + "/content/" + code + "?language=" + language
   );
 };

@@ -35,9 +35,6 @@ const PTypeDesktop: React.FunctionComponent<IPTypeDesktopProps> = (props) => {
 	const { content } = useSelector((state: RootState) => state.personalityType);
 	return (
 		<GeneralContentWrapper>
-			<Head>
-				{content ? <title>{content.code} - {content.title}</title> : <title>Personality</title>}
-			</Head>
 			{content ? (
 				<div style={{ position: 'relative', height: "100%" }}>
 					<StickyContainer >

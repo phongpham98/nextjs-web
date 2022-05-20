@@ -44,18 +44,22 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
 	// const res: ApiListResponse<Project> | void = await projectApi.getAllProjects()
 	let paths: any[] = [];
-	if (locales)
-		['intp'].forEach(block => {
-			for (const locale of locales) {
-				paths.push({
-					params: {
-						id: block,
-					},
-					locale,
-				});
-			}
-		})
-	paths = paths.flat();
+	try {
+		if (locales)
+			['intp'].forEach(block => {
+				for (const locale of locales) {
+					paths.push({
+						params: {
+							id: block,
+						},
+						locale,
+					});
+				}
+			})
+		paths = paths.flat();
+	} catch (error) {
+		console.log('error', error)
+	}
 	return {
 		paths,
 		fallback: true

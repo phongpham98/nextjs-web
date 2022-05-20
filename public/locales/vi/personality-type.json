@@ -17,5 +17,10 @@
     "strength_weakness": "Điểm mạnh và điểm yếu của ",
     "friendship": "Tình bạn của ",
     "relationship": "Mối quan hệ của "
+  },
+  "seo": {
+	  "title": "Tính cách của {{code}} ",
+	  "description": "Tính cách của {{code}} trong cuộc sống và tình yêu",
+	  "keywords": "{{code}}"
   }
 }

@@ -28,14 +28,14 @@ const BlogDetail: InferGetStaticPropsType<typeof getStaticProps> = ({ data }: Pr
 	return (
 		<>
 			<SEO
-				title={data.title}
+				title={data?.title}
 				description={data?.short_description}
-				imgSrc={data.thumbnail}
-				keywords={data.seo_keywords?.join(',')}
-				seo_title={data.title}
+				imgSrc={data?.thumbnail}
+				keywords={data?.seo_keywords?.join(',')}
+				seo_title={data?.title}
 				hasBreadCrumb={true}
-				public_date={renderDateFollowLanguage(data.public_date ? data.public_date : data.created_at, router)}
-				updated_at={renderDateFollowLanguage(data.updated_at ? data.updated_at : data.created_at, router)}
+				public_date={renderDateFollowLanguage(data?.public_date ? data?.public_date : data?.created_at, router)}
+				updated_at={renderDateFollowLanguage(data?.updated_at ? data?.updated_at : data?.created_at, router)}
 				parent_name={t('blogs')}
 				parent_url={`https://${process.env.NEXT_PUBLIC_REACT_APP_DOMAIN}${router.locale === "en" ? "/en" : ""}${t('blogs', { ns: 'routes' })}`}
 				url={`https://${process.env.NEXT_PUBLIC_REACT_APP_DOMAIN}${router.locale === "en" ? "/en" : ""}${router.asPath}`}
@@ -73,12 +73,17 @@ export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
 		created_at: 0,
 		category: {}
 	};
-	if (params && typeof params.link === 'string') {
-		const res = await fetchByLinkorId(params.link, undefined, locale)
-		if (res) {
-			data = res
+	try {
+		if (params && typeof params.link === 'string') {
+			const res = await fetchByLinkorId(params.link, undefined, locale)
+			if (res) {
+				data = res
+			}
 		}
+	} catch (error) {
+		console.log('error', error)
 	}
+
 	return {
 		props: {
 			...(await serverSideTranslations(locale ? locale : 'vi', ["blog", "common", "footer", "title", "menu", "button", "routes"])),
@@ -92,26 +97,31 @@ export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
 export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
 
 	let paths: any[] = [];
-	if (locales)
-		for (const locale of locales) {
-			const q: PostRequest = {
-				page: 1,
-				limit: 300,
-				language: locale
-			};
-			const res = await BlogApi.fetchBlogs(q)
-			if (res) {
-				res.items.forEach(blog => {
-					paths.push({
-						params: {
-							link: blog.link,
-						},
-						locale,
-					});
-				})
+	try {
+		if (locales)
+			for (const locale of locales) {
+				const q: PostRequest = {
+					page: 1,
+					limit: 200,
+					language: locale
+				};
+				const res = await BlogApi.fetchBlogs(q)
+				if (res) {
+					res.items.forEach(blog => {
+						paths.push({
+							params: {
+								link: blog.link,
+							},
+							locale,
+						});
+					})
+				}
 			}
-		}
-	paths = paths.flat();
+		paths = paths.flat();
+	} catch (error) {
+
+	}
+
 	return {
 		paths,
 		fallback: true
